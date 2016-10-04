@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74DCFB49F48684611C4DF359 /* Pods_BeeQuick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B87ED703511EABF6910E6EB5 /* Pods_BeeQuick.framework */; };
 		E22B15FE1DA39B2C0077B4A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22B15FD1DA39B2C0077B4A8 /* AppDelegate.swift */; };
 		E22B16001DA39B2C0077B4A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22B15FF1DA39B2C0077B4A8 /* ViewController.swift */; };
 		E22B16031DA39B2C0077B4A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E22B16011DA39B2C0077B4A8 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08F32452381760B8E967661D /* Pods-BeeQuick.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeeQuick.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeeQuick/Pods-BeeQuick.debug.xcconfig"; sourceTree = "<group>"; };
+		7F8FE54073DEE97D18C042EB /* Pods-BeeQuick.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeeQuick.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeeQuick/Pods-BeeQuick.release.xcconfig"; sourceTree = "<group>"; };
+		B87ED703511EABF6910E6EB5 /* Pods_BeeQuick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeeQuick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E22B15FA1DA39B2C0077B4A8 /* BeeQuick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeeQuick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E22B15FD1DA39B2C0077B4A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E22B15FF1DA39B2C0077B4A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74DCFB49F48684611C4DF359 /* Pods_BeeQuick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				E22B15FC1DA39B2C0077B4A8 /* BeeQuick */,
 				E22B15FB1DA39B2C0077B4A8 /* Products */,
+				F3F3BF8B10FA5FFDE602C01B /* Pods */,
+				FF8CD2727C20A373C64B5722 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = BeeQuick;
 			sourceTree = "<group>";
 		};
+		F3F3BF8B10FA5FFDE602C01B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				08F32452381760B8E967661D /* Pods-BeeQuick.debug.xcconfig */,
+				7F8FE54073DEE97D18C042EB /* Pods-BeeQuick.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FF8CD2727C20A373C64B5722 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B87ED703511EABF6910E6EB5 /* Pods_BeeQuick.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E22B160C1DA39B2C0077B4A8 /* Build configuration list for PBXNativeTarget "BeeQuick" */;
 			buildPhases = (
+				0F2E080E0F62B0784744F5D6 /* [CP] Check Pods Manifest.lock */,
 				E22B15F61DA39B2B0077B4A8 /* Sources */,
 				E22B15F71DA39B2B0077B4A8 /* Frameworks */,
 				E22B15F81DA39B2B0077B4A8 /* Resources */,
+				A75DD1A0843A494B54D32290 /* [CP] Embed Pods Frameworks */,
+				772FFFAC6C1C1F417D97EB61 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0F2E080E0F62B0784744F5D6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		772FFFAC6C1C1F417D97EB61 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeeQuick/Pods-BeeQuick-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A75DD1A0843A494B54D32290 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BeeQuick/Pods-BeeQuick-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E22B15F61DA39B2B0077B4A8 /* Sources */ = {
@@ -257,6 +332,7 @@
 		};
 		E22B160D1DA39B2C0077B4A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08F32452381760B8E967661D /* Pods-BeeQuick.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8LP5KW6GHL;
@@ -270,6 +346,7 @@
 		};
 		E22B160E1DA39B2C0077B4A8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F8FE54073DEE97D18C042EB /* Pods-BeeQuick.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8LP5KW6GHL;
@@ -300,6 +377,7 @@
 				E22B160E1DA39B2C0077B4A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
