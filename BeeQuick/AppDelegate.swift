@@ -19,10 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         setAppSubject()
         
-//        let tabBarVC = MainTabBarController()
-//        window = UIWindow(frame: ScreenBounds)
-//        window!.rootViewController = tabBarVC
-//        window!.makeKeyAndVisible()
+        let tabBarVC = MainTabBarController()
+        window = UIWindow(frame: ScreenBounds)
+        window!.rootViewController = tabBarVC
+        window!.makeKeyAndVisible()
         
         return true
     }

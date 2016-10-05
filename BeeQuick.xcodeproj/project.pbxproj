@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		74DCFB49F48684611C4DF359 /* Pods_BeeQuick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B87ED703511EABF6910E6EB5 /* Pods_BeeQuick.framework */; };
 		E22B15FE1DA39B2C0077B4A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22B15FD1DA39B2C0077B4A8 /* AppDelegate.swift */; };
-		E22B16001DA39B2C0077B4A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22B15FF1DA39B2C0077B4A8 /* ViewController.swift */; };
 		E22B16031DA39B2C0077B4A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E22B16011DA39B2C0077B4A8 /* Main.storyboard */; };
 		E22B16051DA39B2C0077B4A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E22B16041DA39B2C0077B4A8 /* Assets.xcassets */; };
 		E22B16081DA39B2C0077B4A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E22B16061DA39B2C0077B4A8 /* LaunchScreen.storyboard */; };
@@ -22,6 +21,21 @@
 		E2B059E91DA4906C0026DF8D /* RAMBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B059E11DA4906C0026DF8D /* RAMBadge.swift */; };
 		E2B059EA1DA4906C0026DF8D /* RAMItemAnimationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B059E21DA4906C0026DF8D /* RAMItemAnimationProtocol.swift */; };
 		E2B059EC1DA490B20026DF8D /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B059EB1DA490B20026DF8D /* Color+Extension.swift */; };
+		E2B059EF1DA491890026DF8D /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B059EE1DA491890026DF8D /* UIView+Extension.swift */; };
+		E2B059F11DA491B20026DF8D /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B059F01DA491B20026DF8D /* UIBarButtonItem+Extension.swift */; };
+		E2B059F41DA4921D0026DF8D /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B059F31DA4921D0026DF8D /* Theme.swift */; };
+		E2B059FD1DA493280026DF8D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B059FC1DA493280026DF8D /* BaseViewController.swift */; };
+		E2B059FF1DA493930026DF8D /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B059FE1DA493930026DF8D /* BaseNavigationController.swift */; };
+		E2B05A011DA493C50026DF8D /* UpImageDownTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B05A001DA493C50026DF8D /* UpImageDownTextButton.swift */; };
+		E2B05A031DA49D990026DF8D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B05A021DA49D990026DF8D /* MainViewController.swift */; };
+		E2B05A051DA4A1010026DF8D /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B05A041DA4A1010026DF8D /* MineViewController.swift */; };
+		E2B05A0B1DA4A6370026DF8D /* MineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B05A0A1DA4A6370026DF8D /* MineCell.swift */; };
+		E2B05A0E1DA4A6540026DF8D /* MineHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B05A0C1DA4A6540026DF8D /* MineHeadView.swift */; };
+		E2B05A0F1DA4A6540026DF8D /* MineTabeHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B05A0D1DA4A6540026DF8D /* MineTabeHeadView.swift */; };
+		E2B05A141DA4BFAB0026DF8D /* ShopCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B05A131DA4BFAB0026DF8D /* ShopCartViewController.swift */; };
+		E2B05A161DA4BFE60026DF8D /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B05A151DA4BFE60026DF8D /* ScheduleViewController.swift */; };
+		E2B05A181DA4C01E0026DF8D /* SupermarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B05A171DA4C01E0026DF8D /* SupermarketViewController.swift */; };
+		E2B05A1A1DA4C0490026DF8D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B05A191DA4C0490026DF8D /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +44,6 @@
 		B87ED703511EABF6910E6EB5 /* Pods_BeeQuick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeeQuick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E22B15FA1DA39B2C0077B4A8 /* BeeQuick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeeQuick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E22B15FD1DA39B2C0077B4A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E22B15FF1DA39B2C0077B4A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E22B16021DA39B2C0077B4A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E22B16041DA39B2C0077B4A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E22B16071DA39B2C0077B4A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -44,6 +57,22 @@
 		E2B059E11DA4906C0026DF8D /* RAMBadge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMBadge.swift; sourceTree = "<group>"; };
 		E2B059E21DA4906C0026DF8D /* RAMItemAnimationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMItemAnimationProtocol.swift; sourceTree = "<group>"; };
 		E2B059EB1DA490B20026DF8D /* Color+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Color+Extension.swift"; path = "Class/Extension/Color+Extension.swift"; sourceTree = "<group>"; };
+		E2B059EE1DA491890026DF8D /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Extension.swift"; path = "Class/Extension/UIView+Extension.swift"; sourceTree = "<group>"; };
+		E2B059F01DA491B20026DF8D /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIBarButtonItem+Extension.swift"; path = "Class/Extension/UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
+		E2B059F31DA4921D0026DF8D /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Theme.swift; path = Class/Other/Theme.swift; sourceTree = "<group>"; };
+		E2B059FC1DA493280026DF8D /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = Class/LFBBase/BaseViewController.swift; sourceTree = "<group>"; };
+		E2B059FE1DA493930026DF8D /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseNavigationController.swift; path = Class/LFBBase/BaseNavigationController.swift; sourceTree = "<group>"; };
+		E2B05A001DA493C50026DF8D /* UpImageDownTextButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpImageDownTextButton.swift; path = Class/LFBBase/UpImageDownTextButton.swift; sourceTree = "<group>"; };
+		E2B05A021DA49D990026DF8D /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = Class/LFBBase/MainViewController.swift; sourceTree = "<group>"; };
+		E2B05A041DA4A1010026DF8D /* MineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MineViewController.swift; path = Class/Mine/MineViewController.swift; sourceTree = "<group>"; };
+		E2B05A0A1DA4A6370026DF8D /* MineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MineCell.swift; path = Class/Mine/MineCell.swift; sourceTree = "<group>"; };
+		E2B05A0C1DA4A6540026DF8D /* MineHeadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MineHeadView.swift; path = Class/Mine/MineHeadView.swift; sourceTree = "<group>"; };
+		E2B05A0D1DA4A6540026DF8D /* MineTabeHeadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MineTabeHeadView.swift; path = Class/Mine/MineTabeHeadView.swift; sourceTree = "<group>"; };
+		E2B05A101DA4A9D20026DF8D /* BeeQuick-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BeeQuick-Bridging-Header.h"; sourceTree = "<group>"; };
+		E2B05A131DA4BFAB0026DF8D /* ShopCartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShopCartViewController.swift; path = Class/ShopCart/ShopCartViewController.swift; sourceTree = "<group>"; };
+		E2B05A151DA4BFE60026DF8D /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScheduleViewController.swift; path = Class/FreshReserve/ScheduleViewController.swift; sourceTree = "<group>"; };
+		E2B05A171DA4C01E0026DF8D /* SupermarketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SupermarketViewController.swift; path = Class/SuperMarket/SupermarketViewController.swift; sourceTree = "<group>"; };
+		E2B05A191DA4C0490026DF8D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Class/Home/HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				E22B15FD1DA39B2C0077B4A8 /* AppDelegate.swift */,
-				E22B15FF1DA39B2C0077B4A8 /* ViewController.swift */,
+				E2B05A101DA4A9D20026DF8D /* BeeQuick-Bridging-Header.h */,
 				E2B059B91DA490220026DF8D /* Class */,
 				E22B16011DA39B2C0077B4A8 /* Main.storyboard */,
 				E22B16041DA39B2C0077B4A8 /* Assets.xcassets */,
@@ -101,8 +130,15 @@
 		E2B059B91DA490220026DF8D /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				E2B059BA1DA490380026DF8D /* Vender */,
+				E2B059F51DA492900026DF8D /* Home */,
+				E2B059F71DA492A90026DF8D /* SuperMarket */,
+				E2B059FB1DA492D20026DF8D /* FreshReserve */,
+				E2B059FA1DA492C90026DF8D /* ShopCart */,
+				E2B059F91DA492BE0026DF8D /* Mine */,
+				E2B059F81DA492B50026DF8D /* LFBBase */,
+				E2B059F21DA491F20026DF8D /* Other */,
 				E2B059ED1DA490C90026DF8D /* Extension */,
+				E2B059BA1DA490380026DF8D /* Vender */,
 			);
 			name = Class;
 			sourceTree = "<group>";
@@ -191,8 +227,72 @@
 			isa = PBXGroup;
 			children = (
 				E2B059EB1DA490B20026DF8D /* Color+Extension.swift */,
+				E2B059EE1DA491890026DF8D /* UIView+Extension.swift */,
+				E2B059F01DA491B20026DF8D /* UIBarButtonItem+Extension.swift */,
 			);
 			name = Extension;
+			sourceTree = "<group>";
+		};
+		E2B059F21DA491F20026DF8D /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				E2B059F31DA4921D0026DF8D /* Theme.swift */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		E2B059F51DA492900026DF8D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E2B05A191DA4C0490026DF8D /* HomeViewController.swift */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		E2B059F71DA492A90026DF8D /* SuperMarket */ = {
+			isa = PBXGroup;
+			children = (
+				E2B05A171DA4C01E0026DF8D /* SupermarketViewController.swift */,
+			);
+			name = SuperMarket;
+			sourceTree = "<group>";
+		};
+		E2B059F81DA492B50026DF8D /* LFBBase */ = {
+			isa = PBXGroup;
+			children = (
+				E2B059FC1DA493280026DF8D /* BaseViewController.swift */,
+				E2B059FE1DA493930026DF8D /* BaseNavigationController.swift */,
+				E2B05A001DA493C50026DF8D /* UpImageDownTextButton.swift */,
+				E2B05A021DA49D990026DF8D /* MainViewController.swift */,
+			);
+			name = LFBBase;
+			sourceTree = "<group>";
+		};
+		E2B059F91DA492BE0026DF8D /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				E2B05A0C1DA4A6540026DF8D /* MineHeadView.swift */,
+				E2B05A0D1DA4A6540026DF8D /* MineTabeHeadView.swift */,
+				E2B05A041DA4A1010026DF8D /* MineViewController.swift */,
+				E2B05A0A1DA4A6370026DF8D /* MineCell.swift */,
+			);
+			name = Mine;
+			sourceTree = "<group>";
+		};
+		E2B059FA1DA492C90026DF8D /* ShopCart */ = {
+			isa = PBXGroup;
+			children = (
+				E2B05A131DA4BFAB0026DF8D /* ShopCartViewController.swift */,
+			);
+			name = ShopCart;
+			sourceTree = "<group>";
+		};
+		E2B059FB1DA492D20026DF8D /* FreshReserve */ = {
+			isa = PBXGroup;
+			children = (
+				E2B05A151DA4BFE60026DF8D /* ScheduleViewController.swift */,
+			);
+			name = FreshReserve;
 			sourceTree = "<group>";
 		};
 		F3F3BF8B10FA5FFDE602C01B /* Pods */ = {
@@ -248,6 +348,7 @@
 					E22B15F91DA39B2B0077B4A8 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 8LP5KW6GHL;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -336,17 +437,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2B05A1A1DA4C0490026DF8D /* HomeViewController.swift in Sources */,
 				E2B059E51DA4906C0026DF8D /* RAMFumeAnimation.swift in Sources */,
 				E2B059E71DA4906C0026DF8D /* RAMTransitionItemAnimations.swift in Sources */,
 				E2B059E41DA4906C0026DF8D /* RAMFrameItemAnimation.swift in Sources */,
+				E2B05A0F1DA4A6540026DF8D /* MineTabeHeadView.swift in Sources */,
 				E2B059E31DA4906C0026DF8D /* RAMBounceAnimation.swift in Sources */,
 				E2B059EA1DA4906C0026DF8D /* RAMItemAnimationProtocol.swift in Sources */,
+				E2B05A011DA493C50026DF8D /* UpImageDownTextButton.swift in Sources */,
+				E2B05A161DA4BFE60026DF8D /* ScheduleViewController.swift in Sources */,
+				E2B059FD1DA493280026DF8D /* BaseViewController.swift in Sources */,
 				E2B059E91DA4906C0026DF8D /* RAMBadge.swift in Sources */,
-				E22B16001DA39B2C0077B4A8 /* ViewController.swift in Sources */,
+				E2B059EF1DA491890026DF8D /* UIView+Extension.swift in Sources */,
+				E2B059FF1DA493930026DF8D /* BaseNavigationController.swift in Sources */,
+				E2B05A181DA4C01E0026DF8D /* SupermarketViewController.swift in Sources */,
+				E2B05A0B1DA4A6370026DF8D /* MineCell.swift in Sources */,
 				E2B059E81DA4906C0026DF8D /* RAMAnimatedTabBarController.swift in Sources */,
+				E2B05A0E1DA4A6540026DF8D /* MineHeadView.swift in Sources */,
 				E22B15FE1DA39B2C0077B4A8 /* AppDelegate.swift in Sources */,
 				E2B059EC1DA490B20026DF8D /* Color+Extension.swift in Sources */,
+				E2B05A141DA4BFAB0026DF8D /* ShopCartViewController.swift in Sources */,
 				E2B059E61DA4906C0026DF8D /* RAMRotationAnimation.swift in Sources */,
+				E2B05A051DA4A1010026DF8D /* MineViewController.swift in Sources */,
+				E2B05A031DA49D990026DF8D /* MainViewController.swift in Sources */,
+				E2B059F11DA491B20026DF8D /* UIBarButtonItem+Extension.swift in Sources */,
+				E2B059F41DA4921D0026DF8D /* Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,11 +585,14 @@
 			baseConfigurationReference = 08F32452381760B8E967661D /* Pods-BeeQuick.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 8LP5KW6GHL;
 				INFOPLIST_FILE = BeeQuick/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = space.zhangwu.BeeQuick;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BeeQuick/BeeQuick-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -484,11 +602,13 @@
 			baseConfigurationReference = 7F8FE54073DEE97D18C042EB /* Pods-BeeQuick.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 8LP5KW6GHL;
 				INFOPLIST_FILE = BeeQuick/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = space.zhangwu.BeeQuick;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BeeQuick/BeeQuick-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
