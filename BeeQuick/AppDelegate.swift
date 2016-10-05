@@ -13,10 +13,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+// MARK:- public方法
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        setAppSubject()
+        
+//        let tabBarVC = MainTabBarController()
+//        window = UIWindow(frame: ScreenBounds)
+//        window!.rootViewController = tabBarVC
+//        window!.makeKeyAndVisible()
+        
         return true
+    }
+    
+// MARK:- privete方法
+    // MARK:主题设置
+    private func setAppSubject() {
+        let tabBarAppearance = UITabBar.appearance()
+        tabBarAppearance.backgroundColor = UIColor.white
+        
+        let navBarnAppearance = UINavigationBar.appearance()
+        navBarnAppearance.isTranslucent = false
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
