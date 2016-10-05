@@ -40,11 +40,11 @@ class MainTabBarController: RAMAnimatedTabBarController {
     
     // MARK: 初始化tabbar
     private func buildMainTabBarChildViewController() {
-//        tabBarControllerAddChildViewController(HomeViewController(), title: "首页", imageName: "v2_home", selectedImageName: "v2_home_r")
-//        tabBarControllerAddChildViewController(SupermarketViewController(), title: "闪电超市", imageName: "v2_order", selectedImageName: "v2_order_r")
-//        tabBarControllerAddChildViewController(ScheduleViewController(), title: "新鲜预定", imageName: "freshReservation", selectedImageName: "freshReservation_r")
-//        tabBarControllerAddChildViewController(ShopCartViewController(), title: "购物车", imageName: "shopCart", selectedImageName: "shopCart_r")
-//        tabBarControllerAddChildViewController(MineViewController(), title: "我的", imageName: "v2_my", selectedImageName: "v2_my_r")
+        tabBarControllerAddChildViewController(childView: HomeViewController(), title: "首页", imageName: "v2_home", selectedImageName: "v2_home_r")
+        tabBarControllerAddChildViewController(childView: SupermarketViewController(), title: "闪电超市", imageName: "v2_order", selectedImageName: "v2_order_r")
+        tabBarControllerAddChildViewController(childView: ScheduleViewController(), title: "新鲜预定", imageName: "freshReservation", selectedImageName: "freshReservation_r")
+        tabBarControllerAddChildViewController(childView: ShopCartViewController(), title: "购物车", imageName: "shopCart", selectedImageName: "shopCart_r")
+        tabBarControllerAddChildViewController(childView: MineViewController(), title: "我的", imageName: "v2_my", selectedImageName: "v2_my_r")
     }
     
     private func tabBarControllerAddChildViewController(childView: UIViewController, title: String, imageName: String, selectedImageName: String) {

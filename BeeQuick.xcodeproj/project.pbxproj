@@ -8,10 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		74DCFB49F48684611C4DF359 /* Pods_BeeQuick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B87ED703511EABF6910E6EB5 /* Pods_BeeQuick.framework */; };
+		E20C3DA21DA4E94C00CFB843 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E20C3DA11DA4E94C00CFB843 /* Default-568h@2x.png */; };
 		E22B15FE1DA39B2C0077B4A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22B15FD1DA39B2C0077B4A8 /* AppDelegate.swift */; };
-		E22B16031DA39B2C0077B4A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E22B16011DA39B2C0077B4A8 /* Main.storyboard */; };
 		E22B16051DA39B2C0077B4A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E22B16041DA39B2C0077B4A8 /* Assets.xcassets */; };
-		E22B16081DA39B2C0077B4A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E22B16061DA39B2C0077B4A8 /* LaunchScreen.storyboard */; };
 		E2B059E31DA4906C0026DF8D /* RAMBounceAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B059D61DA4906C0026DF8D /* RAMBounceAnimation.swift */; };
 		E2B059E41DA4906C0026DF8D /* RAMFrameItemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B059D81DA4906C0026DF8D /* RAMFrameItemAnimation.swift */; };
 		E2B059E51DA4906C0026DF8D /* RAMFumeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B059DA1DA4906C0026DF8D /* RAMFumeAnimation.swift */; };
@@ -42,11 +41,10 @@
 		08F32452381760B8E967661D /* Pods-BeeQuick.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeeQuick.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeeQuick/Pods-BeeQuick.debug.xcconfig"; sourceTree = "<group>"; };
 		7F8FE54073DEE97D18C042EB /* Pods-BeeQuick.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeeQuick.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeeQuick/Pods-BeeQuick.release.xcconfig"; sourceTree = "<group>"; };
 		B87ED703511EABF6910E6EB5 /* Pods_BeeQuick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeeQuick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E20C3DA11DA4E94C00CFB843 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		E22B15FA1DA39B2C0077B4A8 /* BeeQuick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeeQuick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E22B15FD1DA39B2C0077B4A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E22B16021DA39B2C0077B4A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E22B16041DA39B2C0077B4A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E22B16071DA39B2C0077B4A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E22B16091DA39B2C0077B4A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2B059D61DA4906C0026DF8D /* RAMBounceAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMBounceAnimation.swift; sourceTree = "<group>"; };
 		E2B059D81DA4906C0026DF8D /* RAMFrameItemAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMFrameItemAnimation.swift; sourceTree = "<group>"; };
@@ -90,6 +88,7 @@
 		E22B15F11DA39B2B0077B4A8 = {
 			isa = PBXGroup;
 			children = (
+				E20C3DA11DA4E94C00CFB843 /* Default-568h@2x.png */,
 				E22B15FC1DA39B2C0077B4A8 /* BeeQuick */,
 				E22B15FB1DA39B2C0077B4A8 /* Products */,
 				F3F3BF8B10FA5FFDE602C01B /* Pods */,
@@ -111,20 +110,10 @@
 				E22B15FD1DA39B2C0077B4A8 /* AppDelegate.swift */,
 				E2B05A101DA4A9D20026DF8D /* BeeQuick-Bridging-Header.h */,
 				E2B059B91DA490220026DF8D /* Class */,
-				E22B16011DA39B2C0077B4A8 /* Main.storyboard */,
 				E22B16041DA39B2C0077B4A8 /* Assets.xcassets */,
-				E22B16061DA39B2C0077B4A8 /* LaunchScreen.storyboard */,
 				E22B16091DA39B2C0077B4A8 /* Info.plist */,
-				E2B059B81DA48F390026DF8D /* Vender */,
 			);
 			path = BeeQuick;
-			sourceTree = "<group>";
-		};
-		E2B059B81DA48F390026DF8D /* Vender */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Vender;
 			sourceTree = "<group>";
 		};
 		E2B059B91DA490220026DF8D /* Class */ = {
@@ -376,9 +365,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E22B16081DA39B2C0077B4A8 /* LaunchScreen.storyboard in Resources */,
 				E22B16051DA39B2C0077B4A8 /* Assets.xcassets in Resources */,
-				E22B16031DA39B2C0077B4A8 /* Main.storyboard in Resources */,
+				E20C3DA21DA4E94C00CFB843 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,25 +454,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		E22B16011DA39B2C0077B4A8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E22B16021DA39B2C0077B4A8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		E22B16061DA39B2C0077B4A8 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E22B16071DA39B2C0077B4A8 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E22B160A1DA39B2C0077B4A8 /* Debug */ = {
