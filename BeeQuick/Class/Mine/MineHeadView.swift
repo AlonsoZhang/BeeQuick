@@ -59,7 +59,7 @@ class IconView: UIView {
         addSubview(iconImageView)
         
         phoneNum = UILabel()
-        phoneNum.text = "18612348765"
+        phoneNum.text = "15705170905"
         phoneNum.font = UIFont.boldSystemFont(ofSize: 18)
         phoneNum.textColor = UIColor.white
         phoneNum.textAlignment = .center

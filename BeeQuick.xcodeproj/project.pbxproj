@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		74DCFB49F48684611C4DF359 /* Pods_BeeQuick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B87ED703511EABF6910E6EB5 /* Pods_BeeQuick.framework */; };
-		E20C3DA21DA4E94C00CFB843 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E20C3DA11DA4E94C00CFB843 /* Default-568h@2x.png */; };
+		E22791051DA61C68006ABBB5 /* MinePlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = E22791041DA61C68006ABBB5 /* MinePlist.plist */; };
 		E22B15FE1DA39B2C0077B4A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22B15FD1DA39B2C0077B4A8 /* AppDelegate.swift */; };
 		E22B16051DA39B2C0077B4A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E22B16041DA39B2C0077B4A8 /* Assets.xcassets */; };
 		E25EFF2C1DA506FA0001F01C /* RAMBounceAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25EFF1F1DA506FA0001F01C /* RAMBounceAnimation.swift */; };
@@ -41,7 +41,7 @@
 		08F32452381760B8E967661D /* Pods-BeeQuick.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeeQuick.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeeQuick/Pods-BeeQuick.debug.xcconfig"; sourceTree = "<group>"; };
 		7F8FE54073DEE97D18C042EB /* Pods-BeeQuick.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeeQuick.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeeQuick/Pods-BeeQuick.release.xcconfig"; sourceTree = "<group>"; };
 		B87ED703511EABF6910E6EB5 /* Pods_BeeQuick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeeQuick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E20C3DA11DA4E94C00CFB843 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		E22791041DA61C68006ABBB5 /* MinePlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = MinePlist.plist; path = Class/Resouce/MinePlist.plist; sourceTree = "<group>"; };
 		E22B15FA1DA39B2C0077B4A8 /* BeeQuick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeeQuick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E22B15FD1DA39B2C0077B4A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E22B16041DA39B2C0077B4A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -85,10 +85,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E22791031DA61C24006ABBB5 /* Resouce */ = {
+			isa = PBXGroup;
+			children = (
+				E22791041DA61C68006ABBB5 /* MinePlist.plist */,
+			);
+			name = Resouce;
+			sourceTree = "<group>";
+		};
 		E22B15F11DA39B2B0077B4A8 = {
 			isa = PBXGroup;
 			children = (
-				E20C3DA11DA4E94C00CFB843 /* Default-568h@2x.png */,
 				E22B15FC1DA39B2C0077B4A8 /* BeeQuick */,
 				E22B15FB1DA39B2C0077B4A8 /* Products */,
 				F3F3BF8B10FA5FFDE602C01B /* Pods */,
@@ -190,6 +197,7 @@
 				E2B059F21DA491F20026DF8D /* Other */,
 				E2B059ED1DA490C90026DF8D /* Extension */,
 				E2B059BA1DA490380026DF8D /* Vender */,
+				E22791031DA61C24006ABBB5 /* Resouce */,
 			);
 			name = Class;
 			sourceTree = "<group>";
@@ -358,8 +366,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E22791051DA61C68006ABBB5 /* MinePlist.plist in Resources */,
 				E22B16051DA39B2C0077B4A8 /* Assets.xcassets in Resources */,
-				E20C3DA21DA4E94C00CFB843 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,6 +555,7 @@
 			baseConfigurationReference = 08F32452381760B8E967661D /* Pods-BeeQuick.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 8LP5KW6GHL;
 				INFOPLIST_FILE = BeeQuick/Info.plist;
@@ -564,6 +573,7 @@
 			baseConfigurationReference = 7F8FE54073DEE97D18C042EB /* Pods-BeeQuick.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 8LP5KW6GHL;
 				INFOPLIST_FILE = BeeQuick/Info.plist;
