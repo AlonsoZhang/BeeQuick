@@ -8,13 +8,13 @@
 
 import UIKit
 
-class MineViewController: BaseViewController,UITableViewDelegate, UITableViewDataSource{
+class MineViewController: BaseViewController{
 
     private var headView: MineHeadView!
     private var tableView: UITableView!
     private var headViewHeight: CGFloat = 150
     private var tableHeadView: MineTabeHeadView!
-    private lazy var mines: [MineCellModel] = {
+    fileprivate lazy var mines: [MineCellModel] = {
         let mines = MineCellModel.loadMineCellModels()
         return mines
     }()
@@ -52,6 +52,10 @@ class MineViewController: BaseViewController,UITableViewDelegate, UITableViewDat
         
         tableView.tableHeaderView = tableHeadView
     }
+}
+
+/// MARK:- UITableViewDataSource UITableViewDelegate
+extension MineViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         
@@ -107,10 +111,4 @@ class MineViewController: BaseViewController,UITableViewDelegate, UITableViewDat
             
         }
     }
-
 }
-
-///// MARK:- UITableViewDataSource UITableViewDelegate
-//extension MineViewController: UITableViewDelegate, UITableViewDataSource {
-//
-//    }

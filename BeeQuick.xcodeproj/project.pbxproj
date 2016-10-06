@@ -11,14 +11,6 @@
 		E22791051DA61C68006ABBB5 /* MinePlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = E22791041DA61C68006ABBB5 /* MinePlist.plist */; };
 		E22B15FE1DA39B2C0077B4A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22B15FD1DA39B2C0077B4A8 /* AppDelegate.swift */; };
 		E22B16051DA39B2C0077B4A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E22B16041DA39B2C0077B4A8 /* Assets.xcassets */; };
-		E25EFF2C1DA506FA0001F01C /* RAMBounceAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25EFF1F1DA506FA0001F01C /* RAMBounceAnimation.swift */; };
-		E25EFF2D1DA506FA0001F01C /* RAMFrameItemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25EFF211DA506FA0001F01C /* RAMFrameItemAnimation.swift */; };
-		E25EFF2E1DA506FA0001F01C /* RAMFumeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25EFF231DA506FA0001F01C /* RAMFumeAnimation.swift */; };
-		E25EFF2F1DA506FA0001F01C /* RAMRotationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25EFF251DA506FA0001F01C /* RAMRotationAnimation.swift */; };
-		E25EFF301DA506FA0001F01C /* RAMTransitionItemAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25EFF271DA506FA0001F01C /* RAMTransitionItemAnimations.swift */; };
-		E25EFF311DA506FA0001F01C /* RAMAnimatedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25EFF281DA506FA0001F01C /* RAMAnimatedTabBarController.swift */; };
-		E25EFF321DA506FA0001F01C /* RAMBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25EFF2A1DA506FA0001F01C /* RAMBadge.swift */; };
-		E25EFF331DA506FA0001F01C /* RAMItemAnimationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25EFF2B1DA506FA0001F01C /* RAMItemAnimationProtocol.swift */; };
 		E2B059EC1DA490B20026DF8D /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B059EB1DA490B20026DF8D /* Color+Extension.swift */; };
 		E2B059EF1DA491890026DF8D /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B059EE1DA491890026DF8D /* UIView+Extension.swift */; };
 		E2B059F11DA491B20026DF8D /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B059F01DA491B20026DF8D /* UIBarButtonItem+Extension.swift */; };
@@ -35,6 +27,16 @@
 		E2B05A161DA4BFE60026DF8D /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B05A151DA4BFE60026DF8D /* ScheduleViewController.swift */; };
 		E2B05A181DA4C01E0026DF8D /* SupermarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B05A171DA4C01E0026DF8D /* SupermarketViewController.swift */; };
 		E2B05A1A1DA4C0490026DF8D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B05A191DA4C0490026DF8D /* HomeViewController.swift */; };
+		E2FDF1981DA6340200B8A301 /* HomeTableHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FDF1971DA6340200B8A301 /* HomeTableHeadView.swift */; };
+		E2FDF19A1DA637AE00B8A301 /* PageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FDF1991DA637AE00B8A301 /* PageScrollView.swift */; };
+		E2FDF1AB1DA63FC800B8A301 /* RAMBounceAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FDF19E1DA63FC800B8A301 /* RAMBounceAnimation.swift */; };
+		E2FDF1AC1DA63FC800B8A301 /* RAMFrameItemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FDF1A01DA63FC800B8A301 /* RAMFrameItemAnimation.swift */; };
+		E2FDF1AD1DA63FC800B8A301 /* RAMFumeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FDF1A21DA63FC800B8A301 /* RAMFumeAnimation.swift */; };
+		E2FDF1AE1DA63FC800B8A301 /* RAMRotationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FDF1A41DA63FC800B8A301 /* RAMRotationAnimation.swift */; };
+		E2FDF1AF1DA63FC800B8A301 /* RAMTransitionItemAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FDF1A61DA63FC800B8A301 /* RAMTransitionItemAnimations.swift */; };
+		E2FDF1B11DA63FC800B8A301 /* RAMBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FDF1A91DA63FC800B8A301 /* RAMBadge.swift */; };
+		E2FDF1B21DA63FC800B8A301 /* RAMItemAnimationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FDF1AA1DA63FC800B8A301 /* RAMItemAnimationProtocol.swift */; };
+		E2FDF1B41DA6404F00B8A301 /* RAMAnimatedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FDF1B31DA6404F00B8A301 /* RAMAnimatedTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,14 +48,6 @@
 		E22B15FD1DA39B2C0077B4A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E22B16041DA39B2C0077B4A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E22B16091DA39B2C0077B4A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E25EFF1F1DA506FA0001F01C /* RAMBounceAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMBounceAnimation.swift; sourceTree = "<group>"; };
-		E25EFF211DA506FA0001F01C /* RAMFrameItemAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMFrameItemAnimation.swift; sourceTree = "<group>"; };
-		E25EFF231DA506FA0001F01C /* RAMFumeAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMFumeAnimation.swift; sourceTree = "<group>"; };
-		E25EFF251DA506FA0001F01C /* RAMRotationAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMRotationAnimation.swift; sourceTree = "<group>"; };
-		E25EFF271DA506FA0001F01C /* RAMTransitionItemAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMTransitionItemAnimations.swift; sourceTree = "<group>"; };
-		E25EFF281DA506FA0001F01C /* RAMAnimatedTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RAMAnimatedTabBarController.swift; path = "../../../Downloads/animated-tab-bar-master/RAMAnimatedTabBarController/RAMAnimatedTabBarController.swift"; sourceTree = "<group>"; };
-		E25EFF2A1DA506FA0001F01C /* RAMBadge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMBadge.swift; sourceTree = "<group>"; };
-		E25EFF2B1DA506FA0001F01C /* RAMItemAnimationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RAMItemAnimationProtocol.swift; path = "../../../Downloads/animated-tab-bar-master/RAMAnimatedTabBarController/RAMItemAnimationProtocol.swift"; sourceTree = "<group>"; };
 		E2B059EB1DA490B20026DF8D /* Color+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Color+Extension.swift"; path = "Class/Extension/Color+Extension.swift"; sourceTree = "<group>"; };
 		E2B059EE1DA491890026DF8D /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Extension.swift"; path = "Class/Extension/UIView+Extension.swift"; sourceTree = "<group>"; };
 		E2B059F01DA491B20026DF8D /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIBarButtonItem+Extension.swift"; path = "Class/Extension/UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
@@ -71,6 +65,16 @@
 		E2B05A151DA4BFE60026DF8D /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScheduleViewController.swift; path = Class/FreshReserve/ScheduleViewController.swift; sourceTree = "<group>"; };
 		E2B05A171DA4C01E0026DF8D /* SupermarketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SupermarketViewController.swift; path = Class/SuperMarket/SupermarketViewController.swift; sourceTree = "<group>"; };
 		E2B05A191DA4C0490026DF8D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Class/Home/HomeViewController.swift; sourceTree = "<group>"; };
+		E2FDF1971DA6340200B8A301 /* HomeTableHeadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeTableHeadView.swift; path = Class/Home/HomeTableHeadView.swift; sourceTree = "<group>"; };
+		E2FDF1991DA637AE00B8A301 /* PageScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageScrollView.swift; path = Class/LFBBase/PageScrollView.swift; sourceTree = "<group>"; };
+		E2FDF19E1DA63FC800B8A301 /* RAMBounceAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMBounceAnimation.swift; sourceTree = "<group>"; };
+		E2FDF1A01DA63FC800B8A301 /* RAMFrameItemAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMFrameItemAnimation.swift; sourceTree = "<group>"; };
+		E2FDF1A21DA63FC800B8A301 /* RAMFumeAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMFumeAnimation.swift; sourceTree = "<group>"; };
+		E2FDF1A41DA63FC800B8A301 /* RAMRotationAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMRotationAnimation.swift; sourceTree = "<group>"; };
+		E2FDF1A61DA63FC800B8A301 /* RAMTransitionItemAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMTransitionItemAnimations.swift; sourceTree = "<group>"; };
+		E2FDF1A91DA63FC800B8A301 /* RAMBadge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMBadge.swift; sourceTree = "<group>"; };
+		E2FDF1AA1DA63FC800B8A301 /* RAMItemAnimationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMItemAnimationProtocol.swift; sourceTree = "<group>"; };
+		E2FDF1B31DA6404F00B8A301 /* RAMAnimatedTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RAMAnimatedTabBarController.swift; path = Animations/RAMAnimatedTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,68 +127,6 @@
 			path = BeeQuick;
 			sourceTree = "<group>";
 		};
-		E25EFF1D1DA506FA0001F01C /* Animations */ = {
-			isa = PBXGroup;
-			children = (
-				E25EFF1E1DA506FA0001F01C /* BounceAnimation */,
-				E25EFF201DA506FA0001F01C /* FrameAnimation */,
-				E25EFF221DA506FA0001F01C /* FumeAnimation */,
-				E25EFF241DA506FA0001F01C /* RotationAnimation */,
-				E25EFF261DA506FA0001F01C /* TransitionAniamtions */,
-			);
-			name = Animations;
-			path = "../../../Downloads/animated-tab-bar-master/RAMAnimatedTabBarController/Animations";
-			sourceTree = "<group>";
-		};
-		E25EFF1E1DA506FA0001F01C /* BounceAnimation */ = {
-			isa = PBXGroup;
-			children = (
-				E25EFF1F1DA506FA0001F01C /* RAMBounceAnimation.swift */,
-			);
-			path = BounceAnimation;
-			sourceTree = "<group>";
-		};
-		E25EFF201DA506FA0001F01C /* FrameAnimation */ = {
-			isa = PBXGroup;
-			children = (
-				E25EFF211DA506FA0001F01C /* RAMFrameItemAnimation.swift */,
-			);
-			path = FrameAnimation;
-			sourceTree = "<group>";
-		};
-		E25EFF221DA506FA0001F01C /* FumeAnimation */ = {
-			isa = PBXGroup;
-			children = (
-				E25EFF231DA506FA0001F01C /* RAMFumeAnimation.swift */,
-			);
-			path = FumeAnimation;
-			sourceTree = "<group>";
-		};
-		E25EFF241DA506FA0001F01C /* RotationAnimation */ = {
-			isa = PBXGroup;
-			children = (
-				E25EFF251DA506FA0001F01C /* RAMRotationAnimation.swift */,
-			);
-			path = RotationAnimation;
-			sourceTree = "<group>";
-		};
-		E25EFF261DA506FA0001F01C /* TransitionAniamtions */ = {
-			isa = PBXGroup;
-			children = (
-				E25EFF271DA506FA0001F01C /* RAMTransitionItemAnimations.swift */,
-			);
-			path = TransitionAniamtions;
-			sourceTree = "<group>";
-		};
-		E25EFF291DA506FA0001F01C /* RAMBadge */ = {
-			isa = PBXGroup;
-			children = (
-				E25EFF2A1DA506FA0001F01C /* RAMBadge.swift */,
-			);
-			name = RAMBadge;
-			path = "../../../Downloads/animated-tab-bar-master/RAMAnimatedTabBarController/RAMBadge";
-			sourceTree = "<group>";
-		};
 		E2B059B91DA490220026DF8D /* Class */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,10 +147,7 @@
 		E2B059BA1DA490380026DF8D /* Vender */ = {
 			isa = PBXGroup;
 			children = (
-				E25EFF1D1DA506FA0001F01C /* Animations */,
-				E25EFF281DA506FA0001F01C /* RAMAnimatedTabBarController.swift */,
-				E25EFF291DA506FA0001F01C /* RAMBadge */,
-				E25EFF2B1DA506FA0001F01C /* RAMItemAnimationProtocol.swift */,
+				E2FDF19B1DA63FC800B8A301 /* RAMAnimatedTabBarController */,
 			);
 			name = Vender;
 			sourceTree = "<group>";
@@ -235,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				E2B05A191DA4C0490026DF8D /* HomeViewController.swift */,
+				E2FDF1971DA6340200B8A301 /* HomeTableHeadView.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -254,6 +194,7 @@
 				E2B059FE1DA493930026DF8D /* BaseNavigationController.swift */,
 				E2B05A001DA493C50026DF8D /* UpImageDownTextButton.swift */,
 				E2B05A021DA49D990026DF8D /* MainViewController.swift */,
+				E2FDF1991DA637AE00B8A301 /* PageScrollView.swift */,
 			);
 			name = LFBBase;
 			sourceTree = "<group>";
@@ -283,6 +224,77 @@
 				E2B05A151DA4BFE60026DF8D /* ScheduleViewController.swift */,
 			);
 			name = FreshReserve;
+			sourceTree = "<group>";
+		};
+		E2FDF19B1DA63FC800B8A301 /* RAMAnimatedTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				E2FDF19C1DA63FC800B8A301 /* Animations */,
+				E2FDF1A81DA63FC800B8A301 /* RAMBadge */,
+				E2FDF1AA1DA63FC800B8A301 /* RAMItemAnimationProtocol.swift */,
+				E2FDF1B31DA6404F00B8A301 /* RAMAnimatedTabBarController.swift */,
+			);
+			path = RAMAnimatedTabBarController;
+			sourceTree = "<group>";
+		};
+		E2FDF19C1DA63FC800B8A301 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				E2FDF19D1DA63FC800B8A301 /* BounceAnimation */,
+				E2FDF19F1DA63FC800B8A301 /* FrameAnimation */,
+				E2FDF1A11DA63FC800B8A301 /* FumeAnimation */,
+				E2FDF1A31DA63FC800B8A301 /* RotationAnimation */,
+				E2FDF1A51DA63FC800B8A301 /* TransitionAniamtions */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		E2FDF19D1DA63FC800B8A301 /* BounceAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				E2FDF19E1DA63FC800B8A301 /* RAMBounceAnimation.swift */,
+			);
+			path = BounceAnimation;
+			sourceTree = "<group>";
+		};
+		E2FDF19F1DA63FC800B8A301 /* FrameAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				E2FDF1A01DA63FC800B8A301 /* RAMFrameItemAnimation.swift */,
+			);
+			path = FrameAnimation;
+			sourceTree = "<group>";
+		};
+		E2FDF1A11DA63FC800B8A301 /* FumeAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				E2FDF1A21DA63FC800B8A301 /* RAMFumeAnimation.swift */,
+			);
+			path = FumeAnimation;
+			sourceTree = "<group>";
+		};
+		E2FDF1A31DA63FC800B8A301 /* RotationAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				E2FDF1A41DA63FC800B8A301 /* RAMRotationAnimation.swift */,
+			);
+			path = RotationAnimation;
+			sourceTree = "<group>";
+		};
+		E2FDF1A51DA63FC800B8A301 /* TransitionAniamtions */ = {
+			isa = PBXGroup;
+			children = (
+				E2FDF1A61DA63FC800B8A301 /* RAMTransitionItemAnimations.swift */,
+			);
+			path = TransitionAniamtions;
+			sourceTree = "<group>";
+		};
+		E2FDF1A81DA63FC800B8A301 /* RAMBadge */ = {
+			isa = PBXGroup;
+			children = (
+				E2FDF1A91DA63FC800B8A301 /* RAMBadge.swift */,
+			);
+			path = RAMBadge;
 			sourceTree = "<group>";
 		};
 		F3F3BF8B10FA5FFDE602C01B /* Pods */ = {
@@ -427,30 +439,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2B05A1A1DA4C0490026DF8D /* HomeViewController.swift in Sources */,
-				E25EFF311DA506FA0001F01C /* RAMAnimatedTabBarController.swift in Sources */,
+				E2FDF1B41DA6404F00B8A301 /* RAMAnimatedTabBarController.swift in Sources */,
 				E2B05A0F1DA4A6540026DF8D /* MineTabeHeadView.swift in Sources */,
 				E2B05A011DA493C50026DF8D /* UpImageDownTextButton.swift in Sources */,
-				E25EFF331DA506FA0001F01C /* RAMItemAnimationProtocol.swift in Sources */,
-				E25EFF321DA506FA0001F01C /* RAMBadge.swift in Sources */,
 				E2B05A161DA4BFE60026DF8D /* ScheduleViewController.swift in Sources */,
+				E2FDF1AC1DA63FC800B8A301 /* RAMFrameItemAnimation.swift in Sources */,
+				E2FDF19A1DA637AE00B8A301 /* PageScrollView.swift in Sources */,
 				E2B059FD1DA493280026DF8D /* BaseViewController.swift in Sources */,
 				E2B059EF1DA491890026DF8D /* UIView+Extension.swift in Sources */,
+				E2FDF1AB1DA63FC800B8A301 /* RAMBounceAnimation.swift in Sources */,
 				E2B059FF1DA493930026DF8D /* BaseNavigationController.swift in Sources */,
 				E2B05A181DA4C01E0026DF8D /* SupermarketViewController.swift in Sources */,
+				E2FDF1AF1DA63FC800B8A301 /* RAMTransitionItemAnimations.swift in Sources */,
 				E2B05A0B1DA4A6370026DF8D /* MineCell.swift in Sources */,
-				E25EFF2C1DA506FA0001F01C /* RAMBounceAnimation.swift in Sources */,
-				E25EFF2E1DA506FA0001F01C /* RAMFumeAnimation.swift in Sources */,
+				E2FDF1981DA6340200B8A301 /* HomeTableHeadView.swift in Sources */,
 				E2B05A0E1DA4A6540026DF8D /* MineHeadView.swift in Sources */,
 				E22B15FE1DA39B2C0077B4A8 /* AppDelegate.swift in Sources */,
 				E2B059EC1DA490B20026DF8D /* Color+Extension.swift in Sources */,
 				E2B05A141DA4BFAB0026DF8D /* ShopCartViewController.swift in Sources */,
 				E2B05A051DA4A1010026DF8D /* MineViewController.swift in Sources */,
+				E2FDF1B21DA63FC800B8A301 /* RAMItemAnimationProtocol.swift in Sources */,
 				E2B05A031DA49D990026DF8D /* MainViewController.swift in Sources */,
-				E25EFF2F1DA506FA0001F01C /* RAMRotationAnimation.swift in Sources */,
 				E2B059F11DA491B20026DF8D /* UIBarButtonItem+Extension.swift in Sources */,
-				E25EFF2D1DA506FA0001F01C /* RAMFrameItemAnimation.swift in Sources */,
+				E2FDF1B11DA63FC800B8A301 /* RAMBadge.swift in Sources */,
+				E2FDF1AD1DA63FC800B8A301 /* RAMFumeAnimation.swift in Sources */,
 				E2B059F41DA4921D0026DF8D /* Theme.swift in Sources */,
-				E25EFF301DA506FA0001F01C /* RAMTransitionItemAnimations.swift in Sources */,
+				E2FDF1AE1DA63FC800B8A301 /* RAMRotationAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

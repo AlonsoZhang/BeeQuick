@@ -10,13 +10,18 @@ import UIKit
 
 class HomeViewController: BaseViewController {
 
+    var headView: HomeTableHeadView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         buildNavigationItem()
         
+        buildTableHeadView()
+        
     }
     
+// MARK:- Creat UI
     func buildNavigationItem() {
         navigationController?.navigationBar.barTintColor = LFBNavigationYellowColor
         
@@ -27,6 +32,12 @@ class HomeViewController: BaseViewController {
                                                                       image: UIImage(named: "icon_search")!,hightLightImage: nil,
                                                                       target: self, action: #selector(HomeViewController.rightItemClick), type: ItemButtonType.Right)
     }
+    
+    func buildTableHeadView() {
+        headView = HomeTableHeadView(frame: CGRect(x:0, y:0, width:ScreenWidth, height:150))
+        view.addSubview(headView!)
+    }
+    
     // MARK:- action
     func leftItemClick() {
         print("左")
