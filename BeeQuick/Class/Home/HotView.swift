@@ -44,7 +44,7 @@ class HotView: UIView {
                 for i in 0..<headData!.icons!.count {
                     iconX = CGFloat(i % 4) * iconW + HotViewMargin
                     iconY = iconH * CGFloat(i / 4)
-                    let icon = IconImageTextView(frame: CGRectMake(iconX, iconY, iconW, iconH), placeholderImage: UIImage(named: "icon_icons_holder")!)
+                    let icon = IconImageTextView(frame: CGRect(x:iconX, y:iconY, width:iconW, height:iconH), placeholderImage: UIImage(named: "icon_icons_holder")!)
                     icon.tag = i
                     icon.activitie = headData!.icons![i]
                     let tap = UITapGestureRecognizer(target: self, action: "iconClick:")
@@ -57,14 +57,14 @@ class HotView: UIView {
     // MARK: rows数量
     private var rows: Int = 0 {
         willSet {
-            bounds = CGRectMake(0, 0, ScreenWidth, iconH * CGFloat(newValue))
+            bounds = CGRect(x:0, y:0, width:ScreenWidth, height:iconH * CGFloat(newValue))
         }
     }
     
     // MARK:- Action
     func iconClick(tap: UITapGestureRecognizer) {
         if iconClick != nil {
-            iconClick!(index: tap.view!.tag)
+            iconClick!(tap.view!.tag)
         }
     }
 }

@@ -15,8 +15,8 @@ class HomeTableHeadView: UIView {
     weak var delegate: HomeTableHeadViewDelegate?
     var tableHeadViewHeight: CGFloat = 0 {
         willSet {
-            NSNotificationCenter.defaultCenter().postNotificationName(HomeTableHeadViewHeightDidChange, object: newValue)
-            frame = CGRectMake(0, -newValue, ScreenWidth, newValue)
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: HomeTableHeadViewHeightDidChange), object: newValue)
+            frame = CGRect(x:0, y:-newValue, width:ScreenWidth, height:newValue)
         }
     }
 
@@ -58,7 +58,7 @@ class HomeTableHeadView: UIView {
                 tmpSelf?.delegate?.tableHeadView!(headView: tmpSelf!, focusImageViewClick: index)
             }
         })
-        hotView?.backgroundColor = UIColor.yellowColor()
+        hotView?.backgroundColor = UIColor.yellow
         addSubview(hotView!)
     }
     
@@ -66,11 +66,11 @@ class HomeTableHeadView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        pageScrollView?.frame = CGRectMake(0, 0, ScreenWidth, ScreenWidth * 0.31)
+        pageScrollView?.frame = CGRect(x:0, y:0, width:ScreenWidth, height:ScreenWidth * 0.31)
         
-        hotView?.frame.origin = CGPointMake(0, CGRectGetMaxY((pageScrollView?.frame)!))
+        hotView?.frame.origin = CGPoint(x:0, y:(pageScrollView?.frame)!.maxY)
         
-        tableHeadViewHeight = CGRectGetMaxY(hotView!.frame)
+        tableHeadViewHeight = hotView!.frame.maxY
     }
 }
 

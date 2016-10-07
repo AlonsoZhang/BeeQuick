@@ -27,24 +27,24 @@ class HomeViewController: BaseViewController {
     }
     
     deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
     }
     
     // MARK:- addNotifiation
     func addHomeNotification() {
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "homeTableHeadViewHeightDidChange:", name: HomeTableHeadViewHeightDidChange, object: nil)
+        NotificationCenter.default.addObserver(self, selector: Selector(("homeTableHeadViewHeightDidChange:")), name: NSNotification.Name(rawValue: HomeTableHeadViewHeightDidChange), object: nil)
     }
     
     // MARK:- Creat UI
     func buildNavigationItem() {
         navigationController?.navigationBar.barTintColor = LFBNavigationYellowColor
         
-        navigationItem.leftBarButtonItem = UIBarButtonItem.barButton("扫一扫", titleColor: UIColor.blackColor(),
+        navigationItem.leftBarButtonItem = UIBarButtonItem.barButton(title: "扫一扫", titleColor: UIColor.black,
                                                                      image: UIImage(named: "icon_black_scancode")!, hightLightImage: nil,
-                                                                     target: self, action: "leftItemClick", type: ItemButtonType.Left)
-        navigationItem.rightBarButtonItem = UIBarButtonItem.barButton("搜 索", titleColor: UIColor.blackColor(),
+                                                                     target: self, action: #selector(HomeViewController.leftItemClick), type: ItemButtonType.Left)
+        navigationItem.rightBarButtonItem = UIBarButtonItem.barButton(title: "搜 索", titleColor: UIColor.black,
                                                                       image: UIImage(named: "icon_search")!,hightLightImage: nil,
-                                                                      target: self, action: "rightItemClick", type: ItemButtonType.Right)
+                                                                      target: self, action: #selector(HomeViewController.rightItemClick), type: ItemButtonType.Right)
     }
     
     func buildTableHeadView() {
@@ -65,12 +65,12 @@ class HomeViewController: BaseViewController {
         layout.minimumInteritemSpacing = 5
         layout.minimumLineSpacing = 8
         layout.sectionInset = UIEdgeInsets(top: 0, left: HomeCollectionViewCellMargin, bottom: 0, right: HomeCollectionViewCellMargin)
-        layout.headerReferenceSize = CGSizeMake(0, HomeCollectionViewCellMargin)
+        layout.headerReferenceSize = CGSize(width:0, height:HomeCollectionViewCellMargin)
         
-        collectionView = UICollectionView(frame: CGRectMake(0, 0, ScreenWidth, ScreenHeight - NavigationH), collectionViewLayout: layout)
+        collectionView = UICollectionView(frame: CGRect(x:0, y:0, width:ScreenWidth, height:ScreenHeight - NavigationH), collectionViewLayout: layout)
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.registerClass(HomeCell.self, forCellWithReuseIdentifier: "Cell")
+        collectionView.register(HomeCell.self, forCellWithReuseIdentifier: "Cell")
         view.addSubview(collectionView)
     }
     
@@ -106,7 +106,7 @@ extension HomeViewController: HomeTableHeadViewDelegate {
 // MARK:- UICollectionViewDelegate UICollectionViewDataSource
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 0 {
             return 6
         } else if section == 1 {
@@ -116,50 +116,50 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         return 0
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath)
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath as IndexPath)
         
         cell.contentView.backgroundColor = UIColor.randomColor()
         return cell
     }
     
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    private func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 2
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        var itemSize = CGSizeZero
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        var itemSize = CGSize.zero
         if indexPath.section == 0 {
-            itemSize = CGSizeMake(ScreenWidth - HomeCollectionViewCellMargin * 2, 140)
+            itemSize = CGSize(width:ScreenWidth - HomeCollectionViewCellMargin * 2, height:140)
         } else if indexPath.section == 1 {
-            itemSize = CGSizeMake((ScreenWidth - HomeCollectionViewCellMargin * 2) * 0.5 - 4, 250)
+            itemSize = CGSize(width:(ScreenWidth - HomeCollectionViewCellMargin * 2) * 0.5 - 4, height:250)
         }
         
         return itemSize
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         if section == 0 {
-            return CGSizeMake(ScreenWidth, HomeCollectionViewCellMargin)
+            return CGSize(width:ScreenWidth, height:HomeCollectionViewCellMargin)
         } else if section == 1 {
-            return CGSizeMake(ScreenWidth, HomeCollectionViewCellMargin * 2)
+            return CGSize(width:ScreenWidth, height:HomeCollectionViewCellMargin * 2)
         }
         
-        return CGSizeZero
+        return CGSize.zero
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
         if section == 0 {
-            return CGSizeMake(ScreenWidth, HomeCollectionViewCellMargin)
+            return CGSize(width:ScreenWidth, height:HomeCollectionViewCellMargin)
         } else if section == 1 {
-            return CGSizeMake(ScreenWidth, HomeCollectionViewCellMargin * 8)
+            return CGSize(width:ScreenWidth, height:HomeCollectionViewCellMargin * 8)
         }
         
-        return CGSizeZero
+        return CGSize.zero
     }
     
     
-    func collectionView(collectionView: UICollectionView, willDisplayCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath) {
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if lastContentOffsetY <= collectionView.contentOffset.y {
             
             //Animation
