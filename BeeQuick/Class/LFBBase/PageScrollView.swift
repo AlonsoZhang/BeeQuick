@@ -15,7 +15,7 @@ class PageScrollView: UIView {
     fileprivate var pageControl: UIPageControl!
     private var timer: Timer?
     private var placeholderImage: UIImage?
-    private var imageClick:((_ index: Int) -> ())?
+    fileprivate var imageClick:((_ index: Int) -> ())?
     
     var imageURLSting: [String]? {
         didSet {
@@ -37,9 +37,10 @@ class PageScrollView: UIView {
         
     }
     
-    convenience init(frame: CGRect, placeholder: UIImage, focusImageViewClick:((_ index: Int) -> Void)) {
+    convenience init(frame: CGRect, placeholder: UIImage, focusImageViewClick:@escaping ((_ index: Int) -> Void)) {
         self.init(frame: frame)
         placeholderImage = placeholder
+        imageClick = focusImageViewClick
     }
     
     required init?(coder aDecoder: NSCoder) {
