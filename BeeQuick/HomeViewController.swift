@@ -35,15 +35,26 @@ class HomeViewController: BaseViewController {
     
     func buildTableHeadView() {
         headView = HomeTableHeadView(frame: CGRect(x:0, y:0, width:ScreenWidth, height:150))
+        headView?.delegate = self
         view.addSubview(headView!)
     }
     
-    // MARK:- action
+    // MARK:- Action
+    // MARK: 扫一扫和搜索Action
     func leftItemClick() {
         print("左")
     }
     
     func rightItemClick() {
         print("右")
+    }
+    
+    // MARK: TableHeadViewAction
+}
+
+// MARK:- HomeHeadViewDelegate
+extension HomeViewController: HomeTableHeadViewDelegate {
+    func tableHeadView(headView: HomeTableHeadView, focusImageViewClick index: Int) {
+        print(index)
     }
 }

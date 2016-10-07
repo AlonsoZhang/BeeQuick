@@ -15,6 +15,7 @@ class PageScrollView: UIView {
     fileprivate var pageControl: UIPageControl!
     private var timer: Timer?
     private var placeholderImage: UIImage?
+    private var imageClick:((_ index: Int) -> ())?
     
     var imageURLSting: [String]? {
         didSet {
@@ -36,7 +37,7 @@ class PageScrollView: UIView {
         
     }
     
-    convenience init(frame: CGRect, placeholder: UIImage) {
+    convenience init(frame: CGRect, placeholder: UIImage, focusImageViewClick:((_ index: Int) -> Void)) {
         self.init(frame: frame)
         placeholderImage = placeholder
     }
@@ -115,7 +116,7 @@ class PageScrollView: UIView {
     }
     // MARK: Timer
     fileprivate func startTimer() {
-        timer = Timer(timeInterval: 2.0, target: self, selector: #selector(PageScrollView.next as (PageScrollView) -> () -> ()), userInfo: nil, repeats: true)
+        timer = Timer(timeInterval: 3.0, target: self, selector: #selector(PageScrollView.next as (PageScrollView) -> () -> ()), userInfo: nil, repeats: true)
         RunLoop.main.add(timer!, forMode: RunLoopMode.commonModes)
     }
     
@@ -130,7 +131,9 @@ class PageScrollView: UIView {
     
     // MARK: ACTION
     func imageViewClick(tap: UITapGestureRecognizer) {
-        print(tap.view!.tag)
+        if imageClick != nil {
+            imageClick!(tap.view!.tag)
+        }
     }
     
 }
