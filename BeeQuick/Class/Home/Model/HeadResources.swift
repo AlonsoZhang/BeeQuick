@@ -44,11 +44,11 @@ class HeadData: NSObject, DictModelProtocol {
 
 
 class Activities: NSObject {
-    var id: Int = -1
+    var id: String?
     var name: String?
     var img: String?
     var topimg: String?
-    var jptype: Int = -1
+    var jptype: String?
     var trackid: String?
     var mimg: String?
 }

@@ -11,10 +11,17 @@
 		E22791051DA61C68006ABBB5 /* MinePlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = E22791041DA61C68006ABBB5 /* MinePlist.plist */; };
 		E22B15FE1DA39B2C0077B4A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22B15FD1DA39B2C0077B4A8 /* AppDelegate.swift */; };
 		E22B16051DA39B2C0077B4A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E22B16041DA39B2C0077B4A8 /* Assets.xcassets */; };
-		E27E612E1DA7822D003FE234 /* HomeTableHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27E612B1DA7822D003FE234 /* HomeTableHeadView.swift */; };
-		E27E612F1DA7822D003FE234 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27E612C1DA7822D003FE234 /* HomeViewController.swift */; };
-		E27E61301DA7822D003FE234 /* HotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27E612D1DA7822D003FE234 /* HotView.swift */; };
-		E27E61321DA78238003FE234 /* HeadResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27E61311DA78238003FE234 /* HeadResources.swift */; };
+		E276AE961DA7E9C50020E773 /* HomeTableHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E276AE931DA7E9C50020E773 /* HomeTableHeadView.swift */; };
+		E276AE971DA7E9C50020E773 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E276AE941DA7E9C50020E773 /* HomeViewController.swift */; };
+		E276AE981DA7E9C50020E773 /* HotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E276AE951DA7E9C50020E773 /* HotView.swift */; };
+		E276AE9A1DA7E9D70020E773 /* HeadResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = E276AE991DA7E9D70020E773 /* HeadResources.swift */; };
+		E276AE9C1DA7EA790020E773 /* FreshHot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E276AE9B1DA7EA790020E773 /* FreshHot.swift */; };
+		E276AE9E1DA7EAD50020E773 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E276AE9D1DA7EAD50020E773 /* HomeCell.swift */; };
+		E276AEA01DA7EEA90020E773 /* IconImageTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E276AE9F1DA7EEA90020E773 /* IconImageTextView.swift */; };
+		E276AEA51DA7EF3F0020E773 /* 促销 in Resources */ = {isa = PBXBuildFile; fileRef = E276AEA11DA7EF3F0020E773 /* 促销 */; };
+		E276AEA61DA7EF3F0020E773 /* 首页焦点按钮 in Resources */ = {isa = PBXBuildFile; fileRef = E276AEA21DA7EF3F0020E773 /* 首页焦点按钮 */; };
+		E276AEA71DA7EF3F0020E773 /* 首页新鲜热卖 in Resources */ = {isa = PBXBuildFile; fileRef = E276AEA31DA7EF3F0020E773 /* 首页新鲜热卖 */; };
+		E276AEA81DA7EF400020E773 /* AD in Resources */ = {isa = PBXBuildFile; fileRef = E276AEA41DA7EF3F0020E773 /* AD */; };
 		E27E61351DA78266003FE234 /* SwiftDictModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27E61341DA78266003FE234 /* SwiftDictModel.swift */; };
 		E2B059EC1DA490B20026DF8D /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B059EB1DA490B20026DF8D /* Color+Extension.swift */; };
 		E2B059EF1DA491890026DF8D /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B059EE1DA491890026DF8D /* UIView+Extension.swift */; };
@@ -51,10 +58,17 @@
 		E22B15FD1DA39B2C0077B4A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E22B16041DA39B2C0077B4A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E22B16091DA39B2C0077B4A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E27E612B1DA7822D003FE234 /* HomeTableHeadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableHeadView.swift; sourceTree = "<group>"; };
-		E27E612C1DA7822D003FE234 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		E27E612D1DA7822D003FE234 /* HotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotView.swift; sourceTree = "<group>"; };
-		E27E61311DA78238003FE234 /* HeadResources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadResources.swift; sourceTree = "<group>"; };
+		E276AE931DA7E9C50020E773 /* HomeTableHeadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeTableHeadView.swift; path = Class/Home/HomeTableHeadView.swift; sourceTree = "<group>"; };
+		E276AE941DA7E9C50020E773 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Class/Home/HomeViewController.swift; sourceTree = "<group>"; };
+		E276AE951DA7E9C50020E773 /* HotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HotView.swift; path = Class/Home/HotView.swift; sourceTree = "<group>"; };
+		E276AE991DA7E9D70020E773 /* HeadResources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeadResources.swift; path = Class/Home/Model/HeadResources.swift; sourceTree = "<group>"; };
+		E276AE9B1DA7EA790020E773 /* FreshHot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FreshHot.swift; path = Class/Home/Model/FreshHot.swift; sourceTree = "<group>"; };
+		E276AE9D1DA7EAD50020E773 /* HomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeCell.swift; path = Class/Home/HomeCell.swift; sourceTree = "<group>"; };
+		E276AE9F1DA7EEA90020E773 /* IconImageTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IconImageTextView.swift; path = Class/Home/IconImageTextView.swift; sourceTree = "<group>"; };
+		E276AEA11DA7EF3F0020E773 /* 促销 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "促销"; path = "Class/Resouce/促销"; sourceTree = "<group>"; };
+		E276AEA21DA7EF3F0020E773 /* 首页焦点按钮 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "首页焦点按钮"; path = "Class/Resouce/首页焦点按钮"; sourceTree = "<group>"; };
+		E276AEA31DA7EF3F0020E773 /* 首页新鲜热卖 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "首页新鲜热卖"; path = "Class/Resouce/首页新鲜热卖"; sourceTree = "<group>"; };
+		E276AEA41DA7EF3F0020E773 /* AD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = AD; path = Class/Resouce/AD; sourceTree = "<group>"; };
 		E27E61341DA78266003FE234 /* SwiftDictModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftDictModel.swift; path = Class/Tools/SwiftDictModel.swift; sourceTree = "<group>"; };
 		E2B059EB1DA490B20026DF8D /* Color+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Color+Extension.swift"; path = "Class/Extension/Color+Extension.swift"; sourceTree = "<group>"; };
 		E2B059EE1DA491890026DF8D /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Extension.swift"; path = "Class/Extension/UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -98,6 +112,10 @@
 		E22791031DA61C24006ABBB5 /* Resouce */ = {
 			isa = PBXGroup;
 			children = (
+				E276AEA11DA7EF3F0020E773 /* 促销 */,
+				E276AEA21DA7EF3F0020E773 /* 首页焦点按钮 */,
+				E276AEA31DA7EF3F0020E773 /* 首页新鲜热卖 */,
+				E276AEA41DA7EF3F0020E773 /* AD */,
 				E22791041DA61C68006ABBB5 /* MinePlist.plist */,
 			);
 			name = Resouce;
@@ -136,7 +154,8 @@
 		E27E61201DA780C7003FE234 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E27E61311DA78238003FE234 /* HeadResources.swift */,
+				E276AE991DA7E9D70020E773 /* HeadResources.swift */,
+				E276AE9B1DA7EA790020E773 /* FreshHot.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -196,9 +215,11 @@
 		E2B059F51DA492900026DF8D /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				E27E612B1DA7822D003FE234 /* HomeTableHeadView.swift */,
-				E27E612C1DA7822D003FE234 /* HomeViewController.swift */,
-				E27E612D1DA7822D003FE234 /* HotView.swift */,
+				E276AE931DA7E9C50020E773 /* HomeTableHeadView.swift */,
+				E276AE941DA7E9C50020E773 /* HomeViewController.swift */,
+				E276AE951DA7E9C50020E773 /* HotView.swift */,
+				E276AE9F1DA7EEA90020E773 /* IconImageTextView.swift */,
+				E276AE9D1DA7EAD50020E773 /* HomeCell.swift */,
 				E27E61201DA780C7003FE234 /* Model */,
 			);
 			name = Home;
@@ -403,8 +424,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E276AEA71DA7EF3F0020E773 /* 首页新鲜热卖 in Resources */,
+				E276AEA81DA7EF400020E773 /* AD in Resources */,
+				E276AEA51DA7EF3F0020E773 /* 促销 in Resources */,
 				E22791051DA61C68006ABBB5 /* MinePlist.plist in Resources */,
 				E22B16051DA39B2C0077B4A8 /* Assets.xcassets in Resources */,
+				E276AEA61DA7EF3F0020E773 /* 首页焦点按钮 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,11 +492,8 @@
 				E2B05A0F1DA4A6540026DF8D /* MineTabeHeadView.swift in Sources */,
 				E2B05A011DA493C50026DF8D /* UpImageDownTextButton.swift in Sources */,
 				E2B05A161DA4BFE60026DF8D /* ScheduleViewController.swift in Sources */,
-				E27E612F1DA7822D003FE234 /* HomeViewController.swift in Sources */,
-				E27E61321DA78238003FE234 /* HeadResources.swift in Sources */,
 				E2FDF1AC1DA63FC800B8A301 /* RAMFrameItemAnimation.swift in Sources */,
 				E2FDF19A1DA637AE00B8A301 /* PageScrollView.swift in Sources */,
-				E27E612E1DA7822D003FE234 /* HomeTableHeadView.swift in Sources */,
 				E2B059FD1DA493280026DF8D /* BaseViewController.swift in Sources */,
 				E2B059EF1DA491890026DF8D /* UIView+Extension.swift in Sources */,
 				E2FDF1AB1DA63FC800B8A301 /* RAMBounceAnimation.swift in Sources */,
@@ -481,18 +503,24 @@
 				E2B05A0B1DA4A6370026DF8D /* MineCell.swift in Sources */,
 				E2B05A0E1DA4A6540026DF8D /* MineHeadView.swift in Sources */,
 				E27E61351DA78266003FE234 /* SwiftDictModel.swift in Sources */,
-				E27E61301DA7822D003FE234 /* HotView.swift in Sources */,
 				E22B15FE1DA39B2C0077B4A8 /* AppDelegate.swift in Sources */,
 				E2B059EC1DA490B20026DF8D /* Color+Extension.swift in Sources */,
 				E2B05A141DA4BFAB0026DF8D /* ShopCartViewController.swift in Sources */,
+				E276AE9E1DA7EAD50020E773 /* HomeCell.swift in Sources */,
 				E2B05A051DA4A1010026DF8D /* MineViewController.swift in Sources */,
 				E2FDF1B21DA63FC800B8A301 /* RAMItemAnimationProtocol.swift in Sources */,
 				E2B05A031DA49D990026DF8D /* MainViewController.swift in Sources */,
 				E2B059F11DA491B20026DF8D /* UIBarButtonItem+Extension.swift in Sources */,
 				E2FDF1B11DA63FC800B8A301 /* RAMBadge.swift in Sources */,
+				E276AE971DA7E9C50020E773 /* HomeViewController.swift in Sources */,
 				E2FDF1AD1DA63FC800B8A301 /* RAMFumeAnimation.swift in Sources */,
 				E2B059F41DA4921D0026DF8D /* Theme.swift in Sources */,
 				E2FDF1AE1DA63FC800B8A301 /* RAMRotationAnimation.swift in Sources */,
+				E276AE9C1DA7EA790020E773 /* FreshHot.swift in Sources */,
+				E276AE9A1DA7E9D70020E773 /* HeadResources.swift in Sources */,
+				E276AE961DA7E9C50020E773 /* HomeTableHeadView.swift in Sources */,
+				E276AE981DA7E9C50020E773 /* HotView.swift in Sources */,
+				E276AEA01DA7EEA90020E773 /* IconImageTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
