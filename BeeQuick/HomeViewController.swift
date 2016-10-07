@@ -54,6 +54,7 @@ class HomeViewController: BaseViewController {
 
 // MARK:- HomeHeadViewDelegate
 extension HomeViewController: HomeTableHeadViewDelegate {
+    
     func tableHeadView(headView: HomeTableHeadView, focusImageViewClick index: Int) {
         print(index)
     }

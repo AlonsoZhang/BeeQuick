@@ -101,7 +101,7 @@ class PageScrollView: UIView {
         
         for _ in 0..<3 {
             let imageView = UIImageView()
-            let tap = UITapGestureRecognizer(target: self, action: Selector(("imageViewClick:")))
+            let tap = UITapGestureRecognizer(target: self, action: #selector(imageViewClick(tap:)))
             imageView.addGestureRecognizer(tap)
             imageScrollView.addSubview(imageView)
         }
