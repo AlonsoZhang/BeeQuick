@@ -218,7 +218,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             return headView
         }
         
-        let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionFooter, withReuseIdentifier: "footerView", for: indexPath as IndexPath) as! HomeCollectionFooterView
+        let footerView = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionFooter, withReuseIdentifier: "footerView", forIndexPath: indexPath as IndexPath) as! HomeCollectionFooterView
         
         if indexPath.section == 1 && kind == UICollectionElementKindSectionFooter {
             footerView.showLabel()
