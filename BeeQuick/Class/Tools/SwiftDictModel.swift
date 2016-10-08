@@ -220,9 +220,9 @@ public class DictModelManager {
         
         // 检查类是否实现了协议
         var mappingDict: [String: String]?
-        if cls.responds(to: (Selector(("customClassMapping:")))){
-            mappingDict = cls.customClassMapping()
-        }
+//        if cls.responds(to: #selector(DictModelProtocol.customClassMapping)){
+//            mappingDict = cls.customClassMapping()
+//        }
         
         var infoDict = [String: String]()
         for i in 0..<count {

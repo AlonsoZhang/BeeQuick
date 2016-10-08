@@ -17,11 +17,11 @@ class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //addHomeNotification()
+        addHomeNotification()
         
         buildNavigationItem()
         
-        //buildCollectionView()
+        buildCollectionView()
         
         buildTableHeadView()
         
@@ -33,7 +33,7 @@ class HomeViewController: BaseViewController {
     
     // MARK:- addNotifiation
     func addHomeNotification() {
-        NotificationCenter.default.addObserver(self, selector: Selector(("homeTableHeadViewHeightDidChange:")), name: NSNotification.Name(rawValue: HomeTableHeadViewHeightDidChange), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(homeTableHeadViewHeightDidChange(noti:)), name: NSNotification.Name(rawValue: HomeTableHeadViewHeightDidChange), object: nil)
     }
     
     // MARK:- Creat UI

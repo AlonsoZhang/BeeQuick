@@ -18,10 +18,10 @@ class HeadResources: NSObject, DictModelProtocol {
         let path = Bundle.main.path(forResource: "首页焦点按钮", ofType: nil)
         let data = NSData(contentsOfFile: path!)
         if data != nil {
-            let dict: NSDictionary = (try! JSONSerialization.jsonObject(with: data! as Data, options: .allowFragments)) as! NSDictionary
-            let modelTool = DictModelManager.sharedManager
-            let data = modelTool.objectWithDictionary(dict: dict, cls: HeadResources.self) as? HeadResources
-            completion(data, nil)
+//            let dict: NSDictionary = (try! JSONSerialization.jsonObject(with: data! as Data, options: .allowFragments)) as! NSDictionary
+//            let modelTool = DictModelManager.sharedManager
+//            let data = modelTool.objectWithDictionary(dict: dict, cls: HeadResources.self) as? HeadResources
+//            completion(data, nil)
         }
         
     }
