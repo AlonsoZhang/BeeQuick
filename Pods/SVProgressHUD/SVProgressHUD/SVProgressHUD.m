@@ -1283,7 +1283,7 @@ static const CGFloat SVProgressHUDDefaultAnimationDuration = 0.15;
 
 - (UIImageView*)imageView {
     if(!_imageView) {
-        _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 28.0f, 28.0f)];
+        _imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 60.0f, 60.0f)];
     }
     if(!_imageView.superview) {
         [self.hudView addSubview:_imageView];
