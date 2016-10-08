@@ -19,7 +19,7 @@ class FreshHot: NSObject, DictModelProtocol {
         let path = Bundle.main.path(forResource: "首页新鲜热卖", ofType: nil)
         let data = NSData(contentsOfFile: path!)
         if data != nil {
-            let dict: NSDictionary = (try! JSONSerialization.JSONObjectWithData(data! as Data, options: .AllowFragments)) as! NSDictionary
+            let dict: NSDictionary = (try! JSONSerialization.jsonObject(with: data! as Data, options: .allowFragments)) as! NSDictionary
             let modelTool = DictModelManager.sharedManager
             let data = modelTool.objectWithDictionary(dict: dict, cls: FreshHot.self) as? FreshHot
             completion(data, nil)

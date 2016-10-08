@@ -40,7 +40,7 @@ public class DictModelManager {
             // 3. 遍历模型字典
             for (k, v) in infoDict {
                 
-                if let value: AnyObject = dict[k] as! [String:AnyObject] as AnyObject? {
+                if let value: AnyObject = dict.object(forKey: k) as AnyObject? {
                     
                     if v.isEmpty {
                         if !(value === NSNull()) {

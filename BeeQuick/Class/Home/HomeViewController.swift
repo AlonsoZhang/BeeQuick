@@ -17,13 +17,14 @@ class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addHomeNotification()
+        //addHomeNotification()
         
         buildNavigationItem()
         
-        buildCollectionView()
+        //buildCollectionView()
         
         buildTableHeadView()
+        
     }
     
     deinit {

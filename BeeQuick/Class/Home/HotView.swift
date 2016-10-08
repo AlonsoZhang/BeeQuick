@@ -9,11 +9,11 @@
 import UIKit
 
 class HotView: UIView {
-
+    
     private let iconW = (ScreenWidth - 2 * HotViewMargin) * 0.25
     private let iconH: CGFloat = 80
     
-    var iconClick:((index: Int) -> Void)?
+    var iconClick:((_ index: Int) -> Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -31,7 +31,9 @@ class HotView: UIView {
     // MARK: 模型的Set方法
     var headData: HeadData? {
         didSet {
-            if headData?.icons?.count > 0 {
+            print(headData)
+            
+            if (headData?.icons?.count)! > 0 {
                 
                 if headData!.icons!.count % 4 != 0 {
                     self.rows = headData!.icons!.count / 4 + 1
@@ -47,7 +49,7 @@ class HotView: UIView {
                     let icon = IconImageTextView(frame: CGRect(x:iconX, y:iconY, width:iconW, height:iconH), placeholderImage: UIImage(named: "icon_icons_holder")!)
                     icon.tag = i
                     icon.activitie = headData!.icons![i]
-                    let tap = UITapGestureRecognizer(target: self, action: "iconClick:")
+                    let tap = UITapGestureRecognizer(target: self, action: Selector(("iconClick:")))
                     icon.addGestureRecognizer(tap)
                     addSubview(icon)
                 }
