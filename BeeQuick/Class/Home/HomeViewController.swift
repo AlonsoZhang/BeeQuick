@@ -12,10 +12,10 @@ class HomeViewController: BaseViewController {
     private var flag: Int = -1
     private var headView: HomeTableHeadView?
     private var collectionView: UICollectionView!
-    private var lastContentOffsetY: CGFloat = 0
-    private var isAnimation: Bool = false
-    private var headData: HeadResources?
-    private var freshHot: FreshHot?
+    fileprivate var lastContentOffsetY: CGFloat = 0
+    fileprivate var isAnimation: Bool = false
+    fileprivate var headData: HeadResources?
+    fileprivate var freshHot: FreshHot?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +38,7 @@ class HomeViewController: BaseViewController {
     // MARK:- addNotifiation
     func addHomeNotification() {
         NotificationCenter.default.addObserver(self, selector: #selector(homeTableHeadViewHeightDidChange(noti:)), name: NSNotification.Name(rawValue: HomeTableHeadViewHeightDidChange), object: nil)
-        NotificationCenter.default.addObserver(self, selector: "goodsInventoryProblem:", name: NSNotification.Name(rawValue: GoodsInventoryProblem), object: nil)
+        NotificationCenter.default.addObserver(self, selector: Selector(("goodsInventoryProblem:")), name: NSNotification.Name(rawValue: GoodsInventoryProblem), object: nil)
     }
     
     // MARK:- Creat UI
@@ -198,7 +198,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         }
     }
     
-    func collectionView(collectionView: UICollectionView, willDisplaySupplementaryView view: UICollectionReusableView, forElementKind elementKind: String, atIndexPath indexPath: NSIndexPath) {
+    func collectionView(_ collectionView: UICollectionView, willDisplaySupplementaryView view: UICollectionReusableView, forElementKind elementKind: String, at indexPath: IndexPath) {
         if indexPath.section == 1 && headData != nil && freshHot != nil && isAnimation {
             startAnimation(view: view, offsetY: 40)
         }
@@ -207,18 +207,18 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     private func startAnimation(view: UIView, offsetY: CGFloat) {
         view.transform = CGAffineTransform(translationX: 0, y: offsetY)
         UIView.animate(withDuration: 0.8, animations: { () -> Void in
-            view.transform = CGAffineTransformIdentity
+            view.transform = CGAffineTransform.identity
         })
     }
     
-    func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         if indexPath.section == 1 && kind == UICollectionElementKindSectionHeader {
-            let headView = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionHeader, withReuseIdentifier: "headerView", forIndexPath: indexPath as IndexPath) as! HomeCollectionHeaderView
+            let headView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headerView", for: indexPath as IndexPath) as! HomeCollectionHeaderView
             
             return headView
         }
         
-        let footerView = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionFooter, withReuseIdentifier: "footerView", forIndexPath: indexPath as IndexPath) as! HomeCollectionFooterView
+        let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionFooter, withReuseIdentifier: "footerView", for: indexPath as IndexPath) as! HomeCollectionFooterView
         
         if indexPath.section == 1 && kind == UICollectionElementKindSectionFooter {
             footerView.showLabel()
@@ -227,7 +227,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             footerView.hideLabel()
             footerView.tag = 1
         }
-        let tap = UITapGestureRecognizer(target: self, action: "moreGoodsClick:")
+        let tap = UITapGestureRecognizer(target: self, action: Selector(("moreGoodsClick:")))
         footerView.addGestureRecognizer(tap)
         
         return footerView
@@ -236,13 +236,13 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     // MARK: 查看更多商品被点击
     func moreGoodsClickik(tap: UITapGestureRecognizer) {
         if tap.view?.tag == 100 {
-            let tabBarController = UIApplication.sharedApplication.keyWindow?.rootViewController as! MainTabBarController
+            let tabBarController = UIApplication.shared.keyWindow?.rootViewController as! MainTabBarController
             tabBarController.setSelectIndex(from: 0, to: 1)
         }
     }
     
     // MARK: - ScrollViewDelegate
-    func scrollViewDidScroll(scrollView: UIScrollView) {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView.contentOffset.y <= scrollView.contentSize.height {
             isAnimation = lastContentOffsetY < scrollView.contentOffset.y
             lastContentOffsetY = scrollView.contentOffset.y
