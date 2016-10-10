@@ -38,7 +38,7 @@ class HomeViewController: BaseViewController {
     // MARK:- addNotifiation
     func addHomeNotification() {
         NotificationCenter.default.addObserver(self, selector: #selector(homeTableHeadViewHeightDidChange(noti:)), name: NSNotification.Name(rawValue: HomeTableHeadViewHeightDidChange), object: nil)
-        NotificationCenter.default.addObserver(self, selector: Selector(("goodsInventoryProblem:")), name: NSNotification.Name(rawValue: GoodsInventoryProblem), object: nil)
+        NotificationCenter.default.addObserver(self, selector: Selector(("goodsInventoryProblem:")), name: NSNotification.Name(rawValue: HomeGoodsInventoryProblem), object: nil)
     }
     
     // MARK:- Creat UI
@@ -80,7 +80,7 @@ class HomeViewController: BaseViewController {
         layout.sectionInset = UIEdgeInsets(top: 0, left: HomeCollectionViewCellMargin, bottom: 0, right: HomeCollectionViewCellMargin)
         layout.headerReferenceSize = CGSize(width:0, height:HomeCollectionViewCellMargin)
         
-        collectionView = UICollectionView(frame: CGRect(x:0, y:0, width:ScreenWidth, height:ScreenHeight - NavigationH), collectionViewLayout: layout)
+        collectionView = UICollectionView(frame: CGRect(x:0, y:0, width:ScreenWidth, height:ScreenHeight), collectionViewLayout: layout)
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.backgroundColor = LFBGlobalBackgroundColor
@@ -234,7 +234,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     // MARK: 查看更多商品被点击
-    func moreGoodsClickik(tap: UITapGestureRecognizer) {
+    func moreGoodsClick(tap: UITapGestureRecognizer) {
         if tap.view?.tag == 100 {
             let tabBarController = UIApplication.shared.keyWindow?.rootViewController as! MainTabBarController
             tabBarController.setSelectIndex(from: 0, to: 1)

@@ -34,7 +34,7 @@ class HomeTableHeadView: UIView {
     // MARK: 模型的set方法
     var headData: HeadResources? {
         didSet {
-            
+            pageScrollView?.headData = headData
             hotView!.headData = headData?.data
         }
     }
@@ -47,7 +47,6 @@ class HomeTableHeadView: UIView {
                 tmpSelf?.delegate?.tableHeadView!(headView: tmpSelf!, focusImageViewClick: index)
             }
         })
-        pageScrollView?.imageURLSting = ["aa", "bb", "cc", "dd", "rr"]
         addSubview(pageScrollView!)
     }
     

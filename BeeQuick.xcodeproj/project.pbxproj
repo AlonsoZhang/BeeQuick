@@ -11,6 +11,8 @@
 		E22791051DA61C68006ABBB5 /* MinePlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = E22791041DA61C68006ABBB5 /* MinePlist.plist */; };
 		E22B15FE1DA39B2C0077B4A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22B15FD1DA39B2C0077B4A8 /* AppDelegate.swift */; };
 		E22B16051DA39B2C0077B4A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E22B16041DA39B2C0077B4A8 /* Assets.xcassets */; };
+		E24BB05B1DAB2C01005FC444 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24BB05A1DAB2C01005FC444 /* CategoryCell.swift */; };
+		E24BB05E1DAB30A0005FC444 /* Supermarket.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24BB05D1DAB30A0005FC444 /* Supermarket.swift */; };
 		E25A7D751DA88F80005DC90E /* 促销 in Resources */ = {isa = PBXBuildFile; fileRef = E25A7D711DA88F80005DC90E /* 促销 */; };
 		E25A7D761DA88F80005DC90E /* 首页焦点按钮 in Resources */ = {isa = PBXBuildFile; fileRef = E25A7D721DA88F80005DC90E /* 首页焦点按钮 */; };
 		E25A7D771DA88F80005DC90E /* 首页新鲜热卖 in Resources */ = {isa = PBXBuildFile; fileRef = E25A7D731DA88F80005DC90E /* 首页新鲜热卖 */; };
@@ -79,6 +81,8 @@
 		E22B15FD1DA39B2C0077B4A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E22B16041DA39B2C0077B4A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E22B16091DA39B2C0077B4A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E24BB05A1DAB2C01005FC444 /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryCell.swift; path = Class/SuperMarket/CategoryCell.swift; sourceTree = "<group>"; };
+		E24BB05D1DAB30A0005FC444 /* Supermarket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Supermarket.swift; path = Class/SuperMarket/Model/Supermarket.swift; sourceTree = "<group>"; };
 		E25A7D711DA88F80005DC90E /* 促销 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "促销"; path = "Class/Resouce/促销"; sourceTree = "<group>"; };
 		E25A7D721DA88F80005DC90E /* 首页焦点按钮 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "首页焦点按钮"; path = "Class/Resouce/首页焦点按钮"; sourceTree = "<group>"; };
 		E25A7D731DA88F80005DC90E /* 首页新鲜热卖 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "首页新鲜热卖"; path = "Class/Resouce/首页新鲜热卖"; sourceTree = "<group>"; };
@@ -210,6 +214,14 @@
 			path = BeeQuick;
 			sourceTree = "<group>";
 		};
+		E24BB05C1DAB3074005FC444 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E24BB05D1DAB30A0005FC444 /* Supermarket.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		E27E61201DA780C7003FE234 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -292,6 +304,8 @@
 			isa = PBXGroup;
 			children = (
 				E2B05A171DA4C01E0026DF8D /* SupermarketViewController.swift */,
+				E24BB05A1DAB2C01005FC444 /* CategoryCell.swift */,
+				E24BB05C1DAB3074005FC444 /* Model */,
 			);
 			name = SuperMarket;
 			sourceTree = "<group>";
@@ -647,6 +661,8 @@
 				E25A7D7C1DA88FD4005DC90E /* HomeTableHeadView.swift in Sources */,
 				E2718F381DA8944F0087CE71 /* IconImageTextView.swift in Sources */,
 				E25A7D7E1DA88FD4005DC90E /* HotView.swift in Sources */,
+				E24BB05B1DAB2C01005FC444 /* CategoryCell.swift in Sources */,
+				E24BB05E1DAB30A0005FC444 /* Supermarket.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

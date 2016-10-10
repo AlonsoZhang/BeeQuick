@@ -17,14 +17,15 @@ class PageScrollView: UIView {
     private var placeholderImage: UIImage?
     fileprivate var imageClick:((_ index: Int) -> ())?
     
-    var imageURLSting: [String]? {
+    var headData: HeadResources? {
         didSet {
-            pageControl.numberOfPages = imageURLSting!.count
-            pageControl.currentPage = 0
-            
-            updatePageScrollView()
-            
-            startTimer()
+            if (headData?.data?.focus?.count)! >= 0 {
+                pageControl.numberOfPages = (headData?.data?.focus?.count)!
+                pageControl.currentPage = 0
+                updatePageScrollView()
+                
+                startTimer()
+            }
         }
     }
     
@@ -85,7 +86,9 @@ class PageScrollView: UIView {
             }
             
             imageView.tag = index
-            imageView.image = placeholderImage
+            if (headData?.data?.focus?.count)! > 0 {
+                imageView.sd_setImage(with:NSURL(string: headData!.data!.focus![index].img!) as! URL, placeholderImage: placeholderImage)
+            }
         }
         
         imageScrollView.contentOffset = CGPoint(x:imageScrollView.width, y:0)

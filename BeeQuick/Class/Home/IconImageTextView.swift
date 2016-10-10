@@ -16,7 +16,7 @@ class IconImageTextView: UIView {
     var activitie: Activities? {
         didSet {
             textLabel?.text = activitie?.name
-            imageView?.image = placeholderImage
+            imageView?.sd_setImage(with: NSURL(string: activitie!.img!) as! URL, placeholderImage: placeholderImage)
         }
     }
     
@@ -25,6 +25,7 @@ class IconImageTextView: UIView {
         
         imageView = UIImageView()
         imageView?.isUserInteractionEnabled = false
+        imageView?.contentMode = UIViewContentMode.center
         addSubview(imageView!)
         
         textLabel = UILabel()
@@ -47,7 +48,7 @@ class IconImageTextView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        imageView?.frame = CGRect(x:0, y:0, width:width, height:height - 20)
-        textLabel?.frame = CGRect(x:0, y:height - 20, width:width, height:20)
+        imageView?.frame = CGRect(x:5, y:5, width:width - 15, height:height - 30)
+        textLabel?.frame = CGRect(x:5, y:height - 25, width:imageView!.width, height:20)
     }
 }
