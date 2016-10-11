@@ -48,7 +48,7 @@ public class DictModelManager {
                         }
                         
                     } else {
-                        let type = "\(value.classForCoder)"
+                        let type = "\(value.classForCoder!)"
                         
                         if type == "NSDictionary" {
                             
@@ -82,7 +82,7 @@ public class DictModelManager {
         
         autoreleasepool { () -> () in
             for value in array {
-                let type = "\((value as AnyObject).classForCoder)"
+                let type = "\((value as AnyObject).classForCoder!)"
                 
                 if type == "NSDictionary" {
                     if let subObj: AnyObject = objectWithDictionary(dict: value as! NSDictionary, cls: cls) {
@@ -124,7 +124,7 @@ public class DictModelManager {
             if v.isEmpty || value === NSNull() {
                 result[k] = value
             } else {
-                let type = "\(value!.classForCoder)"
+                let type = "\(value!.classForCoder!)"
                 
                 var subValue: AnyObject?
                 if type == "NSArray" {
@@ -156,7 +156,7 @@ public class DictModelManager {
         var result = [AnyObject]()
         
         for value in array {
-            let type = "\(value.classForCoder)"
+            let type = "\(value.classForCoder!)"
             
             var subValue: AnyObject?
             if type == "NSArray" {
@@ -220,9 +220,9 @@ public class DictModelManager {
         
         // 检查类是否实现了协议
         var mappingDict: [String: String]?
-//        if cls.responds(to: #selector(DictModelProtocol.customClassMapping)){
-//            mappingDict = cls.customClassMapping()
-//        }
+        if cls.responds(to: Selector("customClassMapping")){
+            mappingDict = cls.customClassMapping()
+        }
         
         var infoDict = [String: String]()
         for i in 0..<count {
@@ -231,13 +231,13 @@ public class DictModelManager {
             // 属性名称
             let cname = property_getName(property)
 
-            let name = String.init(validatingUTF8:cname!)
-            
+            let name = String.init(validatingUTF8:(cname)!)!
+            print(name)
             //let name = String.fromCString(cname!)!
             
-            let type = mappingDict?[name!] ?? ""
+            let type = mappingDict?[name] ?? ""
             
-            infoDict[name!] = type
+            infoDict[name] = type
         }
         
         free(properties)
