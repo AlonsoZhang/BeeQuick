@@ -232,7 +232,6 @@ public class DictModelManager {
             let cname = property_getName(property)
 
             let name = String.init(validatingUTF8:(cname)!)!
-            print(name)
             //let name = String.fromCString(cname!)!
             
             let type = mappingDict?[name] ?? ""
