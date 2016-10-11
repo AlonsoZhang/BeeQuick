@@ -31,7 +31,6 @@ class HotView: UIView {
     // MARK: 模型的Set方法
     var headData: HeadData? {
         didSet {
-            print(headData)
             
             if (headData?.icons?.count)! > 0 {
                 

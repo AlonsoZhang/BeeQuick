@@ -19,7 +19,6 @@ class PageScrollView: UIView {
     
     var headData: HeadResources? {
         didSet {
-            print(headData?.data?.focus)
             if (headData?.data?.focus?.count)! >= 0 {
                 pageControl.numberOfPages = (headData?.data?.focus?.count)!
                 pageControl.currentPage = 0
@@ -88,7 +87,9 @@ class PageScrollView: UIView {
             
             imageView.tag = index
             if (headData?.data?.focus?.count)! > 0 {
-                imageView.sd_setImage(with:NSURL(string: headData!.data!.focus![index].img!) as! URL, placeholderImage: placeholderImage)
+                let picurl = NSURL(string: headData!.data!.focus![index].img!)
+                
+                imageView.sd_setImage(with: picurl! as URL, placeholderImage: placeholderImage)
             }
         }
         
