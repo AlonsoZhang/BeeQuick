@@ -116,7 +116,7 @@ class HomeViewController: BaseViewController {
     
     func goodsInventoryProblem(noti: NSNotification) {
         if let goodsName = noti.object as? String {
-            ProgressHUDManager.showImage(UIImage(named: "v2_orderSuccess")!, status: goodsName + "  库存不足了\n先买这么多, 过段时间再来看看吧~")
+            ProgressHUDManager.showImage(image: UIImage(named: "v2_orderSuccess")!, status: goodsName + "  库存不足了\n先买这么多, 过段时间再来看看吧~")
         }
     }
     
@@ -126,7 +126,7 @@ class HomeViewController: BaseViewController {
             animationLayers = [CALayer]()
         }
         
-        let frame = imageView.convertRect(imageView.bounds, toView: view)
+        let frame = imageView.convert(imageView.bounds, to: view)
         let transitionLayer = CALayer()
         transitionLayer.frame = frame
         transitionLayer.contents = imageView.layer.contents
@@ -134,39 +134,39 @@ class HomeViewController: BaseViewController {
         
         let p1 = transitionLayer.position
         let p3X = ScreenWidth - ScreenWidth / 5 - 10
-        let p3 = CGPointMake(p3X, view.layer.bounds.size.height - 20)
+        let p3 = CGPoint(x:p3X, y:view.layer.bounds.size.height - 20)
         
         let positionAnimation = CAKeyframeAnimation(keyPath: "position")
-        let path = CGPathCreateMutable()
+        let path = CGMutablePath()
         CGPathMoveToPoint(path, nil, p1.x, p1.y)
         CGPathAddLineToPoint(path, nil, p3.x, p3.y)
-        positionAnimation.removedOnCompletion = true
+        positionAnimation.isRemovedOnCompletion = true
         positionAnimation.path = path
         positionAnimation.fillMode = kCAFillModeForwards
         
         let transformAnimation =  CABasicAnimation(keyPath: "transform")
-        transformAnimation.fromValue = NSValue(CATransform3D: CATransform3DIdentity)
-        transformAnimation.toValue = NSValue(CATransform3D: CATransform3DScale(CATransform3DIdentity, 0.1, 0.1, 1))
+        transformAnimation.fromValue = NSValue(caTransform3D: CATransform3DIdentity)
+        transformAnimation.toValue = NSValue(caTransform3D: CATransform3DScale(CATransform3DIdentity, 0.1, 0.1, 1))
         transformAnimation.fillMode = kCAFillModeForwards
-        transformAnimation.removedOnCompletion = true
+        transformAnimation.isRemovedOnCompletion = true
         
         let opacityAnimation = CABasicAnimation(keyPath: "opacity")
         opacityAnimation.fromValue = 0.8
         opacityAnimation.toValue = 0.1
         opacityAnimation.fillMode = kCAFillModeForwards
-        opacityAnimation.removedOnCompletion = true
+        opacityAnimation.isRemovedOnCompletion = true
         
         let groupAnimation = CAAnimationGroup()
         groupAnimation.animations = [positionAnimation, transformAnimation, opacityAnimation];
         groupAnimation.duration = 0.5
         groupAnimation.delegate = self
         
-        transitionLayer.addAnimation(groupAnimation, forKey: "cartParabola")
+        transitionLayer.add(groupAnimation, forKey: "cartParabola")
         
         view.layer.addSublayer(transitionLayer)
         animationLayers!.append(transitionLayer)
         
-        let time = dispatch_time(DISPATCH_TIME_NOW,Int64(0.4 * Double(NSEC_PER_SEC)))
+        let time = DispatchTime.now(dispatch_time_t(DispatchTime.now),Int64(0.4 * Double(NSEC_PER_SEC)))
         dispatch_after(time, dispatch_get_main_queue()) { () -> Void in
             transitionLayer.hidden = true
         }
@@ -175,10 +175,10 @@ class HomeViewController: BaseViewController {
     override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
         if animationLayers!.count > 0 {
             let transitionLayer = animationLayers![0]
-            transitionLayer.hidden = true
+            transitionLayer.isHidden = true
             transitionLayer.removeFromSuperlayer()
             animationLayers?.removeFirst()
-            view.layer.removeAnimationForKey("cartParabola")
+            view.layer.removeAnimation(forKey: "cartParabola")
         }
     }
 }
@@ -272,7 +272,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         }
     }
     
-    private func startAnimation(view: UIView, offsetY: CGFloat, duration: NSTimeInterval) {
+    private func startAnimation(view: UIView, offsetY: CGFloat, duration: TimeInterval) {
         view.transform = CGAffineTransform(translationX: 0, y: offsetY)
         UIView.animate(withDuration: duration, animations: { () -> Void in
             view.transform = CGAffineTransform.identity

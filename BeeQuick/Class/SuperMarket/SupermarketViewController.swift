@@ -10,9 +10,9 @@ import UIKit
 
 class SupermarketViewController: BaseViewController {
 
-    private var supermarketData: Supermarket?
-    private var categoryTableView: LFBTableView!
-    private var productsVC: ProductsViewController!
+    fileprivate var supermarketData: Supermarket?
+    fileprivate var categoryTableView: LFBTableView!
+    fileprivate var productsVC: ProductsViewController!
     
     //MARK: Lazy Property
     
@@ -65,7 +65,7 @@ class SupermarketViewController: BaseViewController {
             if error == nil {
                 tmpSelf!.supermarketData = data
                 tmpSelf!.categoryTableView.reloadData()
-                tmpSelf!.categoryTableView.selectRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), animated: true, scrollPosition: .Bottom)
+                tmpSelf!.categoryTableView.selectRow(at: NSIndexPath(forRow: 0, inSection: 0), animated: true, scrollPosition: .bottom)
                 tmpSelf!.productsVC.supermarketData = data
             }
         }
@@ -102,9 +102,9 @@ extension SupermarketViewController: UITableViewDelegate, UITableViewDataSource 
         return 45
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if productsVC != nil {
-            productsVC.categortsSelectedIndexPath = indexPath
+            productsVC.categortsSelectedIndexPath = indexPath as NSIndexPath?
         }
     }
     

@@ -140,7 +140,7 @@ class BuyView: UIView {
             clickAddShopCar!()
         }
         
-        ShopCarRedDotView.sharedRedDotView.addProductToRedDotView(true)
+        ShopCarRedDotView.sharedRedDotView.addProductToRedDotView(animation: true)
     }
     
     func reduceGoodsButtonClick() {
@@ -158,6 +158,6 @@ class BuyView: UIView {
             buyCountLabel.text = "\(buyNumber)"
         }
         
-        ShopCarRedDotView.sharedRedDotView.reduceProductToRedDotView(true)
+        ShopCarRedDotView.sharedRedDotView.reduceProductToRedDotView(animation: true)
     }
 }

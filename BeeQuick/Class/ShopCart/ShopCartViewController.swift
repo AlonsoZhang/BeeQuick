@@ -19,11 +19,11 @@ class ShopCartViewController: BaseViewController {
     private func bulidNavigationItem() {
         navigationItem.title = "购物车"
         
-        navigationItem.leftBarButtonItem = UIBarButtonItem.barButton(UIImage(named: "v2_goback")!, target: self, action: "leftNavigitonItemClick")
+        navigationItem.leftBarButtonItem = UIBarButtonItem.barButton(image: UIImage(named: "v2_goback")!, target: self, action: "leftNavigitonItemClick")
     }
     
     // MARK:-  Action
     func leftNavigitonItemClick() {
-        dismissViewControllerAnimated(true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
 }

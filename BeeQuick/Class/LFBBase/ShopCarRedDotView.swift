@@ -23,34 +23,34 @@ class ShopCarRedDotView: UIView {
         didSet {
             if 0 == buyNumber {
                 numberLabel?.text = ""
-                hidden = true
+                isHidden = true
             } else {
                 if buyNumber > 99 {
-                    numberLabel?.font = UIFont.systemFontOfSize(8)
+                    numberLabel?.font = UIFont.systemFont(ofSize: 8)
                 } else {
-                    numberLabel?.font = UIFont.systemFontOfSize(10)
+                    numberLabel?.font = UIFont.systemFont(ofSize: 10)
                 }
                 
-                hidden = false
+                isHidden = false
                 numberLabel?.text = "\(buyNumber)"
             }
         }
     }
     
     override init(frame: CGRect) {
-        super.init(frame: CGRectMake(frame.origin.x, frame.origin.y, 15, 15))
-        backgroundColor = UIColor.clearColor()
+        super.init(frame: CGRect(x:frame.origin.x, y:frame.origin.y, width:15, height:15))
+        backgroundColor = UIColor.clear
         
         redImageView = UIImageView(image: UIImage(named: "reddot"))
         addSubview(redImageView!)
         
         numberLabel = UILabel()
-        numberLabel!.font = UIFont.systemFontOfSize(10)
-        numberLabel!.textColor = UIColor.whiteColor()
-        numberLabel?.textAlignment = NSTextAlignment.Center
+        numberLabel!.font = UIFont.systemFont(ofSize: 10)
+        numberLabel!.textColor = UIColor.white
+        numberLabel?.textAlignment = NSTextAlignment.center
         addSubview(numberLabel!)
         
-        hidden = true
+        isHidden = true
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -60,11 +60,11 @@ class ShopCarRedDotView: UIView {
     override func layoutSubviews() {
         
         redImageView?.frame = bounds
-        numberLabel?.frame = CGRectMake(0, 0, width, height)
+        numberLabel?.frame = CGRect(x:0, y:0, width:width, height:height)
     }
     
     func addProductToRedDotView(animation: Bool) {
-        buyNumber++
+        buyNumber += 1
         if animation {
             reddotAnimation()
         }
@@ -72,7 +72,7 @@ class ShopCarRedDotView: UIView {
     
     func reduceProductToRedDotView(animation: Bool) {
         if buyNumber > 0 {
-            buyNumber--
+            buyNumber -= 1
         }
         
         if animation {
@@ -81,11 +81,11 @@ class ShopCarRedDotView: UIView {
     }
     
     private func reddotAnimation() {
-        UIView.animateWithDuration(ShopCarRedDotAnimationDuration, animations: { () -> Void in
-            self.transform = CGAffineTransformMakeScale(1.5, 1.5)
+        UIView.animate(withDuration: ShopCarRedDotAnimationDuration, animations: { () -> Void in
+            self.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
             }, completion: { (completion) -> Void in
-                UIView.animateWithDuration(ShopCarRedDotAnimationDuration, animations: { () -> Void in
-                    self.transform = CGAffineTransformIdentity
+                UIView.animate(withDuration: ShopCarRedDotAnimationDuration, animations: { () -> Void in
+                    self.transform = CGAffineTransform.identity
                     }, completion: nil)
         })
     }

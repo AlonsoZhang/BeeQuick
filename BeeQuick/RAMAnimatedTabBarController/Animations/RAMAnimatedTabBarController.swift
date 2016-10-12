@@ -63,7 +63,7 @@ class RAMAnimatedTabBarController: UITabBarController {
                 
                 if 3 == index {
                     let redDotView = ShopCarRedDotView.sharedRedDotView
-                    redDotView.frame = CGRectMake(imageH + 2, 1, 15, 15)
+                    redDotView.frame = CGRect(x:imageH + 2, y:1, width:15, height:15)
                     icon.addSubview(redDotView)
                 }
 
@@ -216,7 +216,7 @@ class RAMAnimatedTabBarController: UITabBarController {
             let vc = childViewControllers[selectedIndex]
             let shopCar = ShopCartViewController()
             let nav = BaseNavigationController(rootViewController: shopCar)
-            vc.presentViewController(nav, animated: true, completion: nil)
+            vc.present(nav, animated: true, completion: nil)
             
             return
         }

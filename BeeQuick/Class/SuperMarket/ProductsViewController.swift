@@ -10,14 +10,14 @@ import UIKit
 
 class ProductsViewController: BaseViewController {
 
-    private let headViewIdentifier = "supermarketHeadView"
-    private var lastOffsetY: CGFloat = 0
-    private var isScrollDown = false
+    fileprivate let headViewIdentifier = "supermarketHeadView"
+    fileprivate var lastOffsetY: CGFloat = 0
+    fileprivate var isScrollDown = false
     
     var productsTableView: LFBTableView?
     weak var delegate: ProductsViewControllerDelegate?
     
-    private var goodsArr: [[Goods]]? {
+    fileprivate var goodsArr: [[Goods]]? {
         didSet {
             productsTableView?.reloadData()
         }
@@ -25,7 +25,7 @@ class ProductsViewController: BaseViewController {
     
     var supermarketData: Supermarket? {
         didSet {
-            self.goodsArr = Supermarket.searchCategoryMatchProducts(supermarketData!.data!)
+            self.goodsArr = Supermarket.searchCategoryMatchProducts(supermarketResouce: supermarketData!.data!)
         }
     }
     
@@ -41,19 +41,19 @@ class ProductsViewController: BaseViewController {
     
     // MARK: - Build UI
     private func buildProductsTableView() -> UITableView{
-        productsTableView = LFBTableView(frame: CGRectMake(ScreenWidth * 0.25, 0, ScreenWidth * 0.75, ScreenHeight - NavigationH - 49), style: .Plain)
+        productsTableView = LFBTableView(frame: CGRect(x:ScreenWidth * 0.25, y:0, width:ScreenWidth * 0.75, height:ScreenHeight - NavigationH - 49), style: .plain)
         productsTableView?.backgroundColor = LFBGlobalBackgroundColor
         productsTableView?.delegate = self
         productsTableView?.dataSource = self
-        productsTableView?.registerClass(SupermarketHeadView.self, forHeaderFooterViewReuseIdentifier: headViewIdentifier)
+        productsTableView?.register(SupermarketHeadView.self, forHeaderFooterViewReuseIdentifier: headViewIdentifier)
         productsTableView?.tableFooterView = buildProductsTableViewTableFooterView()
         
         return productsTableView!
     }
     
     private func buildProductsTableViewTableFooterView() -> UIView {
-        let imageView = UIImageView(frame: CGRectMake(0, 0, productsTableView!.width, 70))
-        imageView.contentMode = UIViewContentMode.Center
+        let imageView = UIImageView(frame: CGRect(x:0, y:0, width:productsTableView!.width, height:70))
+        imageView.contentMode = UIViewContentMode.center
         imageView.image = UIImage(named: "v2_common_footer")
         return imageView
     }
@@ -62,8 +62,8 @@ class ProductsViewController: BaseViewController {
 // MARK: UITableViewDelegate, UITableViewDataSource
 extension ProductsViewController: UITableViewDelegate, UITableViewDataSource {
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if goodsArr?.count > 0 {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if (goodsArr?.count)! > 0 {
             return goodsArr![section].count ?? 0
         }
         
@@ -74,24 +74,24 @@ extension ProductsViewController: UITableViewDelegate, UITableViewDataSource {
         return supermarketData?.data?.categories?.count ?? 0
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = ProductCell()
         let goods = goodsArr![indexPath.section][indexPath.row]
         cell.goods = goods
         return cell
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 85
     }
     
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 25
     }
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headView = tableView.dequeueReusableHeaderFooterViewWithIdentifier(headViewIdentifier) as! SupermarketHeadView
-        if supermarketData?.data?.categories?.count > 0 && supermarketData!.data!.categories![section].name != nil {
+        let headView = tableView.dequeueReusableHeaderFooterView(withIdentifier: headViewIdentifier) as! SupermarketHeadView
+        if (supermarketData?.data?.categories?.count)! > 0 && supermarketData!.data!.categories![section].name != nil {
             headView.titleLabel.text = supermarketData!.data!.categories![section].name
         }
         
@@ -100,14 +100,14 @@ extension ProductsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, didEndDisplayingHeaderView view: UIView, forSection section: Int) {
         
-        if delegate != nil && delegate!.respondsToSelector("didEndDisplayingHeaderView:") && isScrollDown {
-            delegate!.didEndDisplayingHeaderView!(section)
+        if delegate != nil && delegate!.responds(to: "didEndDisplayingHeaderView:") && isScrollDown {
+            delegate!.didEndDisplayingHeaderView!(section: section)
         }
     }
     
     func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        if delegate != nil && delegate!.respondsToSelector("willDisplayHeaderView:") && !isScrollDown {
-            delegate!.willDisplayHeaderView!(section)
+        if delegate != nil && delegate!.responds(to: "willDisplayHeaderView:") && !isScrollDown {
+            delegate!.willDisplayHeaderView!(section: section)
         }
     }
 }
@@ -122,6 +122,6 @@ extension ProductsViewController: UIScrollViewDelegate {
 }
 
 @objc protocol ProductsViewControllerDelegate: NSObjectProtocol {
-    optional func didEndDisplayingHeaderView(section: Int)
-    optional func willDisplayHeaderView(section: Int)
+    @objc optional func didEndDisplayingHeaderView(section: Int)
+    @objc optional func willDisplayHeaderView(section: Int)
 }

@@ -74,7 +74,7 @@ class HomeCell: UICollectionViewCell {
         }
     }
     
-    var addButtonClick:((imageView: UIImageView) -> ())?
+    var addButtonClick:((_ imageView: UIImageView) -> ())?
     
     // MARK: - 便利构造方法
     override init(frame: CGRect) {
@@ -91,7 +91,7 @@ class HomeCell: UICollectionViewCell {
         weak var tmpSelf = self
         buyView.clickAddShopCar = {()
             if tmpSelf?.addButtonClick != nil {
-                tmpSelf!.addButtonClick!(imageView:tmpSelf!.goodsImageView)
+                tmpSelf!.addButtonClick!(tmpSelf!.goodsImageView)
             }
         }
     }

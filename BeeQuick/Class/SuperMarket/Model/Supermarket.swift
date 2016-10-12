@@ -31,7 +31,7 @@ class Supermarket: NSObject, DictModelProtocol {
         
         let products = supermarketResouce.products
         for cate in supermarketResouce.categories! {
-            let goodsArr = products!.valueForKey(cate.id!) as! [Goods]
+            let goodsArr = products!.value(forKey: cate.id!) as! [Goods]
             arr.append(goodsArr)
         }
         return arr
