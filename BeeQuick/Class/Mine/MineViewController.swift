@@ -11,7 +11,7 @@ import UIKit
 class MineViewController: BaseViewController{
 
     private var headView: MineHeadView!
-    private var tableView: UITableView!
+    private var tableView: LFBTableView!
     private var headViewHeight: CGFloat = 150
     private var tableHeadView: MineTabeHeadView!
     fileprivate lazy var mines: [MineCellModel] = {
@@ -22,13 +22,9 @@ class MineViewController: BaseViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
-        _ = mines[0];
         buildUI()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
     
     // MARK:- Private Method
     // MARK: Build UI
@@ -42,11 +38,10 @@ class MineViewController: BaseViewController{
     }
     
     private func buildTableView() {
-        tableView = UITableView(frame: CGRect(x:0, y:headViewHeight, width:ScreenWidth,height:ScreenHeight - headViewHeight), style: .grouped)
+        tableView = LFBTableView(frame: CGRect(x:0, y:headViewHeight, width:ScreenWidth,height:ScreenHeight - headViewHeight), style: .grouped)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = 46
-        tableView.separatorStyle = .none
         view.addSubview(tableView)
         tableHeadView = MineTabeHeadView(frame: CGRect(x:0, y:0, width:ScreenWidth, height:70))
         

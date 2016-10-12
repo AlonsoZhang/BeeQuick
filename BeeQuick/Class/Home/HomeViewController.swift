@@ -11,11 +11,12 @@ import UIKit
 class HomeViewController: BaseViewController {
     private var flag: Int = -1
     private var headView: HomeTableHeadView?
-    private var collectionView: UICollectionView!
+    private var collectionView: LFBCollectionView!
     fileprivate var lastContentOffsetY: CGFloat = 0
     fileprivate var isAnimation: Bool = false
     fileprivate var headData: HeadResources?
     fileprivate var freshHot: FreshHot?
+    private var animationLayers: [CALayer]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,6 +71,7 @@ class HomeViewController: BaseViewController {
         FreshHot.loadFreshHotData { (data, error) -> Void in
             tmpSelf?.freshHot = data
             tmpSelf?.collectionView.reloadData()
+            tmpSelf?.collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 64, right: 0)
         }
     }
     
@@ -80,7 +82,7 @@ class HomeViewController: BaseViewController {
         layout.sectionInset = UIEdgeInsets(top: 0, left: HomeCollectionViewCellMargin, bottom: 0, right: HomeCollectionViewCellMargin)
         layout.headerReferenceSize = CGSize(width:0, height:HomeCollectionViewCellMargin)
         
-        collectionView = UICollectionView(frame: CGRect(x:0, y:0, width:ScreenWidth, height:ScreenHeight), collectionViewLayout: layout)
+        collectionView = LFBCollectionView(frame: CGRect(x:0, y:0, width:ScreenWidth, height:ScreenHeight - 64), collectionViewLayout: layout)
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.backgroundColor = LFBGlobalBackgroundColor
@@ -114,7 +116,69 @@ class HomeViewController: BaseViewController {
     
     func goodsInventoryProblem(noti: NSNotification) {
         if let goodsName = noti.object as? String {
-            SVProgressHUD.show(UIImage(named: "v2_orderSuccess"), status: goodsName + "  库存不足了\n先买这么多, 过段时间再来看看吧~")
+            ProgressHUDManager.showImage(UIImage(named: "v2_orderSuccess")!, status: goodsName + "  库存不足了\n先买这么多, 过段时间再来看看吧~")
+        }
+    }
+    
+    // MARK: 商品添加到购物车动画
+    private func addProductsAnimation(imageView: UIImageView) {
+        if animationLayers == nil {
+            animationLayers = [CALayer]()
+        }
+        
+        let frame = imageView.convertRect(imageView.bounds, toView: view)
+        let transitionLayer = CALayer()
+        transitionLayer.frame = frame
+        transitionLayer.contents = imageView.layer.contents
+        transitionLayer.fillMode = kCAFillModeRemoved
+        
+        let p1 = transitionLayer.position
+        let p3X = ScreenWidth - ScreenWidth / 5 - 10
+        let p3 = CGPointMake(p3X, view.layer.bounds.size.height - 20)
+        
+        let positionAnimation = CAKeyframeAnimation(keyPath: "position")
+        let path = CGPathCreateMutable()
+        CGPathMoveToPoint(path, nil, p1.x, p1.y)
+        CGPathAddLineToPoint(path, nil, p3.x, p3.y)
+        positionAnimation.removedOnCompletion = true
+        positionAnimation.path = path
+        positionAnimation.fillMode = kCAFillModeForwards
+        
+        let transformAnimation =  CABasicAnimation(keyPath: "transform")
+        transformAnimation.fromValue = NSValue(CATransform3D: CATransform3DIdentity)
+        transformAnimation.toValue = NSValue(CATransform3D: CATransform3DScale(CATransform3DIdentity, 0.1, 0.1, 1))
+        transformAnimation.fillMode = kCAFillModeForwards
+        transformAnimation.removedOnCompletion = true
+        
+        let opacityAnimation = CABasicAnimation(keyPath: "opacity")
+        opacityAnimation.fromValue = 0.8
+        opacityAnimation.toValue = 0.1
+        opacityAnimation.fillMode = kCAFillModeForwards
+        opacityAnimation.removedOnCompletion = true
+        
+        let groupAnimation = CAAnimationGroup()
+        groupAnimation.animations = [positionAnimation, transformAnimation, opacityAnimation];
+        groupAnimation.duration = 0.5
+        groupAnimation.delegate = self
+        
+        transitionLayer.addAnimation(groupAnimation, forKey: "cartParabola")
+        
+        view.layer.addSublayer(transitionLayer)
+        animationLayers!.append(transitionLayer)
+        
+        let time = dispatch_time(DISPATCH_TIME_NOW,Int64(0.4 * Double(NSEC_PER_SEC)))
+        dispatch_after(time, dispatch_get_main_queue()) { () -> Void in
+            transitionLayer.hidden = true
+        }
+    }
+    
+    override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
+        if animationLayers!.count > 0 {
+            let transitionLayer = animationLayers![0]
+            transitionLayer.hidden = true
+            transitionLayer.removeFromSuperlayer()
+            animationLayers?.removeFirst()
+            view.layer.removeAnimationForKey("cartParabola")
         }
     }
 }
@@ -150,6 +214,10 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             cell.activities = headData!.data!.activities![indexPath.row]
         } else if indexPath.section == 1 {
             cell.goods = freshHot!.data![indexPath.row]
+            weak var tmpSelf = self
+            cell.addButtonClick = ({ (imageView) -> () in
+                tmpSelf?.addProductsAnimation(imageView)
+            })
         }
         
         return cell
@@ -194,19 +262,19 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if isAnimation {
             //Animation
-            startAnimation(view: cell, offsetY: 60)
+            startAnimation(view: cell, offsetY: 80, duration: 1.0)
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplaySupplementaryView view: UICollectionReusableView, forElementKind elementKind: String, at indexPath: IndexPath) {
         if indexPath.section == 1 && headData != nil && freshHot != nil && isAnimation {
-            startAnimation(view: view, offsetY: 40)
+            startAnimation(view: view, offsetY: 40, duration: 0.6)
         }
     }
     
-    private func startAnimation(view: UIView, offsetY: CGFloat) {
+    private func startAnimation(view: UIView, offsetY: CGFloat, duration: NSTimeInterval) {
         view.transform = CGAffineTransform(translationX: 0, y: offsetY)
-        UIView.animate(withDuration: 0.8, animations: { () -> Void in
+        UIView.animate(withDuration: duration, animations: { () -> Void in
             view.transform = CGAffineTransform.identity
         })
     }
@@ -243,6 +311,11 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     // MARK: - ScrollViewDelegate
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if animationLayers?.count > 0 {
+            let transitionLayer = animationLayers![0]
+            transitionLayer.hidden = true
+        }
+        
         if scrollView.contentOffset.y <= scrollView.contentSize.height {
             isAnimation = lastContentOffsetY < scrollView.contentOffset.y
             lastContentOffsetY = scrollView.contentOffset.y

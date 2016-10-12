@@ -10,6 +10,8 @@ import UIKit
 
 class BuyView: UIView {
     
+    var clickAddShopCar: (() -> ())?
+    
     /// 添加按钮
     private lazy var addGoodsButton: UIButton = {
         let addGoodsButton = UIButton(type: .custom)
@@ -133,6 +135,12 @@ class BuyView: UIView {
         goods?.userBuyNumber = buyNumber
         buyCountLabel.text = "\(buyNumber)"
         buyCountLabel.isHidden = false
+        
+        if clickAddShopCar != nil {
+            clickAddShopCar!()
+        }
+        
+        ShopCarRedDotView.sharedRedDotView.addProductToRedDotView(true)
     }
     
     func reduceGoodsButtonClick() {
@@ -149,5 +157,7 @@ class BuyView: UIView {
         } else {
             buyCountLabel.text = "\(buyNumber)"
         }
+        
+        ShopCarRedDotView.sharedRedDotView.reduceProductToRedDotView(true)
     }
 }

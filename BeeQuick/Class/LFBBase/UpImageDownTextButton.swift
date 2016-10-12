@@ -54,3 +54,13 @@ class ItemRightButton: UIButton {
         imageView?.contentMode = UIViewContentMode.center
     }
 }
+
+class ItemLeftImageButton: UIButton {
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        imageView?.frame = bounds
+        imageView?.frame.origin.x = -15
+    }
+}

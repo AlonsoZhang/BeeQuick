@@ -41,6 +41,14 @@
 		E2B05A141DA4BFAB0026DF8D /* ShopCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B05A131DA4BFAB0026DF8D /* ShopCartViewController.swift */; };
 		E2B05A161DA4BFE60026DF8D /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B05A151DA4BFE60026DF8D /* ScheduleViewController.swift */; };
 		E2B05A181DA4C01E0026DF8D /* SupermarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B05A171DA4C01E0026DF8D /* SupermarketViewController.swift */; };
+		E2B621D91DAE0C3A007F97D2 /* LFBCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B621D81DAE0C3A007F97D2 /* LFBCollectionView.swift */; };
+		E2B621DB1DAE0C62007F97D2 /* UIImage + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B621DA1DAE0C62007F97D2 /* UIImage + Extension.swift */; };
+		E2B621DD1DAE0E1E007F97D2 /* LFBTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B621DC1DAE0E1E007F97D2 /* LFBTableView.swift */; };
+		E2B621DF1DAE0E78007F97D2 /* ShopCarRedDotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B621DE1DAE0E78007F97D2 /* ShopCarRedDotView.swift */; };
+		E2B621E11DAE11CD007F97D2 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B621E01DAE11CD007F97D2 /* ProductCell.swift */; };
+		E2B621E31DAE1203007F97D2 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B621E21DAE1203007F97D2 /* ProductsViewController.swift */; };
+		E2B621E51DAE1291007F97D2 /* SupermarketHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B621E41DAE1291007F97D2 /* SupermarketHeadView.swift */; };
+		E2B621E71DAE133B007F97D2 /* UserShopCarTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B621E61DAE133B007F97D2 /* UserShopCarTool.swift */; };
 		E2E084B11DA8C9EF0067FE52 /* HomeCollectionFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E084B01DA8C9EF0067FE52 /* HomeCollectionFooterView.swift */; };
 		E2E084B31DA8CC3A0067FE52 /* BuyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E084B21DA8CC3A0067FE52 /* BuyView.swift */; };
 		E2E084B51DA8CC6E0067FE52 /* DiscountPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E084B41DA8CC6E0067FE52 /* DiscountPriceView.swift */; };
@@ -113,6 +121,14 @@
 		E2B05A131DA4BFAB0026DF8D /* ShopCartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShopCartViewController.swift; path = Class/ShopCart/ShopCartViewController.swift; sourceTree = "<group>"; };
 		E2B05A151DA4BFE60026DF8D /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScheduleViewController.swift; path = Class/FreshReserve/ScheduleViewController.swift; sourceTree = "<group>"; };
 		E2B05A171DA4C01E0026DF8D /* SupermarketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SupermarketViewController.swift; path = Class/SuperMarket/SupermarketViewController.swift; sourceTree = "<group>"; };
+		E2B621D81DAE0C3A007F97D2 /* LFBCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LFBCollectionView.swift; path = Class/LFBBase/LFBCollectionView.swift; sourceTree = "<group>"; };
+		E2B621DA1DAE0C62007F97D2 /* UIImage + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage + Extension.swift"; path = "Class/Extension/UIImage + Extension.swift"; sourceTree = "<group>"; };
+		E2B621DC1DAE0E1E007F97D2 /* LFBTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LFBTableView.swift; path = Class/LFBBase/LFBTableView.swift; sourceTree = "<group>"; };
+		E2B621DE1DAE0E78007F97D2 /* ShopCarRedDotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShopCarRedDotView.swift; path = Class/LFBBase/ShopCarRedDotView.swift; sourceTree = "<group>"; };
+		E2B621E01DAE11CD007F97D2 /* ProductCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductCell.swift; path = Class/SuperMarket/ProductCell.swift; sourceTree = "<group>"; };
+		E2B621E21DAE1203007F97D2 /* ProductsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductsViewController.swift; path = Class/SuperMarket/ProductsViewController.swift; sourceTree = "<group>"; };
+		E2B621E41DAE1291007F97D2 /* SupermarketHeadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SupermarketHeadView.swift; path = Class/SuperMarket/SupermarketHeadView.swift; sourceTree = "<group>"; };
+		E2B621E61DAE133B007F97D2 /* UserShopCarTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserShopCarTool.swift; path = Class/Tools/UserShopCarTool.swift; sourceTree = "<group>"; };
 		E2E084B01DA8C9EF0067FE52 /* HomeCollectionFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeCollectionFooterView.swift; path = Class/Home/HomeCollectionFooterView.swift; sourceTree = "<group>"; };
 		E2E084B21DA8CC3A0067FE52 /* BuyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BuyView.swift; path = Class/LFBBase/BuyView.swift; sourceTree = "<group>"; };
 		E2E084B41DA8CC6E0067FE52 /* DiscountPriceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiscountPriceView.swift; path = Class/LFBBase/DiscountPriceView.swift; sourceTree = "<group>"; };
@@ -239,6 +255,7 @@
 			children = (
 				E27E61341DA78266003FE234 /* SwiftDictModel.swift */,
 				E2E084B81DA8CD030067FE52 /* ProgressHUDManager.swift */,
+				E2B621E61DAE133B007F97D2 /* UserShopCarTool.swift */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -277,6 +294,7 @@
 				E2B059EE1DA491890026DF8D /* UIView+Extension.swift */,
 				E2B059F01DA491B20026DF8D /* UIBarButtonItem+Extension.swift */,
 				E2E084B61DA8CCDD0067FE52 /* String + Extension.swift */,
+				E2B621DA1DAE0C62007F97D2 /* UIImage + Extension.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -308,6 +326,9 @@
 			children = (
 				E2B05A171DA4C01E0026DF8D /* SupermarketViewController.swift */,
 				E24BB05A1DAB2C01005FC444 /* CategoryCell.swift */,
+				E2B621E41DAE1291007F97D2 /* SupermarketHeadView.swift */,
+				E2B621E01DAE11CD007F97D2 /* ProductCell.swift */,
+				E2B621E21DAE1203007F97D2 /* ProductsViewController.swift */,
 				E24BB05C1DAB3074005FC444 /* Model */,
 			);
 			name = SuperMarket;
@@ -323,6 +344,9 @@
 				E2B05A021DA49D990026DF8D /* MainViewController.swift */,
 				E2E084B41DA8CC6E0067FE52 /* DiscountPriceView.swift */,
 				E2FDF1991DA637AE00B8A301 /* PageScrollView.swift */,
+				E2B621D81DAE0C3A007F97D2 /* LFBCollectionView.swift */,
+				E2B621DC1DAE0E1E007F97D2 /* LFBTableView.swift */,
+				E2B621DE1DAE0E78007F97D2 /* ShopCarRedDotView.swift */,
 			);
 			name = LFBBase;
 			sourceTree = "<group>";
@@ -623,8 +647,12 @@
 				E2B059EF1DA491890026DF8D /* UIView+Extension.swift in Sources */,
 				E2E084B31DA8CC3A0067FE52 /* BuyView.swift in Sources */,
 				E2FDF1AB1DA63FC800B8A301 /* RAMBounceAnimation.swift in Sources */,
+				E2B621E51DAE1291007F97D2 /* SupermarketHeadView.swift in Sources */,
 				E2E084DD1DA8CDE30067FE52 /* NSData+ImageContentType.m in Sources */,
+				E2B621D91DAE0C3A007F97D2 /* LFBCollectionView.swift in Sources */,
 				E2B059FF1DA493930026DF8D /* BaseNavigationController.swift in Sources */,
+				E2B621DD1DAE0E1E007F97D2 /* LFBTableView.swift in Sources */,
+				E2B621DB1DAE0C62007F97D2 /* UIImage + Extension.swift in Sources */,
 				E2B05A181DA4C01E0026DF8D /* SupermarketViewController.swift in Sources */,
 				E2E084B71DA8CCDD0067FE52 /* String + Extension.swift in Sources */,
 				E2E084EB1DA8CDE30067FE52 /* UIView+WebCacheOperation.m in Sources */,
@@ -636,8 +664,10 @@
 				E2E084DF1DA8CDE30067FE52 /* SDWebImageCompat.m in Sources */,
 				E2E084E71DA8CDE30067FE52 /* UIImage+MultiFormat.m in Sources */,
 				E2718F371DA8944F0087CE71 /* HomeCell.swift in Sources */,
+				E2B621E71DAE133B007F97D2 /* UserShopCarTool.swift in Sources */,
 				E2718F3A1DA894580087CE71 /* FreshHot.swift in Sources */,
 				E2E084E81DA8CDE30067FE52 /* UIImage+WebP.m in Sources */,
+				E2B621E31DAE1203007F97D2 /* ProductsViewController.swift in Sources */,
 				E2E084E31DA8CDE30067FE52 /* SDWebImageManager.m in Sources */,
 				E2E084DE1DA8CDE30067FE52 /* SDImageCache.m in Sources */,
 				E2E084B11DA8C9EF0067FE52 /* HomeCollectionFooterView.swift in Sources */,
@@ -659,6 +689,8 @@
 				E25A7D7D1DA88FD4005DC90E /* HomeViewController.swift in Sources */,
 				E2E084E11DA8CDE30067FE52 /* SDWebImageDownloader.m in Sources */,
 				E2FDF1AD1DA63FC800B8A301 /* RAMFumeAnimation.swift in Sources */,
+				E2B621E11DAE11CD007F97D2 /* ProductCell.swift in Sources */,
+				E2B621DF1DAE0E78007F97D2 /* ShopCarRedDotView.swift in Sources */,
 				E2B059F41DA4921D0026DF8D /* Theme.swift in Sources */,
 				E2FDF1AE1DA63FC800B8A301 /* RAMRotationAnimation.swift in Sources */,
 				E25A7D801DA88FE5005DC90E /* HeadResources.swift in Sources */,

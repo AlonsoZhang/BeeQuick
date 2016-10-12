@@ -22,6 +22,7 @@ class HomeCell: UICollectionViewCell {
     
     private lazy var goodsImageView: UIImageView = {
         let goodsImageView = UIImageView()
+        goodsImageView.contentMode = UIViewContentMode.center
         return goodsImageView
     }()
     
@@ -73,6 +74,8 @@ class HomeCell: UICollectionViewCell {
         }
     }
     
+    var addButtonClick:((imageView: UIImageView) -> ())?
+    
     // MARK: - 便利构造方法
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -84,6 +87,13 @@ class HomeCell: UICollectionViewCell {
         addSubview(giveImageView)
         addSubview(specificsLabel)
         addSubview(buyView)
+        
+        weak var tmpSelf = self
+        buyView.clickAddShopCar = {()
+            if tmpSelf?.addButtonClick != nil {
+                tmpSelf!.addButtonClick!(imageView:tmpSelf!.goodsImageView)
+            }
+        }
     }
     
     // MARK: - 模型set方法

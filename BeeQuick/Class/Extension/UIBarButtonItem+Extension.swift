@@ -32,4 +32,13 @@ extension UIBarButtonItem {
         
         return UIBarButtonItem(customView: btn)
     }
+    
+    class func barButton(image: UIImage, target: AnyObject?, action: Selector) -> UIBarButtonItem {
+        let btn = ItemLeftImageButton(type: .custom)
+        btn.setImage(image, forState: UIControlState.normal)
+        btn.imageView?.contentMode = UIViewContentMode.Center
+        btn.addTarget(target, action: action, forControlEvents: UIControlEvents.TouchUpInside)
+        btn.frame = CGRect(x:0, y:0, width:44, height:44)
+        return UIBarButtonItem(customView: btn)
+    }
 }
