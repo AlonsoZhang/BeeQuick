@@ -22,7 +22,7 @@ class LFBTableView: UITableView {
         if wrapView != nil && NSStringFromClass((wrapView?.classForCoder)!).hasPrefix("WrapperView") {
             
             for gesture in wrapView!.gestureRecognizers! {
-                if (NSStringFromClass(gesture.classForCoder).containsString("DelayedTouchesBegan")) {
+                if (NSStringFromClass(gesture.classForCoder).contains("DelayedTouchesBegan")) {
                     gesture.isEnabled = false
                     break
                 }

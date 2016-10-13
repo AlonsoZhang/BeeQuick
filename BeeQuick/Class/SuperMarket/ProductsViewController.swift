@@ -31,7 +31,7 @@ class ProductsViewController: BaseViewController {
     
     var categortsSelectedIndexPath: NSIndexPath? {
         didSet {
-            productsTableView?.selectRowAtIndexPath(NSIndexPath(forRow: 0, inSection: categortsSelectedIndexPath!.row), animated: true, scrollPosition: .Top)
+            productsTableView?.selectRow(at: IndexPath(row: 0, section: categortsSelectedIndexPath!.row), animated: true, scrollPosition: .top)
         }
     }
     
@@ -70,7 +70,7 @@ extension ProductsViewController: UITableViewDelegate, UITableViewDataSource {
         return 0
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    private func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return supermarketData?.data?.categories?.count ?? 0
     }
     
@@ -89,7 +89,7 @@ extension ProductsViewController: UITableViewDelegate, UITableViewDataSource {
         return 25
     }
     
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headView = tableView.dequeueReusableHeaderFooterView(withIdentifier: headViewIdentifier) as! SupermarketHeadView
         if (supermarketData?.data?.categories?.count)! > 0 && supermarketData!.data!.categories![section].name != nil {
             headView.titleLabel.text = supermarketData!.data!.categories![section].name
@@ -98,15 +98,15 @@ extension ProductsViewController: UITableViewDelegate, UITableViewDataSource {
         return headView
     }
     
-    func tableView(tableView: UITableView, didEndDisplayingHeaderView view: UIView, forSection section: Int) {
+    func tableView(_ tableView: UITableView, didEndDisplayingHeaderView view: UIView, forSection section: Int) {
         
-        if delegate != nil && delegate!.responds(to: "didEndDisplayingHeaderView:") && isScrollDown {
+        if delegate != nil && delegate!.responds(to: Selector(("didEndDisplayingHeaderView:"))) && isScrollDown {
             delegate!.didEndDisplayingHeaderView!(section: section)
         }
     }
     
-    func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        if delegate != nil && delegate!.responds(to: "willDisplayHeaderView:") && !isScrollDown {
+    private func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        if delegate != nil && delegate!.responds(to: Selector(("willDisplayHeaderView:"))) && !isScrollDown {
             delegate!.willDisplayHeaderView!(section: section)
         }
     }
@@ -115,7 +115,7 @@ extension ProductsViewController: UITableViewDelegate, UITableViewDataSource {
 // MARK: - UIScrollViewDelegate
 extension ProductsViewController: UIScrollViewDelegate {
     
-    func scrollViewDidScroll(scrollView: UIScrollView) {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
         isScrollDown = lastOffsetY < scrollView.contentOffset.y
         lastOffsetY = scrollView.contentOffset.y
     }

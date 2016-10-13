@@ -65,7 +65,7 @@ class SupermarketViewController: BaseViewController {
             if error == nil {
                 tmpSelf!.supermarketData = data
                 tmpSelf!.categoryTableView.reloadData()
-                tmpSelf!.categoryTableView.selectRow(at: NSIndexPath(forRow: 0, inSection: 0), animated: true, scrollPosition: .bottom)
+                tmpSelf?.categoryTableView.selectRow(at: IndexPath(row: 0, section: 0), animated: true, scrollPosition: .bottom)
                 tmpSelf!.productsVC.supermarketData = data
             }
         }
@@ -114,10 +114,10 @@ extension SupermarketViewController: UITableViewDelegate, UITableViewDataSource 
 extension SupermarketViewController: ProductsViewControllerDelegate {
     
     func didEndDisplayingHeaderView(section: Int) {
-        categoryTableView.selectRowAtIndexPath(NSIndexPath(forRow: section + 1, inSection: 0), animated: true, scrollPosition: UITableViewScrollPosition.Middle)
+        categoryTableView.selectRow(at: IndexPath(row: section + 1, section: 0), animated: true, scrollPosition: UITableViewScrollPosition.middle)
     }
     
     func willDisplayHeaderView(section: Int) {
-        categoryTableView.selectRowAtIndexPath(NSIndexPath(forRow: section, inSection: 0), animated: true, scrollPosition: UITableViewScrollPosition.Middle)
+        categoryTableView.selectRow(at: IndexPath(row: section, section: 0), animated: true, scrollPosition: UITableViewScrollPosition.middle)
     }
 }

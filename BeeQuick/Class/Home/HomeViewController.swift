@@ -16,7 +16,7 @@ class HomeViewController: BaseViewController {
     fileprivate var isAnimation: Bool = false
     fileprivate var headData: HeadResources?
     fileprivate var freshHot: FreshHot?
-    private var animationLayers: [CALayer]?
+    fileprivate var animationLayers: [CALayer]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -121,7 +121,7 @@ class HomeViewController: BaseViewController {
     }
     
     // MARK: 商品添加到购物车动画
-    private func addProductsAnimation(imageView: UIImageView) {
+    fileprivate func addProductsAnimation(imageView: UIImageView) {
         if animationLayers == nil {
             animationLayers = [CALayer]()
         }
@@ -138,8 +138,8 @@ class HomeViewController: BaseViewController {
         
         let positionAnimation = CAKeyframeAnimation(keyPath: "position")
         let path = CGMutablePath()
-        CGPathMoveToPoint(path, nil, p1.x, p1.y)
-        CGPathAddLineToPoint(path, nil, p3.x, p3.y)
+        path.move(to: CGPoint(x:p1.x, y:p1.y))
+        path.addLine(to: CGPoint(x:p3.x, y:p3.y))
         positionAnimation.isRemovedOnCompletion = true
         positionAnimation.path = path
         positionAnimation.fillMode = kCAFillModeForwards
@@ -159,28 +159,28 @@ class HomeViewController: BaseViewController {
         let groupAnimation = CAAnimationGroup()
         groupAnimation.animations = [positionAnimation, transformAnimation, opacityAnimation];
         groupAnimation.duration = 0.5
-        groupAnimation.delegate = self
-        
+        //groupAnimation.delegate = self
+
         transitionLayer.add(groupAnimation, forKey: "cartParabola")
         
         view.layer.addSublayer(transitionLayer)
         animationLayers!.append(transitionLayer)
         
-        let time = DispatchTime.now(dispatch_time_t(DispatchTime.now),Int64(0.4 * Double(NSEC_PER_SEC)))
-        dispatch_after(time, dispatch_get_main_queue()) { () -> Void in
-            transitionLayer.hidden = true
-        }
+//        let time = DispatchTime.now(dispatch_time_t(DispatchTime.now),Int64(0.4 * Double(NSEC_PER_SEC)))
+//        dispatch_after(time, dispatch_get_main_queue()) { () -> Void in
+//            transitionLayer.hidden = true
+//        }
     }
-    
-    override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
-        if animationLayers!.count > 0 {
-            let transitionLayer = animationLayers![0]
-            transitionLayer.isHidden = true
-            transitionLayer.removeFromSuperlayer()
-            animationLayers?.removeFirst()
-            view.layer.removeAnimation(forKey: "cartParabola")
-        }
-    }
+
+//    override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
+//        if animationLayers!.count > 0 {
+//            let transitionLayer = animationLayers![0]
+//            transitionLayer.isHidden = true
+//            transitionLayer.removeFromSuperlayer()
+//            animationLayers?.removeFirst()
+//            view.layer.removeAnimation(forKey: "cartParabola")
+//        }
+//    }
 }
 
 // MARK:- HomeHeadViewDelegate TableHeadViewAction
@@ -216,7 +216,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             cell.goods = freshHot!.data![indexPath.row]
             weak var tmpSelf = self
             cell.addButtonClick = ({ (imageView) -> () in
-                tmpSelf?.addProductsAnimation(imageView)
+                tmpSelf?.addProductsAnimation(imageView: imageView)
             })
         }
         
@@ -311,9 +311,10 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     // MARK: - ScrollViewDelegate
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if animationLayers?.count > 0 {
+        print(animationLayers)
+        if (animationLayers?.count)! > 0 {
             let transitionLayer = animationLayers![0]
-            transitionLayer.hidden = true
+            transitionLayer.isHidden = true
         }
         
         if scrollView.contentOffset.y <= scrollView.contentSize.height {

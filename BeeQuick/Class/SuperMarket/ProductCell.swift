@@ -93,7 +93,7 @@ class ProductCell: UITableViewCell {
     // MARK: - 模型set方法
     var goods: Goods? {
         didSet {
-            goodsImageView.sd_setImageWithURL(NSURL(string: goods!.img!), placeholderImage: UIImage(named: "v2_placeholder_square"))
+            goodsImageView.sd_setImage(with: NSURL(string: goods!.img!) as! URL, placeholderImage: UIImage(named: "v2_placeholder_square"))
             nameLabel.text = goods?.name
             if goods!.pm_desc == "买一赠一" {
                 giveImageView.isHidden = false
