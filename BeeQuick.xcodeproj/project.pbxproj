@@ -10,7 +10,6 @@
 		74DCFB49F48684611C4DF359 /* Pods_BeeQuick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B87ED703511EABF6910E6EB5 /* Pods_BeeQuick.framework */; };
 		E209BD111DB0759F0022EB83 /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E209BD101DB0759F0022EB83 /* AnimationViewController.swift */; };
 		E209BD141DB0764E0022EB83 /* LFBRefreshHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E209BD131DB0764E0022EB83 /* LFBRefreshHeader.swift */; };
-		E20F74481DAD2E57007A36B9 /* supermarket in Resources */ = {isa = PBXBuildFile; fileRef = E20F74471DAD2E57007A36B9 /* supermarket */; };
 		E22791051DA61C68006ABBB5 /* MinePlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = E22791041DA61C68006ABBB5 /* MinePlist.plist */; };
 		E22B15FE1DA39B2C0077B4A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22B15FD1DA39B2C0077B4A8 /* AppDelegate.swift */; };
 		E22B16051DA39B2C0077B4A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E22B16041DA39B2C0077B4A8 /* Assets.xcassets */; };
@@ -28,6 +27,7 @@
 		E2718F381DA8944F0087CE71 /* IconImageTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2718F361DA8944F0087CE71 /* IconImageTextView.swift */; };
 		E2718F3A1DA894580087CE71 /* FreshHot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2718F391DA894580087CE71 /* FreshHot.swift */; };
 		E27E61351DA78266003FE234 /* SwiftDictModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27E61341DA78266003FE234 /* SwiftDictModel.swift */; };
+		E29B82041DB0BAAE009A0866 /* supermarket in Resources */ = {isa = PBXBuildFile; fileRef = E29B82031DB0BAAE009A0866 /* supermarket */; };
 		E2B059EC1DA490B20026DF8D /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B059EB1DA490B20026DF8D /* Color+Extension.swift */; };
 		E2B059EF1DA491890026DF8D /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B059EE1DA491890026DF8D /* UIView+Extension.swift */; };
 		E2B059F11DA491B20026DF8D /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B059F01DA491B20026DF8D /* UIBarButtonItem+Extension.swift */; };
@@ -89,7 +89,6 @@
 		B87ED703511EABF6910E6EB5 /* Pods_BeeQuick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeeQuick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E209BD101DB0759F0022EB83 /* AnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimationViewController.swift; path = Class/LFBBase/AnimationViewController.swift; sourceTree = "<group>"; };
 		E209BD131DB0764E0022EB83 /* LFBRefreshHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LFBRefreshHeader.swift; path = Class/LFBBase/LFBRefresh/LFBRefreshHeader.swift; sourceTree = "<group>"; };
-		E20F74471DAD2E57007A36B9 /* supermarket */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = supermarket; path = Class/Resouce/supermarket; sourceTree = "<group>"; };
 		E22791041DA61C68006ABBB5 /* MinePlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = MinePlist.plist; path = Class/Resouce/MinePlist.plist; sourceTree = "<group>"; };
 		E22B15FA1DA39B2C0077B4A8 /* BeeQuick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeeQuick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E22B15FD1DA39B2C0077B4A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +108,7 @@
 		E2718F361DA8944F0087CE71 /* IconImageTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IconImageTextView.swift; path = Class/Home/IconImageTextView.swift; sourceTree = "<group>"; };
 		E2718F391DA894580087CE71 /* FreshHot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FreshHot.swift; path = Class/Home/Model/FreshHot.swift; sourceTree = "<group>"; };
 		E27E61341DA78266003FE234 /* SwiftDictModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftDictModel.swift; path = Class/Tools/SwiftDictModel.swift; sourceTree = "<group>"; };
+		E29B82031DB0BAAE009A0866 /* supermarket */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = supermarket; sourceTree = "<group>"; };
 		E2B059EB1DA490B20026DF8D /* Color+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Color+Extension.swift"; path = "Class/Extension/Color+Extension.swift"; sourceTree = "<group>"; };
 		E2B059EE1DA491890026DF8D /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Extension.swift"; path = "Class/Extension/UIView+Extension.swift"; sourceTree = "<group>"; };
 		E2B059F01DA491B20026DF8D /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIBarButtonItem+Extension.swift"; path = "Class/Extension/UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
@@ -205,7 +205,7 @@
 		E22791031DA61C24006ABBB5 /* Resouce */ = {
 			isa = PBXGroup;
 			children = (
-				E20F74471DAD2E57007A36B9 /* supermarket */,
+				E29B82031DB0BAAE009A0866 /* supermarket */,
 				E25A7D711DA88F80005DC90E /* 促销 */,
 				E25A7D721DA88F80005DC90E /* 首页焦点按钮 */,
 				E25A7D731DA88F80005DC90E /* 首页新鲜热卖 */,
@@ -585,7 +585,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E25A7D771DA88F80005DC90E /* 首页新鲜热卖 in Resources */,
-				E20F74481DAD2E57007A36B9 /* supermarket in Resources */,
+				E29B82041DB0BAAE009A0866 /* supermarket in Resources */,
 				E25A7D781DA88F80005DC90E /* AD in Resources */,
 				E25A7D751DA88F80005DC90E /* 促销 in Resources */,
 				E22791051DA61C68006ABBB5 /* MinePlist.plist in Resources */,

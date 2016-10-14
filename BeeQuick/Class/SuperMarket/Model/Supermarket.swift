@@ -23,6 +23,7 @@ class Supermarket: NSObject, DictModelProtocol {
             let modelTool = DictModelManager.sharedManager
             let data = modelTool.objectWithDictionary(dict: dict, cls: Supermarket.self) as? Supermarket
             completion(data, nil)
+            
         }
     }
     
@@ -31,6 +32,7 @@ class Supermarket: NSObject, DictModelProtocol {
         
         let products = supermarketResouce.products
         for cate in supermarketResouce.categories! {
+            
             let goodsArr = products!.value(forKey: cate.id!) as! [Goods]
             arr.append(goodsArr)
         }

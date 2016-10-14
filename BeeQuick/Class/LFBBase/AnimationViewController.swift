@@ -30,8 +30,8 @@ class AnimationViewController: BaseViewController {
         
         let positionAnimation = CAKeyframeAnimation(keyPath: "position")
         let path = CGMutablePath()
-        CGPathMoveToPoint(path, nil, p1.x, p1.y)
-        CGPathAddLineToPoint(path, nil, p3.x, p3.y)
+        path.move(to: CGPoint(x:p1.x, y:p1.y))
+        path.addLine(to: CGPoint(x:p3.x, y:p3.y))
         positionAnimation.isRemovedOnCompletion = true
         positionAnimation.path = path
         positionAnimation.fillMode = kCAFillModeForwards
@@ -51,26 +51,25 @@ class AnimationViewController: BaseViewController {
         let groupAnimation = CAAnimationGroup()
         groupAnimation.animations = [positionAnimation, transformAnimation, opacityAnimation];
         groupAnimation.duration = 0.5
-        groupAnimation.delegate = self
+        //groupAnimation.delegate = self
         
         transitionLayer.add(groupAnimation, forKey: "cartParabola")
         
         view.layer.addSublayer(transitionLayer)
         animationLayers!.append(transitionLayer)
-        
-        let time = dispatch_time(DISPATCH_TIME_NOW,Int64(0.4 * Double(NSEC_PER_SEC)))
-        dispatch_after(time, dispatch_get_main_queue()) { () -> Void in
-            transitionLayer.hidden = true
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4){
+            transitionLayer.isHidden = true
         }
     }
     
-    override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
-        if animationLayers!.count > 0 {
-            let transitionLayer = animationLayers![0]
-            transitionLayer.isHidden = true
-            transitionLayer.removeFromSuperlayer()
-            animationLayers?.removeFirst()
-            view.layer.removeAnimation(forKey: "cartParabola")
-        }
-    }
+//    override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
+//        if animationLayers!.count > 0 {
+//            let transitionLayer = animationLayers![0]
+//            transitionLayer.isHidden = true
+//            transitionLayer.removeFromSuperlayer()
+//            animationLayers?.removeFirst()
+//            view.layer.removeAnimation(forKey: "cartParabola")
+//        }
+//    }
 }

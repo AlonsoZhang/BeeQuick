@@ -107,8 +107,7 @@ class HomeViewController: AnimationViewController {
         freshHot = nil
         
         weak var tmpSelf = self
-        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(0.8 * Double(NSEC_PER_SEC)))
-        dispatch_after(time, dispatch_get_main_queue()) { () -> Void in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) { 
             HeadResources.loadHomeHeadData { (data, error) -> Void in
                 if error == nil {
                     tmpSelf?.headView?.headData = data
@@ -281,12 +280,10 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     // MARK: - ScrollViewDelegate
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print(animationLayers)
-        if (animationLayers?.count)! > 0 {
+        if animationLayers != nil {
             let transitionLayer = animationLayers![0]
             transitionLayer.isHidden = true
         }
-        
         if scrollView.contentOffset.y <= scrollView.contentSize.height {
             isAnimation = lastContentOffsetY < scrollView.contentOffset.y
             lastContentOffsetY = scrollView.contentOffset.y

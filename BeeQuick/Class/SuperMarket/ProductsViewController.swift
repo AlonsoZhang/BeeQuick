@@ -75,8 +75,8 @@ class ProductsViewController: AnimationViewController {
 extension ProductsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if (goodsArr?.count)! > 0 {
-            return goodsArr![section].count ?? 0
+        if goodsArr != nil {
+            return goodsArr![section].count
         }
         
         return 0
@@ -87,13 +87,13 @@ extension ProductsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = ProductCell.cellWithTableView(tableView)
+        let cell = ProductCell.cellWithTableView(tableView: tableView)
         let goods = goodsArr![indexPath.section][indexPath.row]
         cell.goods = goods
         
         weak var tmpSelf = self
         cell.addProductClick = { (imageView) -> () in
-            tmpSelf?.addProductsAnimation(imageView)
+            tmpSelf?.addProductsAnimation(imageView: imageView)
         }
         return cell
     }
@@ -134,9 +134,9 @@ extension ProductsViewController: UIScrollViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
-        if animationLayers?.count > 0 {
+        if (animationLayers?.count)! > 0 {
             let transitionLayer = animationLayers![0]
-            transitionLayer.hidden = true
+            transitionLayer.isHidden = true
         }
         
         isScrollDown = lastOffsetY < scrollView.contentOffset.y

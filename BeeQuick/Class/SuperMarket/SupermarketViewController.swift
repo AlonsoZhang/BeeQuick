@@ -39,6 +39,8 @@ class SupermarketViewController: BaseViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem.barButton(title: "搜 索", titleColor: UIColor.black,
                                                                       image: UIImage(named: "icon_search")!,hightLightImage: nil,
                                                                       target: self, action: #selector(SupermarketViewController.rightItemClick), type: ItemButtonType.Right)
+        
+        
     }
     
     private func bulidCategoryTableView() {
@@ -62,14 +64,13 @@ class SupermarketViewController: BaseViewController {
         productsVC.refreshUpPull = {
             Supermarket.loadSupermarketData { (data, error) -> Void in
                 if error == nil {
-                    let time = dispatch_time(DISPATCH_TIME_NOW,Int64(1.0 * Double(NSEC_PER_SEC)))
-                    dispatch_after(time, dispatch_get_main_queue(), { () -> Void in
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0){
                         tmpSelf!.supermarketData = data
                         tmpSelf!.productsVC.supermarketData = data
                         tmpSelf?.productsVC.productsTableView?.mj_header.endRefreshing()
                         tmpSelf!.categoryTableView.reloadData()
-                        tmpSelf!.categoryTableView.selectRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), animated: true, scrollPosition: .Top)
-                    })
+                        tmpSelf!.categoryTableView.selectRow(at: IndexPath(row: 0, section: 0), animated: true, scrollPosition: .top)
+                    }
                 }
             }
         }
@@ -83,13 +84,12 @@ class SupermarketViewController: BaseViewController {
                 tmpSelf!.supermarketData = data
                 tmpSelf!.categoryTableView.reloadData()
                 tmpSelf?.categoryTableView.selectRow(at: IndexPath(row: 0, section: 0), animated: true, scrollPosition: .bottom)
+                print(data)
                 tmpSelf!.productsVC.supermarketData = data
             }
-            
-            let time = dispatch_time(DISPATCH_TIME_NOW,Int64(1.0 * Double(NSEC_PER_SEC)))
-            dispatch_after(time, dispatch_get_main_queue(), { () -> Void in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0){
                 ProgressHUDManager.dismiss()
-            })
+            }
         }
     }
     
