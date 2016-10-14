@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProductsViewController: BaseViewController {
+class ProductsViewController: AnimationViewController {
 
     fileprivate let headViewIdentifier = "supermarketHeadView"
     fileprivate var lastOffsetY: CGFloat = 0
@@ -16,6 +16,7 @@ class ProductsViewController: BaseViewController {
     
     var productsTableView: LFBTableView?
     weak var delegate: ProductsViewControllerDelegate?
+    var refreshUpPull:(() -> ())?
     
     fileprivate var goodsArr: [[Goods]]? {
         didSet {
@@ -36,19 +37,23 @@ class ProductsViewController: BaseViewController {
     }
     
     override func viewDidLoad() {
-        view = buildProductsTableView()
+        view = UIView(frame: CGRect(x:ScreenWidth * 0.25, y:0, width:ScreenWidth * 0.75, height:ScreenHeight - NavigationH - 49))
+        buildProductsTableView()
     }
     
     // MARK: - Build UI
-    private func buildProductsTableView() -> UITableView{
-        productsTableView = LFBTableView(frame: CGRect(x:ScreenWidth * 0.25, y:0, width:ScreenWidth * 0.75, height:ScreenHeight - NavigationH - 49), style: .plain)
+    private func buildProductsTableView() {
+        productsTableView = LFBTableView(frame: view.bounds, style: .plain)
         productsTableView?.backgroundColor = LFBGlobalBackgroundColor
         productsTableView?.delegate = self
         productsTableView?.dataSource = self
         productsTableView?.register(SupermarketHeadView.self, forHeaderFooterViewReuseIdentifier: headViewIdentifier)
         productsTableView?.tableFooterView = buildProductsTableViewTableFooterView()
         
-        return productsTableView!
+        let headView = LFBRefreshHeader(refreshingTarget: self, refreshingAction: "startRefreshUpPull")
+        productsTableView?.mj_header = headView
+        
+        view.addSubview(productsTableView!)
     }
     
     private func buildProductsTableViewTableFooterView() -> UIView {
@@ -56,6 +61,13 @@ class ProductsViewController: BaseViewController {
         imageView.contentMode = UIViewContentMode.center
         imageView.image = UIImage(named: "v2_common_footer")
         return imageView
+    }
+    
+    // MARK: - 上拉刷新
+    func startRefreshUpPull() {
+        if refreshUpPull != nil {
+            refreshUpPull!()
+        }
     }
 }
 
@@ -75,9 +87,14 @@ extension ProductsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = ProductCell()
+        let cell = ProductCell.cellWithTableView(tableView)
         let goods = goodsArr![indexPath.section][indexPath.row]
         cell.goods = goods
+        
+        weak var tmpSelf = self
+        cell.addProductClick = { (imageView) -> () in
+            tmpSelf?.addProductsAnimation(imageView)
+        }
         return cell
     }
     
@@ -116,6 +133,12 @@ extension ProductsViewController: UITableViewDelegate, UITableViewDataSource {
 extension ProductsViewController: UIScrollViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        if animationLayers?.count > 0 {
+            let transitionLayer = animationLayers![0]
+            transitionLayer.hidden = true
+        }
+        
         isScrollDown = lastOffsetY < scrollView.contentOffset.y
         lastOffsetY = scrollView.contentOffset.y
     }

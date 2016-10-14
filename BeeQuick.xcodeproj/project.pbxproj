@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		74DCFB49F48684611C4DF359 /* Pods_BeeQuick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B87ED703511EABF6910E6EB5 /* Pods_BeeQuick.framework */; };
+		E209BD111DB0759F0022EB83 /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E209BD101DB0759F0022EB83 /* AnimationViewController.swift */; };
+		E209BD141DB0764E0022EB83 /* LFBRefreshHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E209BD131DB0764E0022EB83 /* LFBRefreshHeader.swift */; };
 		E20F74481DAD2E57007A36B9 /* supermarket in Resources */ = {isa = PBXBuildFile; fileRef = E20F74471DAD2E57007A36B9 /* supermarket */; };
 		E22791051DA61C68006ABBB5 /* MinePlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = E22791041DA61C68006ABBB5 /* MinePlist.plist */; };
 		E22B15FE1DA39B2C0077B4A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22B15FD1DA39B2C0077B4A8 /* AppDelegate.swift */; };
@@ -85,6 +87,8 @@
 		08F32452381760B8E967661D /* Pods-BeeQuick.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeeQuick.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BeeQuick/Pods-BeeQuick.debug.xcconfig"; sourceTree = "<group>"; };
 		7F8FE54073DEE97D18C042EB /* Pods-BeeQuick.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeeQuick.release.xcconfig"; path = "Pods/Target Support Files/Pods-BeeQuick/Pods-BeeQuick.release.xcconfig"; sourceTree = "<group>"; };
 		B87ED703511EABF6910E6EB5 /* Pods_BeeQuick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeeQuick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E209BD101DB0759F0022EB83 /* AnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimationViewController.swift; path = Class/LFBBase/AnimationViewController.swift; sourceTree = "<group>"; };
+		E209BD131DB0764E0022EB83 /* LFBRefreshHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LFBRefreshHeader.swift; path = Class/LFBBase/LFBRefresh/LFBRefreshHeader.swift; sourceTree = "<group>"; };
 		E20F74471DAD2E57007A36B9 /* supermarket */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = supermarket; path = Class/Resouce/supermarket; sourceTree = "<group>"; };
 		E22791041DA61C68006ABBB5 /* MinePlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = MinePlist.plist; path = Class/Resouce/MinePlist.plist; sourceTree = "<group>"; };
 		E22B15FA1DA39B2C0077B4A8 /* BeeQuick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeeQuick.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -190,6 +194,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E209BD121DB075E60022EB83 /* LFBRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				E209BD131DB0764E0022EB83 /* LFBRefreshHeader.swift */,
+			);
+			name = LFBRefresh;
+			sourceTree = "<group>";
+		};
 		E22791031DA61C24006ABBB5 /* Resouce */ = {
 			isa = PBXGroup;
 			children = (
@@ -338,6 +350,7 @@
 			isa = PBXGroup;
 			children = (
 				E2B059FC1DA493280026DF8D /* BaseViewController.swift */,
+				E209BD101DB0759F0022EB83 /* AnimationViewController.swift */,
 				E2E084B21DA8CC3A0067FE52 /* BuyView.swift */,
 				E2B059FE1DA493930026DF8D /* BaseNavigationController.swift */,
 				E2B05A001DA493C50026DF8D /* UpImageDownTextButton.swift */,
@@ -347,6 +360,7 @@
 				E2B621D81DAE0C3A007F97D2 /* LFBCollectionView.swift */,
 				E2B621DC1DAE0E1E007F97D2 /* LFBTableView.swift */,
 				E2B621DE1DAE0E78007F97D2 /* ShopCarRedDotView.swift */,
+				E209BD121DB075E60022EB83 /* LFBRefresh */,
 			);
 			name = LFBBase;
 			sourceTree = "<group>";
@@ -682,6 +696,7 @@
 				E2FDF1B21DA63FC800B8A301 /* RAMItemAnimationProtocol.swift in Sources */,
 				E2E084E91DA8CDE30067FE52 /* UIImageView+HighlightedWebCache.m in Sources */,
 				E2B05A031DA49D990026DF8D /* MainViewController.swift in Sources */,
+				E209BD141DB0764E0022EB83 /* LFBRefreshHeader.swift in Sources */,
 				E2B059F11DA491B20026DF8D /* UIBarButtonItem+Extension.swift in Sources */,
 				E2E084E51DA8CDE30067FE52 /* UIButton+WebCache.m in Sources */,
 				E2FDF1B11DA63FC800B8A301 /* RAMBadge.swift in Sources */,
@@ -697,6 +712,7 @@
 				E25A7D7C1DA88FD4005DC90E /* HomeTableHeadView.swift in Sources */,
 				E2718F381DA8944F0087CE71 /* IconImageTextView.swift in Sources */,
 				E25A7D7E1DA88FD4005DC90E /* HotView.swift in Sources */,
+				E209BD111DB0759F0022EB83 /* AnimationViewController.swift in Sources */,
 				E24BB05B1DAB2C01005FC444 /* CategoryCell.swift in Sources */,
 				E24BB05E1DAB30A0005FC444 /* Supermarket.swift in Sources */,
 			);

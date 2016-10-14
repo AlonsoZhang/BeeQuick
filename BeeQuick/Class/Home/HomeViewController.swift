@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: BaseViewController {
+class HomeViewController: AnimationViewController {
     private var flag: Int = -1
     private var headView: HomeTableHeadView?
     private var collectionView: LFBCollectionView!
@@ -16,7 +16,6 @@ class HomeViewController: BaseViewController {
     fileprivate var isAnimation: Bool = false
     fileprivate var headData: HeadResources?
     fileprivate var freshHot: FreshHot?
-    fileprivate var animationLayers: [CALayer]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,11 +89,40 @@ class HomeViewController: BaseViewController {
         collectionView.register(HomeCollectionHeaderView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headerView")
         collectionView.register(HomeCollectionFooterView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: "footerView")
         view.addSubview(collectionView)
+        
+        let refreshHeadView = LFBRefreshHeader(refreshingTarget: self, refreshingAction: #selector(HomeViewController.headRefresh))
+        refreshHeadView?.gifView?.frame = CGRect(x:0, y:30, width:100, height:100)
+        collectionView.mj_header = refreshHeadView
     }
     
     private func buildProessHud() {
         ProgressHUDManager.setBackgroundColor(color: UIColor.colorWithCustom(r: 240, g: 240, b: 240))
         ProgressHUDManager.setFont(font: UIFont.systemFont(ofSize: 16))
+    }
+    
+    // MARK: 刷新
+    func headRefresh() {
+        headView?.headData = nil
+        headData = nil
+        freshHot = nil
+        
+        weak var tmpSelf = self
+        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(0.8 * Double(NSEC_PER_SEC)))
+        dispatch_after(time, dispatch_get_main_queue()) { () -> Void in
+            HeadResources.loadHomeHeadData { (data, error) -> Void in
+                if error == nil {
+                    tmpSelf?.headView?.headData = data
+                    tmpSelf?.headData = data
+                    tmpSelf?.collectionView.reloadData()
+                }
+            }
+            
+            FreshHot.loadFreshHotData { (data, error) -> Void in
+                tmpSelf?.freshHot = data
+                tmpSelf?.collectionView.reloadData()
+                tmpSelf?.collectionView.mj_header.endRefreshing()
+            }
+        }
     }
     
     // MARK:- Action
@@ -119,68 +147,6 @@ class HomeViewController: BaseViewController {
             ProgressHUDManager.showImage(image: UIImage(named: "v2_orderSuccess")!, status: goodsName + "  库存不足了\n先买这么多, 过段时间再来看看吧~")
         }
     }
-    
-    // MARK: 商品添加到购物车动画
-    fileprivate func addProductsAnimation(imageView: UIImageView) {
-        if animationLayers == nil {
-            animationLayers = [CALayer]()
-        }
-        
-        let frame = imageView.convert(imageView.bounds, to: view)
-        let transitionLayer = CALayer()
-        transitionLayer.frame = frame
-        transitionLayer.contents = imageView.layer.contents
-        transitionLayer.fillMode = kCAFillModeRemoved
-        
-        let p1 = transitionLayer.position
-        let p3X = ScreenWidth - ScreenWidth / 5 - 10
-        let p3 = CGPoint(x:p3X, y:view.layer.bounds.size.height - 20)
-        
-        let positionAnimation = CAKeyframeAnimation(keyPath: "position")
-        let path = CGMutablePath()
-        path.move(to: CGPoint(x:p1.x, y:p1.y))
-        path.addLine(to: CGPoint(x:p3.x, y:p3.y))
-        positionAnimation.isRemovedOnCompletion = true
-        positionAnimation.path = path
-        positionAnimation.fillMode = kCAFillModeForwards
-        
-        let transformAnimation =  CABasicAnimation(keyPath: "transform")
-        transformAnimation.fromValue = NSValue(caTransform3D: CATransform3DIdentity)
-        transformAnimation.toValue = NSValue(caTransform3D: CATransform3DScale(CATransform3DIdentity, 0.1, 0.1, 1))
-        transformAnimation.fillMode = kCAFillModeForwards
-        transformAnimation.isRemovedOnCompletion = true
-        
-        let opacityAnimation = CABasicAnimation(keyPath: "opacity")
-        opacityAnimation.fromValue = 0.8
-        opacityAnimation.toValue = 0.1
-        opacityAnimation.fillMode = kCAFillModeForwards
-        opacityAnimation.isRemovedOnCompletion = true
-        
-        let groupAnimation = CAAnimationGroup()
-        groupAnimation.animations = [positionAnimation, transformAnimation, opacityAnimation];
-        groupAnimation.duration = 0.5
-        //groupAnimation.delegate = self
-
-        transitionLayer.add(groupAnimation, forKey: "cartParabola")
-        
-        view.layer.addSublayer(transitionLayer)
-        animationLayers!.append(transitionLayer)
-        
-//        let time = DispatchTime.now(dispatch_time_t(DispatchTime.now),Int64(0.4 * Double(NSEC_PER_SEC)))
-//        dispatch_after(time, dispatch_get_main_queue()) { () -> Void in
-//            transitionLayer.hidden = true
-//        }
-    }
-
-//    override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
-//        if animationLayers!.count > 0 {
-//            let transitionLayer = animationLayers![0]
-//            transitionLayer.isHidden = true
-//            transitionLayer.removeFromSuperlayer()
-//            animationLayers?.removeFirst()
-//            view.layer.removeAnimation(forKey: "cartParabola")
-//        }
-//    }
 }
 
 // MARK:- HomeHeadViewDelegate TableHeadViewAction
@@ -260,8 +226,12 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        
+        if indexPath.section == 0 && (indexPath.row == 0 || indexPath.row == 1) {
+            return
+        }
+        
         if isAnimation {
-            //Animation
             startAnimation(view: cell, offsetY: 80, duration: 1.0)
         }
     }

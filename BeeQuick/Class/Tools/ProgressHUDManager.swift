@@ -35,4 +35,12 @@ class ProgressHUDManager {
         SVProgressHUD.show(image, status: status)
     }
     
+    class func show() {
+        SVProgressHUD.show()
+    }
+    
+    class func dismiss() {
+        SVProgressHUD.dismiss()
+    }
+    
 }

@@ -19,6 +19,12 @@ class PageScrollView: UIView {
     
     var headData: HeadResources? {
         didSet {
+            
+            if timer != nil {
+                timer!.invalidate()
+                timer = nil
+            }
+            
             if (headData?.data?.focus?.count)! >= 0 {
                 pageControl.numberOfPages = (headData?.data?.focus?.count)!
                 pageControl.currentPage = 0
