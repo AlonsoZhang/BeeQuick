@@ -92,7 +92,7 @@ class PageScrollView: UIView {
             }
             
             imageView.tag = index
-            if (headData?.data?.focus?.count)! > 0 {
+            if (headData?.data?.focus?.count != nil){
                 let picurl = NSURL(string: headData!.data!.focus![index].img!)
                 
                 imageView.sd_setImage(with: picurl! as URL, placeholderImage: placeholderImage)
