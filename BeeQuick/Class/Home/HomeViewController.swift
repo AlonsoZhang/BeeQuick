@@ -188,7 +188,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         return cell
     }
     
-    private func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
     }
     
@@ -264,7 +264,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             footerView.hideLabel()
             footerView.tag = 1
         }
-        let tap = UITapGestureRecognizer(target: self, action: Selector(("moreGoodsClick:")))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(HomeViewController.moreGoodsClick(tap:)))
         footerView.addGestureRecognizer(tap)
         
         return footerView
