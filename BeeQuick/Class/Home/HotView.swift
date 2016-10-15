@@ -32,7 +32,7 @@ class HotView: UIView {
     var headData: HeadData? {
         didSet {
             
-            if (headData?.icons?.count)! > 0 {
+            if (headData?.icons?.count != nil) {
                 
                 if headData!.icons!.count % 4 != 0 {
                     self.rows = headData!.icons!.count / 4 + 1
@@ -48,7 +48,7 @@ class HotView: UIView {
                     let icon = IconImageTextView(frame: CGRect(x:iconX, y:iconY, width:iconW, height:iconH), placeholderImage: UIImage(named: "icon_icons_holder")!)
                     icon.tag = i
                     icon.activitie = headData!.icons![i]
-                    let tap = UITapGestureRecognizer(target: self, action: Selector(("iconClick:")))
+                    let tap = UITapGestureRecognizer(target: self, action: #selector(HotView.iconClick(tap:)))
                     icon.addGestureRecognizer(tap)
                     addSubview(icon)
                 }
@@ -64,6 +64,7 @@ class HotView: UIView {
     
     // MARK:- Action
     func iconClick(tap: UITapGestureRecognizer) {
+        
         if iconClick != nil {
             iconClick!(tap.view!.tag)
         }

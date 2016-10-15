@@ -25,7 +25,7 @@ class PageScrollView: UIView {
                 timer = nil
             }
             
-            if (headData?.data?.focus?.count)! >= 0 {
+            if (headData?.data?.focus?.count != nil) {
                 pageControl.numberOfPages = (headData?.data?.focus?.count)!
                 pageControl.currentPage = 0
                 updatePageScrollView()

@@ -50,7 +50,7 @@ class ProductsViewController: AnimationViewController {
         productsTableView?.register(SupermarketHeadView.self, forHeaderFooterViewReuseIdentifier: headViewIdentifier)
         productsTableView?.tableFooterView = buildProductsTableViewTableFooterView()
         
-        let headView = LFBRefreshHeader(refreshingTarget: self, refreshingAction: "startRefreshUpPull")
+        let headView = LFBRefreshHeader(refreshingTarget: self, refreshingAction: #selector(ProductsViewController.startRefreshUpPull))
         productsTableView?.mj_header = headView
         
         view.addSubview(productsTableView!)
@@ -134,7 +134,7 @@ extension ProductsViewController: UIScrollViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
-        if (animationLayers?.count)! > 0 {
+        if (animationLayers?.count != nil) {
             let transitionLayer = animationLayers![0]
             transitionLayer.isHidden = true
         }
