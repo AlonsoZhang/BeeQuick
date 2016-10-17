@@ -24,4 +24,30 @@ extension UIImage {
         
         return image!
     }
+    
+    class func createImageFromView(view: UIView) -> UIImage {
+        UIGraphicsBeginImageContext(view.bounds.size);
+        
+        view.layer.render(in: UIGraphicsGetCurrentContext()!)
+        
+        let image = UIGraphicsGetImageFromCurrentImageContext();
+        
+        UIGraphicsEndImageContext();
+        
+        return image!
+    }
+    
+    func imageClipOvalImage() -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(self.size, false, 0.0)
+        let ctx = UIGraphicsGetCurrentContext()
+        let rect = CGRect(x:0, y:0, width:self.size.width, height:self.size.height)
+        ctx!.addEllipse(in: rect)
+        
+        ctx?.clip()
+        self.draw(in: rect)
+        
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image!
+    }
 }

@@ -39,12 +39,22 @@ public class DictModelManager {
         autoreleasepool {
             // 3. 遍历模型字典
             for (k, v) in infoDict {
-                
+                if k == "desc" {
+                    let newValue = dict["description"] as? String
+                    obj.setValue(newValue, forKey: "desc")
+                }
                 if let value: AnyObject = dict.object(forKey: k) as AnyObject? {
                     
                     if v.isEmpty {
                         if !(value === NSNull()) {
-                            obj.setValue(value, forKey: k)
+                            if k == "number" && ScreenWidth < 375 {
+                                if let vav: String = value as? String {
+                                    print(Int(vav)!)
+                                    obj.setValue(Int(vav)!, forKey: k)
+                                }
+                            } else {
+                                obj.setValue(value, forKey: k)
+                            }
                         }
                         
                     } else {

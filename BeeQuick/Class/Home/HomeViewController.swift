@@ -17,6 +17,7 @@ class HomeViewController: AnimationViewController {
     fileprivate var headData: HeadResources?
     fileprivate var freshHot: FreshHot?
     
+// MARK: - Life circle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,13 +36,13 @@ class HomeViewController: AnimationViewController {
         NotificationCenter.default.removeObserver(self)
     }
     
-    // MARK:- addNotifiation
+// MARK:- addNotifiation
     func addHomeNotification() {
         NotificationCenter.default.addObserver(self, selector: #selector(homeTableHeadViewHeightDidChange(noti:)), name: NSNotification.Name(rawValue: HomeTableHeadViewHeightDidChange), object: nil)
         NotificationCenter.default.addObserver(self, selector: Selector(("goodsInventoryProblem:")), name: NSNotification.Name(rawValue: HomeGoodsInventoryProblem), object: nil)
     }
     
-    // MARK:- Creat UI
+// MARK:- Creat UI
     private func buildNavigationItem() {
         navigationController?.navigationBar.barTintColor = LFBNavigationYellowColor
         
@@ -237,7 +238,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, willDisplaySupplementaryView view: UICollectionReusableView, forElementKind elementKind: String, at indexPath: IndexPath) {
         if indexPath.section == 1 && headData != nil && freshHot != nil && isAnimation {
-            startAnimation(view: view, offsetY: 40, duration: 0.6)
+            startAnimation(view: view, offsetY: 60, duration: 0.8)
         }
     }
     
@@ -288,5 +289,9 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             isAnimation = lastContentOffsetY < scrollView.contentOffset.y
             lastContentOffsetY = scrollView.contentOffset.y
         }
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
     }
 }

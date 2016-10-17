@@ -37,13 +37,14 @@ class ProductsViewController: AnimationViewController {
     }
     
     override func viewDidLoad() {
-        view = UIView(frame: CGRect(x:ScreenWidth * 0.25, y:0, width:ScreenWidth * 0.75, height:ScreenHeight - NavigationH - 49))
+        view = UIView(frame: CGRect(x:ScreenWidth * 0.25, y:0, width:ScreenWidth * 0.75, height:ScreenHeight - NavigationH))
         buildProductsTableView()
     }
     
     // MARK: - Build UI
     private func buildProductsTableView() {
         productsTableView = LFBTableView(frame: view.bounds, style: .plain)
+        productsTableView?.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 49, right: 0)
         productsTableView?.backgroundColor = LFBGlobalBackgroundColor
         productsTableView?.delegate = self
         productsTableView?.dataSource = self

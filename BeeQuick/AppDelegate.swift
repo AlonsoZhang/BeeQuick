@@ -12,19 +12,50 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var adViewController: ADViewController?
 
 // MARK:- public方法
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        Thread.sleep(forTimeInterval: 1.0)
         
         setAppSubject()
+        addNotification()
         
-        let tabBarVC = MainTabBarController()
         window = UIWindow(frame: ScreenBounds)
-        window!.rootViewController = tabBarVC
         window!.makeKeyAndVisible()
         
+        adViewController = ADViewController()
+        
+        weak var tmpSelf = self
+        MainAD.loadADData { (data, error) -> Void in
+            if data?.data?.img_name != nil {
+                tmpSelf!.adViewController!.imageName = data!.data!.img_name
+                tmpSelf!.window?.rootViewController = self.adViewController
+            }
+        }
+        
         return true
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    // MARK: - Public Method
+    func addNotification() {
+        NotificationCenter.default.addObserver(self, selector: "showMainTabbarControllerSucess:", name: ADImageLoadSecussed, object: nil)
+        NotificationCenter.default.addObserver(self, selector: "showMainTabbarControllerFale", name: ADImageLoadFail, object: nil)
+        
+    }
+    
+    func showMainTabbarControllerSucess(noti: NSNotification) {
+        let adImage = noti.object as! UIImage
+        let mainTabBar = MainTabBarController()
+        mainTabBar.adImage = adImage
+        window?.rootViewController = mainTabBar
+    }
+    
+    func showMainTabbarControllerFale() {
+        window!.rootViewController = MainTabBarController()
     }
     
 // MARK:- privete方法
@@ -32,7 +63,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func setAppSubject() {
         let tabBarAppearance = UITabBar.appearance()
         tabBarAppearance.backgroundColor = UIColor.white
-        tabBarAppearance.isTranslucent = true
+        tabBarAppearance.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
         let navBarnAppearance = UINavigationBar.appearance()
         navBarnAppearance.isTranslucent = false
     }

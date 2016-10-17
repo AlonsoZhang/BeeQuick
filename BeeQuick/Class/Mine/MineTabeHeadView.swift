@@ -16,9 +16,11 @@ enum MineHeadViewButtonType: Int {
 
 class MineTabeHeadView: UIView {
     
+    var mineHeadViewClick:((type: MineHeadViewButtonType) -> ())?
     private let orderView = MineOrderView()
     private let couponView = MineCouponView()
     private let messageView = MineMessageView()
+    private var couponNumber: UIButton?
     private let line1 = UIView()
     private let line2 = UIView()
     
@@ -38,12 +40,31 @@ class MineTabeHeadView: UIView {
         orderView.frame = CGRect(x:0, y:0, width:subViewW, height:height)
         couponView.frame = CGRect(x:subViewW, y:0, width:subViewW, height:height)
         messageView.frame = CGRect(x:subViewW * 2, y:0, width:subViewW, height:height)
+        couponNumber?.frame = CGRectMake(subViewW * 1.56, 12, 15, 15)
         line1.frame = CGRect(x:subViewW - 0.5,y:height * 0.2, width:1, height:height * 0.6)
         line2.frame = CGRect(x:subViewW * 2 - 0.5, y:height * 0.2, width:1, height:height * 0.6)
     }
     
     func click(tap: UIGestureRecognizer) {
-        print(tap.view!.tag)
+        if mineHeadViewClick != nil {
+            
+            switch tap.view!.tag {
+                
+            case MineHeadViewButtonType.Order.rawValue:
+                mineHeadViewClick!(type: MineHeadViewButtonType.Order)
+                break
+                
+            case MineHeadViewButtonType.Coupon.rawValue:
+                mineHeadViewClick!(type: MineHeadViewButtonType.Coupon)
+                break
+                
+            case MineHeadViewButtonType.Message.rawValue:
+                mineHeadViewClick!(type: MineHeadViewButtonType.Message)
+                break
+                
+            default: break
+            }
+        }
     }
     
     private func buildUI() {
@@ -69,6 +90,26 @@ class MineTabeHeadView: UIView {
         line2.backgroundColor = UIColor.gray
         line2.alpha = 0.3
         addSubview(line2)
+        
+        couponNumber = UIButton(type: .Custom)
+        couponNumber?.setBackgroundImage(UIImage(named: "redCycle"), forState: UIControlState.Normal)
+        couponNumber?.setTitleColor(UIColor.redColor(), forState: .Normal)
+        couponNumber?.userInteractionEnabled = false
+        couponNumber?.titleLabel?.font = UIFont.systemFontOfSize(8)
+        couponNumber?.hidden = true
+        addSubview(couponNumber!)
+    }
+    
+    func setCouponNumer(number: Int) {
+        if number > 0 && number <= 9 {
+            couponNumber?.hidden = false
+            couponNumber?.setTitle("\(number)", forState: .Normal)
+        } else if number > 9 && number < 100 {
+            couponNumber?.setTitle("\(number)", forState: .Normal)
+            couponNumber?.hidden = false
+        } else {
+            couponNumber?.hidden = true
+        }
     }
 }
 
