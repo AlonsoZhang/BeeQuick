@@ -84,7 +84,7 @@ class SupermarketViewController: BaseViewController {
                 tmpSelf!.supermarketData = data
                 tmpSelf!.categoryTableView.reloadData()
                 tmpSelf?.categoryTableView.selectRow(at: IndexPath(row: 0, section: 0), animated: true, scrollPosition: .bottom)
-                print(data)
+                //print(data)
                 tmpSelf!.productsVC.supermarketData = data
             }
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0){
@@ -129,7 +129,6 @@ extension SupermarketViewController: UITableViewDelegate, UITableViewDataSource 
             productsVC.categortsSelectedIndexPath = indexPath as NSIndexPath?
         }
     }
-    
 }
 
 // MARK: - SupermarketViewController

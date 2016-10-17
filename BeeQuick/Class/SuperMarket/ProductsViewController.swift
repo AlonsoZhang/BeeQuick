@@ -82,7 +82,7 @@ extension ProductsViewController: UITableViewDelegate, UITableViewDataSource {
         return 0
     }
     
-    private func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return supermarketData?.data?.categories?.count ?? 0
     }
     
