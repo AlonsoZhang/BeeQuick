@@ -176,7 +176,7 @@ class RAMAnimatedTabBarController: UITabBarController {
         view.addSubview(viewContainer)
 
         // add gesture
-        let tapGesture = UITapGestureRecognizer(target: self, action: Selector(("tapHandler:")))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(RAMAnimatedTabBarController.tapHandler(gesture:)))
         tapGesture.numberOfTouchesRequired = 1
         viewContainer.addGestureRecognizer(tapGesture)
 
@@ -242,6 +242,7 @@ class RAMAnimatedTabBarController: UITabBarController {
     func setSelectIndex(from: Int,to: Int) {
         selectedIndex = to
         let items = tabBar.items as! [RAMAnimatedTabBarItem]
+        
         let fromIV = iconsView[from].icon
         fromIV.image = UIImage(named: iconsImageName[from])
         items[from].deselectAnimation(icon: fromIV, textLabel: iconsView[from].textLabel)

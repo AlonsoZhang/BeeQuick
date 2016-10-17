@@ -26,9 +26,8 @@ class MainTabBarController: RAMAnimatedTabBarController {
         super.viewDidAppear(animated)
         
         if fristLoadMainTabBarController == false {
-//            let containers = createview
-//            let containers = createViewContainers()
-//            createCustomIcons(containers)
+            let containers1 = createViewContainers()
+            createCustomIcons(containers: containers1)
             fristLoadMainTabBarController = true
         }
     }

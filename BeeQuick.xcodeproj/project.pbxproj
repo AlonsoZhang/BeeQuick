@@ -35,7 +35,7 @@
 		E2B059FD1DA493280026DF8D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B059FC1DA493280026DF8D /* BaseViewController.swift */; };
 		E2B059FF1DA493930026DF8D /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B059FE1DA493930026DF8D /* BaseNavigationController.swift */; };
 		E2B05A011DA493C50026DF8D /* UpImageDownTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B05A001DA493C50026DF8D /* UpImageDownTextButton.swift */; };
-		E2B05A031DA49D990026DF8D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B05A021DA49D990026DF8D /* MainViewController.swift */; };
+		E2B05A031DA49D990026DF8D /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B05A021DA49D990026DF8D /* MainTabBarController.swift */; };
 		E2B05A051DA4A1010026DF8D /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B05A041DA4A1010026DF8D /* MineViewController.swift */; };
 		E2B05A0B1DA4A6370026DF8D /* MineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B05A0A1DA4A6370026DF8D /* MineCell.swift */; };
 		E2B05A0E1DA4A6540026DF8D /* MineHeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B05A0C1DA4A6540026DF8D /* MineHeadView.swift */; };
@@ -116,7 +116,7 @@
 		E2B059FC1DA493280026DF8D /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = Class/LFBBase/BaseViewController.swift; sourceTree = "<group>"; };
 		E2B059FE1DA493930026DF8D /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseNavigationController.swift; path = Class/LFBBase/BaseNavigationController.swift; sourceTree = "<group>"; };
 		E2B05A001DA493C50026DF8D /* UpImageDownTextButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpImageDownTextButton.swift; path = Class/LFBBase/UpImageDownTextButton.swift; sourceTree = "<group>"; };
-		E2B05A021DA49D990026DF8D /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = Class/LFBBase/MainViewController.swift; sourceTree = "<group>"; };
+		E2B05A021DA49D990026DF8D /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabBarController.swift; path = Class/LFBBase/MainTabBarController.swift; sourceTree = "<group>"; };
 		E2B05A041DA4A1010026DF8D /* MineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MineViewController.swift; path = Class/Mine/MineViewController.swift; sourceTree = "<group>"; };
 		E2B05A0A1DA4A6370026DF8D /* MineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MineCell.swift; path = Class/Mine/MineCell.swift; sourceTree = "<group>"; };
 		E2B05A0C1DA4A6540026DF8D /* MineHeadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MineHeadView.swift; path = Class/Mine/MineHeadView.swift; sourceTree = "<group>"; };
@@ -354,7 +354,7 @@
 				E2E084B21DA8CC3A0067FE52 /* BuyView.swift */,
 				E2B059FE1DA493930026DF8D /* BaseNavigationController.swift */,
 				E2B05A001DA493C50026DF8D /* UpImageDownTextButton.swift */,
-				E2B05A021DA49D990026DF8D /* MainViewController.swift */,
+				E2B05A021DA49D990026DF8D /* MainTabBarController.swift */,
 				E2E084B41DA8CC6E0067FE52 /* DiscountPriceView.swift */,
 				E2FDF1991DA637AE00B8A301 /* PageScrollView.swift */,
 				E2B621D81DAE0C3A007F97D2 /* LFBCollectionView.swift */,
@@ -695,7 +695,7 @@
 				E2E084E01DA8CDE30067FE52 /* SDWebImageDecoder.m in Sources */,
 				E2FDF1B21DA63FC800B8A301 /* RAMItemAnimationProtocol.swift in Sources */,
 				E2E084E91DA8CDE30067FE52 /* UIImageView+HighlightedWebCache.m in Sources */,
-				E2B05A031DA49D990026DF8D /* MainViewController.swift in Sources */,
+				E2B05A031DA49D990026DF8D /* MainTabBarController.swift in Sources */,
 				E209BD141DB0764E0022EB83 /* LFBRefreshHeader.swift in Sources */,
 				E2B059F11DA491B20026DF8D /* UIBarButtonItem+Extension.swift in Sources */,
 				E2E084E51DA8CDE30067FE52 /* UIButton+WebCache.m in Sources */,
