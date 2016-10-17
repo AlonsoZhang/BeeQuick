@@ -58,9 +58,9 @@ class HelpHeadView: UITableViewHeaderFooterView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        questionLabel?.frame = CGRectMake(20, 0, width - 20, height)
-        arrowImageView?.frame = CGRectMake(width - 30, (height - arrowImageView!.size.height) * 0.5, arrowImageView!.size.width, arrowImageView!.size.height)
-        lineView.frame = CGRectMake(0, 0, width, 1)
+        questionLabel?.frame = CGRect(x:20, y:0, width:width - 20, height:height)
+        arrowImageView?.frame = CGRect(x:width - 30, y:(height - arrowImageView!.size.height) * 0.5, width:arrowImageView!.size.width, height:arrowImageView!.size.height)
+        lineView.frame = CGRect(x:0, y:0, width:width, height:1)
         
     }
     

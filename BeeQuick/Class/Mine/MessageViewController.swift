@@ -25,11 +25,11 @@ class MessageViewController: BaseViewController {
     
     private func bulidSegmentedControl() {
         segment = UISegmentedControl(items: ["系统消息", "用户消息"])
-        segment.frame = CGRectMake(0, 0, 180, 30)
+        segment.frame = CGRect(x:0, y:0, width:180, height:30)
         navigationItem.titleView = segment
-        navigationItem.titleView?.frame = CGRectMake(0, 0, 180, 30)
+        navigationItem.titleView?.frame = CGRect(x:0, y:0, width:180, height:30)
         segment.tintColor = LFBNavigationYellowColor
-        segment.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.blackColor()], forState: UIControlState.Selected)
+        segment.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.black], forState: UIControlState.Selected)
         segment.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.lightGrayColor()], forState: UIControlState.Normal)
         segment.selectedSegmentIndex = 0
     }

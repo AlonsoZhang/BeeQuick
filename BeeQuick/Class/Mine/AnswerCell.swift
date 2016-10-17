@@ -21,7 +21,7 @@ class AnswerCell: UITableViewCell {
                     textY += question!.everyRowHeight[j]
                 }
                 
-                let textLabel = UILabel(frame: CGRectMake(20, textY, ScreenWidth - 40, question!.everyRowHeight[i]))
+                let textLabel = UILabel(frame: CGRect(x:20, y:textY, width:ScreenWidth - 40, height:question!.everyRowHeight[i]))
                 textLabel.text = question!.texts![i]
                 textLabel.numberOfLines = 0
                 textLabel.textColor = UIColor.grayColor()
@@ -55,6 +55,6 @@ class AnswerCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        lineView.frame = CGRectMake(20, 0, width - 40, 0.5)
+        lineView.frame = CGRect(x:20, y:0, width:width - 40, height:0.5)
     }
 }

@@ -29,7 +29,7 @@ class AboltAuthorViewController: BaseViewController {
     private func buildAuthorImageView() {
         navigationItem.title = "关于作者"
         
-        let authorImageView = UIImageView(frame: CGRectMake((ScreenWidth - 100) * 0.5, 50, 100, 100))
+        let authorImageView = UIImageView(frame: CGRect(x:(ScreenWidth - 100) * 0.5, y:50, width:100, height:100))
         authorImageView.image = UIImage(named: "author")
         authorImageView.layer.masksToBounds = true
         authorImageView.layer.cornerRadius = 15
@@ -69,11 +69,11 @@ class AboltAuthorViewController: BaseViewController {
         label.numberOfLines = 0
         
         switch tag {
-        case 1: label.frame = CGRectMake(40, CGRectGetMaxY(authorLabel.frame) + 20, gitHubLabel.width, gitHubLabel.height + 10)
+        case 1: label.frame = CGRect(x:40, y:CGRectGetMaxY(authorLabel.frame) + 20, width:gitHubLabel.width, height:gitHubLabel.height + 10)
             break
-        case 2: label.frame = CGRectMake(40, CGRectGetMaxY(gitHubLabel.frame) + 10, ScreenWidth, sinaWeiBoLabel.height + 10)
+        case 2: label.frame = CGRect(x:40, y:CGRectGetMaxY(gitHubLabel.frame) + 10, width:ScreenWidth, height:sinaWeiBoLabel.height + 10)
             break
-        case 3: label.frame = CGRectMake(40, CGRectGetMaxY(sinaWeiBoLabel.frame) + 10, ScreenWidth - 40 - 50, 40)
+        case 3: label.frame = CGRect(x:40, y:CGRectGetMaxY(sinaWeiBoLabel.frame) + 10, width:ScreenWidth - 40 - 50, height:40)
         default:break
         }
         

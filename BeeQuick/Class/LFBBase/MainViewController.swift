@@ -42,7 +42,7 @@ class MainTabBarController: AnimationTabBarController, UITabBarControllerDelegat
         if fristLoadMainTabBarController {
             let containers = createViewContainers()
             
-            createCustomIcons(containers)
+            createCustomIcons(containers: containers)
             fristLoadMainTabBarController = false
         }
     }

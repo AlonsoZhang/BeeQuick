@@ -46,7 +46,7 @@ class CouponViewController: BaseViewController {
     }
     
     func buildBindingCouponView() {
-        bindingCouponView = BindingCouponView(frame: CGRectMake(0, 0, ScreenWidth, 50), bindingButtonClickBack: { (couponTextFiled) -> () in
+        bindingCouponView = BindingCouponView(frame: CGRect(x:0, y:0, width:ScreenWidth, height:50), bindingButtonClickBack: { (couponTextFiled) -> () in
             if couponTextFiled.text != nil && !(couponTextFiled.text!.isEmpty) {
                 ProgressHUDManager.showImage(UIImage(named: "v2_orderSuccess")!, status: "请输入正确的优惠劵")
             } else {
@@ -58,7 +58,7 @@ class CouponViewController: BaseViewController {
     }
     
     private func bulidCouponTableView() {
-        couponTableView = LFBTableView(frame: CGRectMake(0, CGRectGetMaxY(bindingCouponView!.frame), ScreenWidth, ScreenHeight - bindingCouponView!.height - NavigationH), style: UITableViewStyle.Plain)
+        couponTableView = LFBTableView(frame: CGRect(x:0, y:CGRectGetMaxY(bindingCouponView!.frame), width:ScreenWidth, height:ScreenHeight - bindingCouponView!.height - NavigationH), style: UITableViewStyle.Plain)
         couponTableView!.delegate = self
         couponTableView?.dataSource = self
         view.addSubview(couponTableView!)
@@ -164,10 +164,10 @@ extension CouponViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         if unUseCoupons.count > 0 && useCoupons.count > 0 {
             if 0 == section {
-                let footView = UIView(frame: CGRectMake(0, 0, ScreenWidth, 10))
+                let footView = UIView(frame: CGRect(x:0, y:0, width:ScreenWidth, height:10))
                 footView.backgroundColor = UIColor.clearColor()
-                let lineView = UIView(frame: CGRectMake(CouponViewControllerMargin, 4.5, ScreenWidth - 2 * CouponViewControllerMargin, 1))
-                lineView.backgroundColor = UIColor.colorWithCustom(230, g: 230, b: 230)
+                let lineView = UIView(frame: CGRect(x:CouponViewControllerMargin, y:4.5, width:ScreenWidth - 2 * CouponViewControllerMargin, height:1))
+                lineView.backgroundColor = UIColor.colorWithCustom(r:230, g: 230, b: 230)
                 footView.addSubview(lineView)
                 return footView
             } else {

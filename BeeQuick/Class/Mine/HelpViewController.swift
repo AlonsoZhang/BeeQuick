@@ -16,7 +16,7 @@ enum HelpCellType: Int {
 class HelpViewController: BaseViewController {
     
     let margin: CGFloat = 20
-    let backView: UIView = UIView(frame: CGRectMake(0, 10, ScreenWidth, 100))
+    let backView: UIView = UIView(frame: CGRect(x:0, y:10, width:ScreenWidth, height:100))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,23 +26,23 @@ class HelpViewController: BaseViewController {
         backView.backgroundColor = UIColor.whiteColor()
         view.addSubview(backView)
         
-        let phoneLabel = UILabel(frame: CGRectMake(20, 0, ScreenWidth - margin, 50))
+        let phoneLabel = UILabel(frame: CGRect(x:20, y:0, width:ScreenWidth - margin, height:50))
         creatLabel(phoneLabel, text: "客服电话: 400-8484-842", type: .Phone)
         
         let arrowImageView = UIImageView(image: UIImage(named: "icon_go"))
-        arrowImageView.frame = CGRectMake(ScreenWidth - 20, (50 - 10) * 0.5, 5, 10)
+        arrowImageView.frame = CGRect(x:ScreenWidth - 20, y:(50 - 10) * 0.5, width:5, height:10)
         backView.addSubview(arrowImageView)
         
-        let lineView = UIView(frame: CGRectMake(margin, 49.5, ScreenWidth - margin, 1))
+        let lineView = UIView(frame: CGRect(x:margin, y:49.5, width:ScreenWidth - margin, height:1))
         lineView.backgroundColor = UIColor.grayColor()
         lineView.alpha = 0.2
         backView.addSubview(lineView)
         
-        let questionLabel = UILabel(frame: CGRectMake(margin, 50, ScreenWidth - margin, 50))
+        let questionLabel = UILabel(frame: CGRect(x:margin, y:50, width:ScreenWidth - margin, height:50))
         creatLabel(questionLabel, text: "常见问题", type: .Question)
         
         let arrowImageView2 = UIImageView(image: UIImage(named: "icon_go"))
-        arrowImageView2.frame = CGRectMake(ScreenWidth - 20, (50 - 10) * 0.5 + 50, 5, 10)
+        arrowImageView2.frame = CGRect(x:ScreenWidth - 20, y:(50 - 10) * 0.5 + 50, width:5, height:10)
         backView.addSubview(arrowImageView2)
     }
     

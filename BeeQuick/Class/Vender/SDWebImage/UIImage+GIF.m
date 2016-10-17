@@ -144,7 +144,7 @@
     for (UIImage *image in self.images) {
         UIGraphicsBeginImageContextWithOptions(size, NO, 0.0);
         
-        [image drawInRect:CGRectMake(thumbnailPoint.x, thumbnailPoint.y, scaledSize.width, scaledSize.height)];
+        [image drawInRect:CGRect(x:thumbnailPoint.x, y:thumbnailPoint.y, width:scaledSize.width, height:scaledSize.height)];
         UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
 
         [scaledImages addObject:newImage];

@@ -23,7 +23,7 @@ class BaseNavigationController: UINavigationController {
         backBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignment.Left
         backBtn.contentEdgeInsets = UIEdgeInsetsMake(0, -10, 0, 0)
         let btnW: CGFloat = ScreenWidth > 375.0 ? 50 : 44
-        backBtn.frame = CGRectMake(0, 0, btnW, 40)
+        backBtn.frame = CGRect(x:0, y:0, width:btnW, height:40)
         
         return backBtn
     }()

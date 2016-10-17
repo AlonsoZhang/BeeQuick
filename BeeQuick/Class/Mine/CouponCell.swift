@@ -55,10 +55,10 @@ class CouponCell: UITableViewCell {
         titleLabel?.textAlignment = NSTextAlignment.Center
         contentView.addSubview(titleLabel!)
         
-        circleImageView = UIImageView(frame: CGRectMake(0, 0, circleWidth, circleWidth))
+        circleImageView = UIImageView(frame: CGRect(x:0, y:0, width:circleWidth, height:circleWidth))
         contentView.addSubview(circleImageView!)
         
-        statusLabel = UILabel(frame: CGRectMake(0, 35, circleWidth, 20))
+        statusLabel = UILabel(frame: CGRect(x:0, y:35, width:circleWidth, height:20))
         statusLabel!.hidden = true
         statusLabel?.textColor = UIColor.colorWithCustom(105, g: 105, b: 105)
         statusLabel?.font = UIFont.systemFontOfSize(10)
@@ -67,9 +67,9 @@ class CouponCell: UITableViewCell {
         
         priceLabel = UILabel()
         priceLabel?.font = UIFont.boldSystemFontOfSize(16)
-        priceLabel?.frame = CGRectMake(0, 10, circleWidth, 30)
+        priceLabel?.frame = CGRect(x:0, y:10, width:circleWidth, height:30)
         priceLabel?.textAlignment = NSTextAlignment.Center
-        priceLabel?.textColor = UIColor.whiteColor()
+        priceLabel?.textColor = UIColor.white
         circleImageView!.addSubview(priceLabel!)
         
         descLabel = UILabel()
@@ -97,24 +97,24 @@ class CouponCell: UITableViewCell {
         let starRightL: CGFloat = (ScreenWidth - 2 * CouponViewControllerMargin) * 0.26 + CouponViewControllerMargin
         let rightWidth: CGFloat = (ScreenWidth - 2 * CouponViewControllerMargin) * 0.74
         
-        backImageView?.frame = CGRectMake(CouponViewControllerMargin, 5, width - 2 * CouponViewControllerMargin, height - 10)
+        backImageView?.frame = CGRect(x:CouponViewControllerMargin, y:5, width:width - 2 * CouponViewControllerMargin, height:height - 10)
         
         let circleX = ((ScreenWidth - 2 * CouponViewControllerMargin) * 0.26 - circleWidth) * 0.65
-        circleImageView?.frame = CGRectMake(CouponViewControllerMargin + circleX, 0, circleWidth, circleWidth)
+        circleImageView?.frame = CGRect(x:CouponViewControllerMargin + circleX, y:0, width:circleWidth, height:circleWidth)
         circleImageView?.center.y = backImageView!.center.y
         
         titleLabel?.sizeToFit()
-        titleLabel?.frame = CGRectMake((rightWidth - titleLabel!.width) * 0.5 + starRightL, 15, titleLabel!.width, titleLabel!.height)
+        titleLabel?.frame = CGRect(x:(rightWidth - titleLabel!.width) * 0.5 + starRightL, y:15, width:titleLabel!.width, height:titleLabel!.height)
         
-        line1View?.frame = CGRectMake(CouponViewControllerMargin + (ScreenWidth - 2 * CouponViewControllerMargin) * 0.26 + 10, 2, (ScreenWidth - 2 * CouponViewControllerMargin) * 0.74 - 20, 0.8)
+        line1View?.frame = CGRect(x:CouponViewControllerMargin + (ScreenWidth - 2 * CouponViewControllerMargin) * 0.26 + 10, y:2, width:(ScreenWidth - 2 * CouponViewControllerMargin) * 0.74 - 20, height:0.8)
         line1View?.center.y = (titleLabel?.center.y)!
         
         dateLabel?.sizeToFit()
-        dateLabel?.frame = CGRectMake((rightWidth - dateLabel!.width) * 0.5 + starRightL, CGRectGetMaxY(titleLabel!.frame) + 10, dateLabel!.width, dateLabel!.height)
+        dateLabel?.frame = CGRect(x:(rightWidth - dateLabel!.width) * 0.5 + starRightL, y:CGRectGetMaxY(titleLabel!.frame) + 10, width:dateLabel!.width, height:dateLabel!.height)
         
-        line2View?.frame = CGRectMake(CGRectGetMinX(dateLabel!.frame), CGRectGetMaxY(dateLabel!.frame) + 15, dateLabel!.width, 0.4)
+        line2View?.frame = CGRect(x:CGRectGetMinX(dateLabel!.frame), y:CGRectGetMaxY(dateLabel!.frame) + 15, width:dateLabel!.width, height:0.4)
         
-        descLabel?.frame = CGRectMake(starRightL + CouponViewControllerMargin, CGRectGetMinY(line2View!.frame) + 5, rightWidth - CouponViewControllerMargin - 10, 40)
+        descLabel?.frame = CGRect(x:starRightL + CouponViewControllerMargin, y:CGRectGetMinY(line2View!.frame) + 5, width:rightWidth - CouponViewControllerMargin - 10, height:40)
     }
     
     var coupon: Coupon? {
@@ -150,7 +150,7 @@ class CouponCell: UITableViewCell {
         line2View?.backgroundColor = line1View?.backgroundColor
         descLabel?.textColor = titleLabel?.textColor
         
-        let tmpView = UIView(frame: CGRectMake(0, 0, circleWidth, circleWidth))
+        let tmpView = UIView(frame: CGRect(x:0, y:0, width:circleWidth, height:circleWidth))
         tmpView.backgroundColor = isUse ? LFBNavigationYellowColor : UIColor.colorWithCustom(210, g: 210, b: 210)
         let image = UIImage.createImageFromView(tmpView)
         circleImageView!.image = image.imageClipOvalImage()

@@ -40,30 +40,30 @@ class SettingViewController: BaseViewController {
     }
     
     private func buildaboutMeView() {
-        aboutMeView = UIView(frame: CGRectMake(0, 10, ScreenWidth, subViewHeight))
+        aboutMeView = UIView(frame: CGRect(x:0, y:10, width:ScreenWidth, height:subViewHeight))
         aboutMeView.backgroundColor = UIColor.whiteColor()
         view.addSubview(aboutMeView!)
         
         let tap = UITapGestureRecognizer(target: self, action: "aboutMeViewClick")
         aboutMeView.addGestureRecognizer(tap)
         
-        let aboutLabel = UILabel(frame: CGRectMake(10, 0, 200, subViewHeight))
+        let aboutLabel = UILabel(frame: CGRect(x:10, y:0, width:200, height:subViewHeight))
         aboutLabel.text = "关于小熊"
         aboutLabel.font = UIFont.systemFontOfSize(14)
         aboutLabel.textColor = UIColor.colorWithCustom(60, g: 60, b: 60)
         aboutMeView.addSubview(aboutLabel)
         
         let arrowImageView = UIImageView(image: UIImage(named: "icon_go"))
-        arrowImageView.frame = CGRectMake(ScreenWidth - 20, (subViewHeight - 10) * 0.5, 5, 10)
+        arrowImageView.frame = CGRect(x:ScreenWidth - 20, y:(subViewHeight - 10) * 0.5, width:5, height:10)
         aboutMeView.addSubview(arrowImageView)
     }
     
     private func buildCleanCacheView() {
-        cleanCacheView = UIView(frame: CGRectMake(0, subViewHeight + 10, ScreenWidth, subViewHeight))
+        cleanCacheView = UIView(frame: CGRect(x:0, y:subViewHeight + 10, width:ScreenWidth, height:subViewHeight))
         cleanCacheView.backgroundColor = UIColor.whiteColor()
         view.addSubview(cleanCacheView!)
         
-        let cleanCacheLabel = UILabel(frame: CGRectMake(10, 0, 200, subViewHeight))
+        let cleanCacheLabel = UILabel(frame: CGRect(x:10, y:0, width:200, height:subViewHeight))
         cleanCacheLabel.text = "清理缓存"
         cleanCacheLabel.font = UIFont.systemFontOfSize(14)
         cleanCacheLabel.textColor = UIColor.colorWithCustom(60, g: 60, b: 60)
@@ -72,24 +72,24 @@ class SettingViewController: BaseViewController {
         let tap = UITapGestureRecognizer(target: self, action: "cleanCacheViewClick")
         cleanCacheView.addGestureRecognizer(tap)
         
-        cacheNumberLabel = UILabel(frame: CGRectMake(150, 0, ScreenWidth - 165, subViewHeight))
+        cacheNumberLabel = UILabel(frame: CGRect(x:150, y:0, width:ScreenWidth - 165, height:subViewHeight))
         cacheNumberLabel.textAlignment = NSTextAlignment.Right
         cacheNumberLabel.textColor = UIColor.colorWithCustom(180, g: 180, b: 180)
         cacheNumberLabel.text = String().stringByAppendingFormat("%.2fM", FileTool.folderSize(LFBCachePath)).cleanDecimalPointZear()
         cleanCacheView.addSubview(cacheNumberLabel)
         
-        let lineView = UIView(frame: CGRectMake(10, -0.5, ScreenWidth - 10, 0.5))
+        let lineView = UIView(frame: CGRect(x:10, y:-0.5, width:ScreenWidth - 10, height:0.5))
         lineView.backgroundColor = UIColor.blackColor()
         lineView.alpha = 0.08
         cleanCacheView.addSubview(lineView)
     }
     
     private func buildLogoutView() {
-        logoutView = UIView(frame: CGRectMake(0, CGRectGetMaxY(cleanCacheView.frame) + 20, ScreenHeight, subViewHeight))
+        logoutView = UIView(frame: CGRect(x:0, y:CGRectGetMaxY(cleanCacheView.frame) + 20, width:ScreenHeight, height:subViewHeight))
         logoutView.backgroundColor = UIColor.whiteColor()
         view.addSubview(logoutView)
         
-        let logoutLabel = UILabel(frame: CGRectMake(0, 0, ScreenWidth, subViewHeight))
+        let logoutLabel = UILabel(frame: CGRect(x:0, y:0, width:ScreenWidth, height:subViewHeight))
         logoutLabel.text = "退出当前账号"
         logoutLabel.textColor = UIColor.colorWithCustom(60, g: 60, b: 60)
         logoutLabel.font = UIFont.systemFontOfSize(15)

@@ -16,7 +16,7 @@ class BindingCouponView: UIView {
         let couponTextFiled = UITextField()
         
         couponTextFiled.keyboardType = UIKeyboardType.NumberPad
-        couponTextFiled.borderStyle = UITextBorderStyle.RoundedRect
+        couponTextFiled.borderStyle = UITextBorderStyle.roundedRect
         couponTextFiled.autocorrectionType = UITextAutocorrectionType.No
         couponTextFiled.font = UIFont.systemFontOfSize(14)
         let placeholder = NSAttributedString(string: "请输入优惠劵号码", attributes: [NSFontAttributeName : UIFont.systemFontOfSize(14), NSForegroundColorAttributeName : UIColor(red: 50 / 255.0, green: 50 / 255.0, blue: 50 / 255.0, alpha: 0.8)])
@@ -70,9 +70,9 @@ class BindingCouponView: UIView {
         
         let topBottomMargin: CGFloat = 10
         let bingdingButtonWidth: CGFloat = 60
-        couponTextFiled.frame = CGRectMake(CouponViewControllerMargin, topBottomMargin, width - 2 * CouponViewControllerMargin - bingdingButtonWidth - 10, height - 2 * topBottomMargin)
-        bindingButton.frame = CGRectMake(width - CouponViewControllerMargin - bingdingButtonWidth, topBottomMargin, bingdingButtonWidth, couponTextFiled.height)
-        lineView.frame = CGRectMake(0, height - 0.5, width, 0.5)
+        couponTextFiled.frame = CGRect(x:CouponViewControllerMargin, y:topBottomMargin, width:width - 2 * CouponViewControllerMargin - bingdingButtonWidth - 10, height:height - 2 * topBottomMargin)
+        bindingButton.frame = CGRect(x:width - CouponViewControllerMargin - bingdingButtonWidth, y:topBottomMargin, width:bingdingButtonWidth, height:couponTextFiled.height)
+        lineView.frame = CGRect(x:0, y:height - 0.5, width:width, height:0.5)
     }
     
     // MARK: Action

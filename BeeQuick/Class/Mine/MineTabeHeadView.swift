@@ -40,7 +40,7 @@ class MineTabeHeadView: UIView {
         orderView.frame = CGRect(x:0, y:0, width:subViewW, height:height)
         couponView.frame = CGRect(x:subViewW, y:0, width:subViewW, height:height)
         messageView.frame = CGRect(x:subViewW * 2, y:0, width:subViewW, height:height)
-        couponNumber?.frame = CGRectMake(subViewW * 1.56, 12, 15, 15)
+        couponNumber?.frame = CGRect(x:subViewW * 1.56, y:12, width:15, height:15)
         line1.frame = CGRect(x:subViewW - 0.5,y:height * 0.2, width:1, height:height * 0.6)
         line2.frame = CGRect(x:subViewW * 2 - 0.5, y:height * 0.2, width:1, height:height * 0.6)
     }

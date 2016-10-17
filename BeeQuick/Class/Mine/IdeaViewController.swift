@@ -45,7 +45,7 @@ class IdeaViewController: BaseViewController {
     }
     
     private func buildPlaceholderLabel() {
-        promptLabel = UILabel(frame: CGRectMake(margin, 5, ScreenWidth - 2 * margin, 50))
+        promptLabel = UILabel(frame: CGRect(x:margin, y:5, width:ScreenWidth - 2 * margin, height:50))
         promptLabel.text = "你的批评和建议能帮助我们更好的完善产品,请留下你的宝贵意见!"
         promptLabel.numberOfLines = 2;
         promptLabel.textColor = UIColor.blackColor()
@@ -54,7 +54,7 @@ class IdeaViewController: BaseViewController {
     }
     
     private func buildIderTextView() {
-        iderTextView = PlaceholderTextView(frame: CGRectMake(margin, CGRectGetMaxY(promptLabel.frame) + 10, ScreenWidth - 2 * margin, 150))
+        iderTextView = PlaceholderTextView(frame: CGRect(x:margin, y:CGRectGetMaxY(promptLabel.frame) + 10, width:ScreenWidth - 2 * margin, height:150))
         iderTextView.placeholder = "请输入宝贵意见(300字以内)"
         view.addSubview(iderTextView)
     }

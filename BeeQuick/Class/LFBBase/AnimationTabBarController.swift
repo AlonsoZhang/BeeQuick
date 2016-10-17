@@ -60,7 +60,7 @@ class RAMAnimatedTabBarItem: UITabBarItem {
     
     var animation: RAMItemAnimation?
     
-    var textColor = UIColor.grayColor()
+    var textColor = UIColor.gray
     
     func playAnimation(icon: UIImageView, textLabel: UILabel){
         guard let animation = animation else {
@@ -132,9 +132,9 @@ class AnimationTabBarController: UITabBarController {
         let viewWidth: CGFloat = ScreenWidth / CGFloat(tabBar.items!.count)
         let viewHeight: CGFloat = tabBar.bounds.size.height
         
-        let viewContainer = UIView(frame: CGRectMake(viewWidth * CGFloat(index), 0, viewWidth, viewHeight))
+        let viewContainer = UIView(frame: CGRect(x:viewWidth * CGFloat(index), y:0, width:viewWidth, height:viewHeight))
         
-        viewContainer.backgroundColor = UIColor.clearColor()
+        viewContainer.backgroundColor = UIColor.clear
         viewContainer.userInteractionEnabled = true
         
         tabBar.addSubview(viewContainer)
@@ -177,12 +177,12 @@ class AnimationTabBarController: UITabBarController {
                 
                 // text
                 let textLabel = UILabel()
-                textLabel.frame = CGRectMake(0, 32, ScreenWidth / CGFloat(items.count), 49 - 32)
+                textLabel.frame = CGRect(x:0, y:32, width:ScreenWidth / CGFloat(items.count), height:49 - 32)
                 textLabel.text = item.title
-                textLabel.backgroundColor = UIColor.clearColor()
+                textLabel.backgroundColor = UIColor.clear
                 textLabel.font = UIFont.systemFontOfSize(10)
-                textLabel.textAlignment = NSTextAlignment.Center
-                textLabel.textColor = UIColor.grayColor()
+                textLabel.textAlignment = NSTextAlignment.center
+                textLabel.textColor = UIColor.gray
                 textLabel.translatesAutoresizingMaskIntoConstraints = false
                 container.addSubview(icon)
                 container.addSubview(textLabel)
@@ -195,7 +195,7 @@ class AnimationTabBarController: UITabBarController {
                 
                 if 2 == index {
                     let redDotView = ShopCarRedDotView.sharedRedDotView
-                    redDotView.frame = CGRectMake(imageH + 2, 1, 15, 15)
+                    redDotView.frame = CGRect(x:imageH + 2, y:1, width:15, height:15)
                     icon.addSubview(redDotView)
                 }
                 

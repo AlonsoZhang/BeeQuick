@@ -44,19 +44,19 @@ class ShopCartViewController: BaseViewController {
     private func buildEmptyUI() {
         shopImageView.image = UIImage(named: "v2_shop_empty")
         shopImageView.contentMode = UIViewContentMode.Center
-        shopImageView.frame = CGRectMake((view.width - shopImageView.width) * 0.5, view.height * 0.25, shopImageView.width, shopImageView.height)
+        shopImageView.frame = CGRect(x:(view.width - shopImageView.width) * 0.5, y:view.height * 0.25, width:shopImageView.width, height:shopImageView.height)
         shopImageView.hidden = true
         view.addSubview(shopImageView)
         
         emptyLabel.text = "亲,购物车空空的耶~赶紧挑好吃的吧"
         emptyLabel.textColor = UIColor.colorWithCustom(100, g: 100, b: 100)
         emptyLabel.textAlignment = NSTextAlignment.Center
-        emptyLabel.frame = CGRectMake(0, CGRectGetMaxY(shopImageView.frame) + 55, view.width, 50)
+        emptyLabel.frame = CGRect(x:0, y:CGRectGetMaxY(shopImageView.frame) + 55, width:view.width, height:50)
         emptyLabel.font = UIFont.systemFontOfSize(16)
         emptyLabel.hidden = true
         view.addSubview(emptyLabel)
         
-        emptyButton.frame = CGRectMake((view.width - 150) * 0.5, CGRectGetMaxY(emptyLabel.frame) + 15, 150, 30)
+        emptyButton.frame = CGRect(x:(view.width - 150) * 0.5, y:CGRectGetMaxY(emptyLabel.frame) + 15, width:150, height:30)
         emptyButton.setBackgroundImage(UIImage(named: "btn.png"), forState: UIControlState.Normal)
         emptyButton.setTitle("去逛逛", forState: UIControlState.Normal)
         emptyButton.setTitleColor(UIColor.colorWithCustom(100, g: 100, b: 100), forState: UIControlState.Normal)
