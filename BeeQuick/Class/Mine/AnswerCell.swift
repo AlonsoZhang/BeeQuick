@@ -24,8 +24,8 @@ class AnswerCell: UITableViewCell {
                 let textLabel = UILabel(frame: CGRect(x:20, y:textY, width:ScreenWidth - 40, height:question!.everyRowHeight[i]))
                 textLabel.text = question!.texts![i]
                 textLabel.numberOfLines = 0
-                textLabel.textColor = UIColor.grayColor()
-                textLabel.font = UIFont.systemFontOfSize(14)
+                textLabel.textColor = UIColor.gray
+                textLabel.font = UIFont.systemFont(ofSize: 14)
                 
                 contentView.addSubview(textLabel)
             }

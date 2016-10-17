@@ -14,7 +14,7 @@ class LoadProgressAnimationView: UIView {
     override var frame: CGRect {
         willSet {
             if frame.size.width == viewWidth {
-                self.hidden = true
+                self.isHidden = true
             }
             super.frame = frame
         }
@@ -34,18 +34,19 @@ class LoadProgressAnimationView: UIView {
     
     func startLoadProgressAnimation() {
         self.frame.size.width = 0
-        hidden = false
+        isHidden = false
         weak var tmpSelf = self
-        UIView.animateWithDuration(0.4, animations: { () -> Void in
+        UIView.animate(withDuration: 0.4, animations: { () -> Void in
             tmpSelf!.frame.size.width = tmpSelf!.viewWidth * 0.6
             
         }) { (finish) -> Void in
-            
-            let time = dispatch_time(DISPATCH_TIME_NOW,Int64(0.4 * Double(NSEC_PER_SEC)))
-            dispatch_after(time, dispatch_get_main_queue(), { () -> Void in
-                UIView.animateWithDuration(0.3, animations: { () -> Void in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: { 
+                UIView.animate(withDuration: 0.3, animations: { () -> Void in
                     tmpSelf!.frame.size.width = tmpSelf!.viewWidth * 0.8
                 })
+            })
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4, execute: { 
+                
             })
         }
     }
@@ -53,7 +54,7 @@ class LoadProgressAnimationView: UIView {
     func endLoadProgressAnimation() {
         weak var tmpSelf = self
         
-        UIView.animateWithDuration(0.2) { () -> Void in
+        UIView.animate(withDuration: 0.2) { () -> Void in
             tmpSelf!.frame.size.width = tmpSelf!.viewWidth
         }
     }

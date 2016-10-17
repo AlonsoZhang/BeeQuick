@@ -12,8 +12,8 @@ class CouponCell: UITableViewCell {
 
     static private let cellIdentifier = "cuoponCell"
     
-    let useColor = UIColor.colorWithCustom(161, g: 120, b: 90)
-    let unUseColor = UIColor.colorWithCustom(158, g: 158, b: 158)
+    let useColor = UIColor.colorWithCustom(r: 161, g: 120, b: 90)
+    let unUseColor = UIColor.colorWithCustom(r: 158, g: 158, b: 158)
     
     var backImageView: UIImageView? //v2_coupon_gray  v2_coupon_yellow
     var outdateImageView: UIImageView? // v2_coupon_outdated 过期 // v2_coupon_used已使用
@@ -31,15 +31,15 @@ class CouponCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        selectionStyle = UITableViewCellSelectionStyle.None
-        contentView.backgroundColor = UIColor.clearColor()
+        selectionStyle = UITableViewCellSelectionStyle.none
+        contentView.backgroundColor = UIColor.clear
         
         backImageView = UIImageView()
         contentView.addSubview(backImageView!)
         
         dateLabel = UILabel()
-        dateLabel?.font = UIFont.systemFontOfSize(12)
-        dateLabel?.textAlignment = NSTextAlignment.Center
+        dateLabel?.font = UIFont.systemFont(ofSize: 12)
+        dateLabel?.textAlignment = NSTextAlignment.center
         contentView.addSubview(dateLabel!)
         
         line1View = UIView()
@@ -51,29 +51,29 @@ class CouponCell: UITableViewCell {
         contentView.addSubview(line2View!)
         
         titleLabel = UILabel()
-        titleLabel?.font = UIFont.boldSystemFontOfSize(12)
-        titleLabel?.textAlignment = NSTextAlignment.Center
+        titleLabel?.font = UIFont.boldSystemFont(ofSize: 12)
+        titleLabel?.textAlignment = NSTextAlignment.center
         contentView.addSubview(titleLabel!)
         
         circleImageView = UIImageView(frame: CGRect(x:0, y:0, width:circleWidth, height:circleWidth))
         contentView.addSubview(circleImageView!)
         
         statusLabel = UILabel(frame: CGRect(x:0, y:35, width:circleWidth, height:20))
-        statusLabel!.hidden = true
-        statusLabel?.textColor = UIColor.colorWithCustom(105, g: 105, b: 105)
-        statusLabel?.font = UIFont.systemFontOfSize(10)
-        statusLabel?.textAlignment = NSTextAlignment.Center
+        statusLabel!.isHidden = true
+        statusLabel?.textColor = UIColor.colorWithCustom(r: 105, g: 105, b: 105)
+        statusLabel?.font = UIFont.systemFont(ofSize: 10)
+        statusLabel?.textAlignment = NSTextAlignment.center
         circleImageView?.addSubview(statusLabel!)
         
         priceLabel = UILabel()
-        priceLabel?.font = UIFont.boldSystemFontOfSize(16)
+        priceLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         priceLabel?.frame = CGRect(x:0, y:10, width:circleWidth, height:30)
-        priceLabel?.textAlignment = NSTextAlignment.Center
+        priceLabel?.textAlignment = NSTextAlignment.center
         priceLabel?.textColor = UIColor.white
         circleImageView!.addSubview(priceLabel!)
         
         descLabel = UILabel()
-        descLabel?.font = UIFont.systemFontOfSize(9)
+        descLabel?.font = UIFont.systemFont(ofSize: 9)
         descLabel?.numberOfLines = 0
         contentView.addSubview(descLabel!)
     }
@@ -83,9 +83,9 @@ class CouponCell: UITableViewCell {
     }
     
     class func cellWithTableView(tableView: UITableView) -> CouponCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as? CouponCell
+        var cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? CouponCell
         if cell == nil {
-            cell = CouponCell(style: UITableViewCellStyle.Default, reuseIdentifier: cellIdentifier)
+            cell = CouponCell(style: UITableViewCellStyle.default, reuseIdentifier: cellIdentifier)
         }
         
         return cell!
@@ -110,25 +110,25 @@ class CouponCell: UITableViewCell {
         line1View?.center.y = (titleLabel?.center.y)!
         
         dateLabel?.sizeToFit()
-        dateLabel?.frame = CGRect(x:(rightWidth - dateLabel!.width) * 0.5 + starRightL, y:CGRectGetMaxY(titleLabel!.frame) + 10, width:dateLabel!.width, height:dateLabel!.height)
+        dateLabel?.frame = CGRect(x:(rightWidth - dateLabel!.width) * 0.5 + starRightL, y:titleLabel!.frame.maxY + 10, width:dateLabel!.width, height:dateLabel!.height)
         
-        line2View?.frame = CGRect(x:CGRectGetMinX(dateLabel!.frame), y:CGRectGetMaxY(dateLabel!.frame) + 15, width:dateLabel!.width, height:0.4)
+        line2View?.frame = CGRect(x:dateLabel!.frame.minX, y:dateLabel!.frame.maxY + 15, width:dateLabel!.width, height:0.4)
         
-        descLabel?.frame = CGRect(x:starRightL + CouponViewControllerMargin, y:CGRectGetMinY(line2View!.frame) + 5, width:rightWidth - CouponViewControllerMargin - 10, height:40)
+        descLabel?.frame = CGRect(x:starRightL + CouponViewControllerMargin, y:line2View!.frame.minY + 5, width:rightWidth - CouponViewControllerMargin - 10, height:40)
     }
     
     var coupon: Coupon? {
         didSet {
             switch coupon!.status {
             case 0:
-                setCouponColor(true)
+                setCouponColor(isUse: true)
                 break
             case 1:
-                setCouponColor(false)
+                setCouponColor(isUse: false)
                 statusLabel?.text = "已使用"
                 break
             default:
-                setCouponColor(false)
+                setCouponColor(isUse: false)
                 statusLabel?.text = "已过期"
                 break
             }
@@ -143,16 +143,16 @@ class CouponCell: UITableViewCell {
         
         backImageView!.image = isUse ? UIImage(named: "v2_coupon_yellow") : UIImage(named: "v2_coupon_gray")
         titleLabel?.textColor = isUse ? useColor : unUseColor
-        titleLabel?.backgroundColor = isUse ? UIColor.colorWithCustom(255, g: 244, b: 224) : UIColor.colorWithCustom(238, g: 238, b: 238)
+        titleLabel?.backgroundColor = isUse ? UIColor.colorWithCustom(r: 255, g: 244, b: 224) : UIColor.colorWithCustom(r: 238, g: 238, b: 238)
         dateLabel?.textColor = titleLabel?.textColor
-        statusLabel?.hidden = isUse
+        statusLabel?.isHidden = isUse
         line1View?.backgroundColor = isUse ? useColor : unUseColor
         line2View?.backgroundColor = line1View?.backgroundColor
         descLabel?.textColor = titleLabel?.textColor
         
         let tmpView = UIView(frame: CGRect(x:0, y:0, width:circleWidth, height:circleWidth))
-        tmpView.backgroundColor = isUse ? LFBNavigationYellowColor : UIColor.colorWithCustom(210, g: 210, b: 210)
-        let image = UIImage.createImageFromView(tmpView)
+        tmpView.backgroundColor = isUse ? LFBNavigationYellowColor : UIColor.colorWithCustom(r: 210, g: 210, b: 210)
+        let image = UIImage.createImageFromView(view: tmpView)
         circleImageView!.image = image.imageClipOvalImage()
     }
 }

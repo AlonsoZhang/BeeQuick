@@ -13,15 +13,15 @@ class CouponViewController: BaseViewController {
     private var bindingCouponView: BindingCouponView?
     private var couponTableView: LFBTableView?
     
-    private var useCoupons: [Coupon] = [Coupon]()
-    private var unUseCoupons: [Coupon] = [Coupon]()
+    fileprivate var useCoupons: [Coupon] = [Coupon]()
+    fileprivate var unUseCoupons: [Coupon] = [Coupon]()
     
     
     // MARK: life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor.whiteColor()
+        view.backgroundColor = UIColor.white
         
         setNavigationItem()
         
@@ -32,7 +32,7 @@ class CouponViewController: BaseViewController {
         loadCouponData()
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         navigationController?.setNavigationBarHidden(false, animated: animated)
@@ -42,13 +42,13 @@ class CouponViewController: BaseViewController {
     private func setNavigationItem() {
         navigationItem.title = "优惠劵"
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem.barButton("使用规则", titleColor: UIColor.colorWithCustom(100, g: 100, b: 100), target: self, action: "rightItemClick")
+        navigationItem.rightBarButtonItem = UIBarButtonItem.barButton(title: "使用规则", titleColor: UIColor.colorWithCustom(r: 100, g: 100, b: 100), target: self, action: "rightItemClick")
     }
     
     func buildBindingCouponView() {
         bindingCouponView = BindingCouponView(frame: CGRect(x:0, y:0, width:ScreenWidth, height:50), bindingButtonClickBack: { (couponTextFiled) -> () in
             if couponTextFiled.text != nil && !(couponTextFiled.text!.isEmpty) {
-                ProgressHUDManager.showImage(UIImage(named: "v2_orderSuccess")!, status: "请输入正确的优惠劵")
+                ProgressHUDManager.showImage(image: UIImage(named: "v2_orderSuccess")!, status: "请输入正确的优惠劵")
             } else {
                 let alert = UIAlertView(title: nil, message: "请输入优惠码!", delegate: nil, cancelButtonTitle: "确定")
                 alert.show()
@@ -58,7 +58,7 @@ class CouponViewController: BaseViewController {
     }
     
     private func bulidCouponTableView() {
-        couponTableView = LFBTableView(frame: CGRect(x:0, y:CGRectGetMaxY(bindingCouponView!.frame), width:ScreenWidth, height:ScreenHeight - bindingCouponView!.height - NavigationH), style: UITableViewStyle.Plain)
+        couponTableView = LFBTableView(frame: CGRect(x:0, y:bindingCouponView!.frame.maxY, width:ScreenWidth, height:ScreenHeight - bindingCouponView!.height - NavigationH), style: UITableViewStyle.plain)
         couponTableView!.delegate = self
         couponTableView?.dataSource = self
         view.addSubview(couponTableView!)
@@ -71,7 +71,7 @@ class CouponViewController: BaseViewController {
                 return
             }
             
-            if data?.data?.count > 0 {
+            if (data?.data?.count != nil) {
                 for obj in data!.data! {
                     switch obj.status {
                     case 0: tmpSelf!.useCoupons.append(obj)
@@ -98,7 +98,7 @@ class CouponViewController: BaseViewController {
 // - MARK: UITableViewDelegate, UITableViewDataSource
 extension CouponViewController: UITableViewDelegate, UITableViewDataSource {
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if useCoupons.count > 0 && unUseCoupons.count > 0 {
             if 0 == section {
@@ -129,12 +129,12 @@ extension CouponViewController: UITableViewDelegate, UITableViewDataSource {
         return 0
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: IndexPath) -> CGFloat {
         return 130
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = CouponCell.cellWithTableView(tableView)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = CouponCell.cellWithTableView(tableView: tableView)
         var coupon: Coupon?
         if useCoupons.count > 0 && unUseCoupons.count > 0 {
             if 0 == indexPath.section {
@@ -165,7 +165,7 @@ extension CouponViewController: UITableViewDelegate, UITableViewDataSource {
         if unUseCoupons.count > 0 && useCoupons.count > 0 {
             if 0 == section {
                 let footView = UIView(frame: CGRect(x:0, y:0, width:ScreenWidth, height:10))
-                footView.backgroundColor = UIColor.clearColor()
+                footView.backgroundColor = UIColor.clear
                 let lineView = UIView(frame: CGRect(x:CouponViewControllerMargin, y:4.5, width:ScreenWidth - 2 * CouponViewControllerMargin, height:1))
                 lineView.backgroundColor = UIColor.colorWithCustom(r:230, g: 230, b: 230)
                 footView.addSubview(lineView)

@@ -62,14 +62,14 @@ class SupermarketViewController: BaseViewController {
     private func bulidProductsViewController() {
         productsVC = ProductsViewController()
         productsVC.delegate = self
-        productsVC.view.hidden = true
+        productsVC.view.isHidden = true
         addChildViewController(productsVC)
         view.addSubview(productsVC.view)
         
         weak var tmpSelf = self
         productsVC.refreshUpPull = {
-            let time = dispatch_time(DISPATCH_TIME_NOW,Int64(1.2 * Double(NSEC_PER_SEC)))
-            dispatch_after(time, dispatch_get_main_queue(), { () -> Void in
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.2, execute: { 
                 Supermarket.loadSupermarketData { (data, error) -> Void in
                     if error == nil {
                         tmpSelf!.supermarketData = data
@@ -84,26 +84,25 @@ class SupermarketViewController: BaseViewController {
     }
     
     private func loadSupermarketData() {
-        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(1 * Double(NSEC_PER_SEC)))
-        dispatch_after(time, dispatch_get_main_queue()) { () -> Void in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
             weak var tmpSelf = self
             Supermarket.loadSupermarketData { (data, error) -> Void in
                 if error == nil {
                     tmpSelf!.supermarketData = data
                     tmpSelf!.categoryTableView.reloadData()
-                    tmpSelf!.categoryTableView.selectRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), animated: true, scrollPosition: .Bottom)
+                    tmpSelf!.categoryTableView.selectRow(at: IndexPath(row: 0, section: 0), animated: true, scrollPosition: .bottom)
                     tmpSelf!.productsVC.supermarketData = data
                     tmpSelf!.categoryTableViewIsLoadFinish = true
                     tmpSelf!.productTableViewIsLoadFinish = true
                     if tmpSelf!.categoryTableViewIsLoadFinish && tmpSelf!.productTableViewIsLoadFinish {
-                        tmpSelf!.categoryTableView.hidden = false
-                        tmpSelf!.productsVC.productsTableView!.hidden = false
-                        tmpSelf!.productsVC.view.hidden = false
+                        tmpSelf!.categoryTableView.isHidden = false
+                        tmpSelf!.productsVC.productsTableView!.isHidden = false
+                        tmpSelf!.productsVC.view.isHidden = false
                         ProgressHUDManager.dismiss()
                     }
                 }
             }
-        }
+        })
     }
     
     // MARK:- Action
@@ -119,7 +118,7 @@ class SupermarketViewController: BaseViewController {
     // MARK: - Private Method
     private func showProgressHUD() {
         if !ProgressHUDManager.isVisible() {
-            ProgressHUDManager.showWithStatus("正在加载中")
+            ProgressHUDManager.showWithStatus(status: "正在加载中")
         }
     }
 }

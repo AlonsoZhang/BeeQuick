@@ -30,7 +30,7 @@ class ADViewController: UIViewController {
                 placeholderImageName = "iphone6s"
             }
             
-            backImageView.sd_setImageWithURL(NSURL(string: imageName!), placeholderImage: UIImage(named: placeholderImageName!)) { (image, error, _, _) -> Void in
+            backImageView.sd_setImage(with: NSURL(string: imageName!) as URL!, placeholderImage: UIImage(named: placeholderImageName!)){ (image, error, _, _) -> Void in
                 if error != nil {
                     //加载广告失败
                     print("加载广告失败")
@@ -38,16 +38,12 @@ class ADViewController: UIViewController {
                 }
                 
                 if image != nil {
-                    let time = dispatch_time(DISPATCH_TIME_NOW,Int64(1.0 * Double(NSEC_PER_SEC)))
-                    dispatch_after(time, dispatch_get_main_queue(), { () -> Void in
-                        
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
                         UIApplication.sharedApplication().setStatusBarHidden(false, withAnimation: UIStatusBarAnimation.Fade)
-                        
-                        let time1 = dispatch_time(DISPATCH_TIME_NOW,Int64(0.5 * Double(NSEC_PER_SEC)))
-                        dispatch_after(time1, dispatch_get_main_queue(), { () -> Void in
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
                             NSNotificationCenter.defaultCenter().postNotificationName(ADImageLoadSecussed, object: image)
                         })
-                        
+
                     })
                 }
             }
@@ -58,6 +54,6 @@ class ADViewController: UIViewController {
         super.viewDidLoad()
         
         view.addSubview(backImageView)
-        UIApplication.sharedApplication().setStatusBarHidden(true, withAnimation: UIStatusBarAnimation.None)
+        UIApplication.shared.setStatusBarHidden(true, with: UIStatusBarAnimation.none)
     }
 }

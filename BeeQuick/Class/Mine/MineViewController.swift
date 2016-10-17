@@ -29,7 +29,7 @@ class MineViewController: BaseViewController{
     override func loadView() {
         super.loadView()
         
-        self.navigationController?.navigationBar.hidden = true
+        self.navigationController?.navigationBar.isHidden = true
     }
     
     override func viewDidLoad() {
@@ -38,7 +38,7 @@ class MineViewController: BaseViewController{
         buildUI()
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         
         navigationController?.setNavigationBarHidden(true, animated: animated)
         super.viewWillAppear(animated)
@@ -46,20 +46,20 @@ class MineViewController: BaseViewController{
         weak var tmpSelf = self
         Mine.loadMineData { (data, error) -> Void in
             if error == nil {
-                if data?.data?.availble_coupon_num > 0 {
+                if (data?.data?.availble_coupon_num != nil) {
                     tmpSelf!.couponNum = data!.data!.availble_coupon_num
-                    tmpSelf!.tableHeadView.setCouponNumer(data!.data!.availble_coupon_num)
+                    tmpSelf!.tableHeadView.setCouponNumer(number: data!.data!.availble_coupon_num)
                 } else {
-                    tmpSelf!.tableHeadView.setCouponNumer(0)
+                    tmpSelf!.tableHeadView.setCouponNumer(number: 0)
                 }
             }
         }
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if iderVCSendIderSuccess {
-            ProgressHUDManager.showSuccessWithStatus("已经收到你的意见了,我们会刚正面的,放心吧~~")
+            ProgressHUDManager.showSuccessWithStatus(string: "已经收到你的意见了,我们会刚正面的,放心吧~~")
             iderVCSendIderSuccess = false
         }
     }

@@ -34,10 +34,10 @@ class HelpHeadView: UITableViewHeaderFooterView {
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
         
-        contentView.backgroundColor = UIColor.whiteColor()
+        contentView.backgroundColor = UIColor.white
         
         questionLabel = UILabel()
-        questionLabel?.font = UIFont.systemFontOfSize(16)
+        questionLabel?.font = UIFont.systemFont(ofSize: 16)
         contentView.addSubview(questionLabel!)
         
         arrowImageView = UIImageView(image: UIImage(named: "cell_arrow_down_accessory"))
@@ -47,7 +47,7 @@ class HelpHeadView: UITableViewHeaderFooterView {
         contentView.addGestureRecognizer(tap)
         
         lineView.alpha = 0.08
-        lineView.backgroundColor = UIColor.blackColor()
+        lineView.backgroundColor = UIColor.black
         contentView.addSubview(lineView)
     }
     
@@ -67,14 +67,14 @@ class HelpHeadView: UITableViewHeaderFooterView {
     func headViewDidClick(tap: UITapGestureRecognizer) {
         isSelected = !isSelected
         
-        if delegate != nil && delegate!.respondsToSelector("headViewDidClck:") {
+        if delegate != nil && delegate!.responds(to: "headViewDidClck:") {
             
-            delegate!.headViewDidClck!(self)
+            delegate!.headViewDidClck!(headView: self)
         }
     }
 }
 
 @objc protocol HelpHeadViewDelegate: NSObjectProtocol {
-    optional
+    @objc optional
     func headViewDidClck(headView: HelpHeadView)
 }

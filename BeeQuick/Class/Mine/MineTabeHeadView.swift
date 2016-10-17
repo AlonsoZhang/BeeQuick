@@ -16,7 +16,7 @@ enum MineHeadViewButtonType: Int {
 
 class MineTabeHeadView: UIView {
     
-    var mineHeadViewClick:((type: MineHeadViewButtonType) -> ())?
+    var mineHeadViewClick:((_ type: MineHeadViewButtonType) -> ())?
     private let orderView = MineOrderView()
     private let couponView = MineCouponView()
     private let messageView = MineMessageView()
@@ -51,15 +51,15 @@ class MineTabeHeadView: UIView {
             switch tap.view!.tag {
                 
             case MineHeadViewButtonType.Order.rawValue:
-                mineHeadViewClick!(type: MineHeadViewButtonType.Order)
+                mineHeadViewClick!(MineHeadViewButtonType.Order)
                 break
                 
             case MineHeadViewButtonType.Coupon.rawValue:
-                mineHeadViewClick!(type: MineHeadViewButtonType.Coupon)
+                mineHeadViewClick!(MineHeadViewButtonType.Coupon)
                 break
                 
             case MineHeadViewButtonType.Message.rawValue:
-                mineHeadViewClick!(type: MineHeadViewButtonType.Message)
+                mineHeadViewClick!(MineHeadViewButtonType.Message)
                 break
                 
             default: break
@@ -91,24 +91,24 @@ class MineTabeHeadView: UIView {
         line2.alpha = 0.3
         addSubview(line2)
         
-        couponNumber = UIButton(type: .Custom)
-        couponNumber?.setBackgroundImage(UIImage(named: "redCycle"), forState: UIControlState.Normal)
-        couponNumber?.setTitleColor(UIColor.redColor(), forState: .Normal)
-        couponNumber?.userInteractionEnabled = false
-        couponNumber?.titleLabel?.font = UIFont.systemFontOfSize(8)
-        couponNumber?.hidden = true
+        couponNumber = UIButton(type: .custom)
+        couponNumber?.setBackgroundImage(UIImage(named: "redCycle"), for: UIControlState.normal)
+        couponNumber?.setTitleColor(UIColor.red, for: .normal)
+        couponNumber?.isUserInteractionEnabled = false
+        couponNumber?.titleLabel?.font = UIFont.systemFont(ofSize: 8)
+        couponNumber?.isHidden = true
         addSubview(couponNumber!)
     }
     
     func setCouponNumer(number: Int) {
         if number > 0 && number <= 9 {
-            couponNumber?.hidden = false
-            couponNumber?.setTitle("\(number)", forState: .Normal)
+            couponNumber?.isHidden = false
+            couponNumber?.setTitle("\(number)", for: .normal)
         } else if number > 9 && number < 100 {
-            couponNumber?.setTitle("\(number)", forState: .Normal)
-            couponNumber?.hidden = false
+            couponNumber?.setTitle("\(number)", for: .normal)
+            couponNumber?.isHidden = false
         } else {
-            couponNumber?.hidden = true
+            couponNumber?.isHidden = true
         }
     }
 }

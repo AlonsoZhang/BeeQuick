@@ -14,7 +14,7 @@ class CoupinRuleViewController: BaseViewController {
     private let loadProgressAnimationView: LoadProgressAnimationView = LoadProgressAnimationView(frame: CGRect(x:0, y:0, width:ScreenWidth, height:3))
     var loadURLStr: String? {
         didSet {
-            webView.loadRequest(NSURLRequest(URL: NSURL(string: loadURLStr!)!))
+            webView.loadRequest(NSURLRequest(url: NSURL(string: loadURLStr!)! as URL) as URLRequest)
         }
     }
     
@@ -27,7 +27,7 @@ class CoupinRuleViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor.whiteColor()
+        view.backgroundColor = UIColor.white
         
         buildWebView()
         webView.addSubview(loadProgressAnimationView)
@@ -35,18 +35,18 @@ class CoupinRuleViewController: BaseViewController {
     
     private func buildWebView() {
         webView.delegate = self
-        webView.backgroundColor = UIColor.whiteColor()
+        webView.backgroundColor = UIColor.white
         view.addSubview(webView)
     }
 }
 
 extension CoupinRuleViewController: UIWebViewDelegate {
     
-    func webViewDidStartLoad(webView: UIWebView) {
+    func webViewDidStartLoad(_ webView: UIWebView) {
         loadProgressAnimationView.startLoadProgressAnimation()
     }
     
-    func webViewDidFinishLoad(webView: UIWebView) {
+    func webViewDidFinishLoad(_ webView: UIWebView) {
         loadProgressAnimationView.endLoadProgressAnimation()
     }
 }

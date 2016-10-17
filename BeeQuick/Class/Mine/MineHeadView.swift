@@ -12,7 +12,7 @@ class MineHeadView: UIImageView {
     
     let setUpBtn: UIButton = UIButton(type: .custom)
     let iconView: IconView = IconView()
-    var buttonClick:(Void -> Void)?
+    var buttonClick:((Void) -> Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)

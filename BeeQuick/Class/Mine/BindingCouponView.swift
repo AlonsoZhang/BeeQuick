@@ -10,16 +10,16 @@ import UIKit
 
 class BindingCouponView: UIView {
     
-    var bindingButtonClickBack:((couponTextFiled: UITextField) -> ())?
+    var bindingButtonClickBack:((_ couponTextFiled: UITextField) -> ())?
     
     private lazy var couponTextFiled: UITextField = {
         let couponTextFiled = UITextField()
         
-        couponTextFiled.keyboardType = UIKeyboardType.NumberPad
+        couponTextFiled.keyboardType = UIKeyboardType.numberPad
         couponTextFiled.borderStyle = UITextBorderStyle.roundedRect
-        couponTextFiled.autocorrectionType = UITextAutocorrectionType.No
-        couponTextFiled.font = UIFont.systemFontOfSize(14)
-        let placeholder = NSAttributedString(string: "请输入优惠劵号码", attributes: [NSFontAttributeName : UIFont.systemFontOfSize(14), NSForegroundColorAttributeName : UIColor(red: 50 / 255.0, green: 50 / 255.0, blue: 50 / 255.0, alpha: 0.8)])
+        couponTextFiled.autocorrectionType = UITextAutocorrectionType.no
+        couponTextFiled.font = UIFont.systemFont(ofSize: 14)
+        let placeholder = NSAttributedString(string: "请输入优惠劵号码", attributes: [NSFontAttributeName : UIFont.systemFont(ofSize: 14), NSForegroundColorAttributeName : UIColor(red: 50 / 255.0, green: 50 / 255.0, blue: 50 / 255.0, alpha: 0.8)])
         
         couponTextFiled.attributedPlaceholder = placeholder
         
@@ -27,21 +27,21 @@ class BindingCouponView: UIView {
     }()
     
     private lazy var bindingButton: UIButton = {
-        let btn = UIButton(type: UIButtonType.Custom)
+        let btn = UIButton(type: UIButtonType.custom)
         btn.layer.masksToBounds = true
         btn.layer.cornerRadius = 5
         btn.backgroundColor = LFBNavigationYellowColor
-        btn.setTitle("绑定", forState: UIControlState.Normal)
-        btn.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
-        btn.titleLabel?.font = UIFont.systemFontOfSize(14)
-        btn.addTarget(self, action: "bindingButtonClick", forControlEvents: UIControlEvents.TouchUpInside)
+        btn.setTitle("绑定", for: UIControlState.normal)
+        btn.setTitleColor(UIColor.black, for: UIControlState.normal)
+        btn.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+        btn.addTarget(self, action: "bindingButtonClick", for: UIControlEvents.touchUpInside)
         
         return btn
     }()
     
     private lazy var lineView: UIView = {
         let lineView = UIView()
-        lineView.backgroundColor = UIColor.blackColor()
+        lineView.backgroundColor = UIColor.black
         lineView.alpha = 0.2
         
         return lineView
@@ -55,7 +55,7 @@ class BindingCouponView: UIView {
         addSubview(lineView)
     }
     
-    convenience init(frame: CGRect, bindingButtonClickBack:((couponTextFiled: UITextField) -> ())) {
+    convenience init(frame: CGRect, bindingButtonClickBack:@escaping ((_ couponTextFiled: UITextField) -> ())) {
         self.init(frame: frame)
         
         self.bindingButtonClickBack = bindingButtonClickBack
@@ -78,7 +78,7 @@ class BindingCouponView: UIView {
     // MARK: Action
     func bindingButtonClick() {
         if bindingButtonClickBack != nil {
-            bindingButtonClickBack!(couponTextFiled: couponTextFiled)
+            bindingButtonClickBack!(couponTextFiled)
         }
     }
 }

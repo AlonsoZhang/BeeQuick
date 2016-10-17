@@ -18,7 +18,7 @@ class MessageViewController: BaseViewController {
         bulidSegmentedControl()
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
@@ -29,8 +29,8 @@ class MessageViewController: BaseViewController {
         navigationItem.titleView = segment
         navigationItem.titleView?.frame = CGRect(x:0, y:0, width:180, height:30)
         segment.tintColor = LFBNavigationYellowColor
-        segment.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.black], forState: UIControlState.Selected)
-        segment.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.lightGrayColor()], forState: UIControlState.Normal)
+        segment.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.black], for: UIControlState.selected)
+        segment.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.lightGray], for: UIControlState.normal)
         segment.selectedSegmentIndex = 0
     }
 }

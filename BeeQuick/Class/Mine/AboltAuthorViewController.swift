@@ -48,32 +48,32 @@ class AboltAuthorViewController: BaseViewController {
     private func bulidGitHubLabel() {
         //frame: CGRectMake((ScreenWidth - gitHubLabel.width) * 0.5, CGRectGetMaxY(authorLabel.frame) + 10, gitHubLabel.width, gitHubLabel.height)
         gitHubLabel = UILabel()
-        bulidTextLabel(gitHubLabel, text: "GitHub: " + "\(GitHubURLString)", tag: 1)
+        bulidTextLabel(label: gitHubLabel, text: "GitHub: " + "\(GitHubURLString)", tag: 1)
     }
     
     private func bulidSinaLabel() {
         sinaWeiBoLabel = UILabel()
-        bulidTextLabel(sinaWeiBoLabel, text: "新浪微博: " + "\(SinaWeiBoURLString)", tag: 2)
+        bulidTextLabel(label: sinaWeiBoLabel, text: "新浪微博: " + "\(SinaWeiBoURLString)", tag: 2)
     }
     private func bulidBlogLabel() {
         blogLabel = UILabel()
-        bulidTextLabel(blogLabel, text: "技术博客: " + "\(BlogURLString)", tag: 3)
+        bulidTextLabel(label: blogLabel, text: "技术博客: " + "\(BlogURLString)", tag: 3)
     }
     
     private func bulidTextLabel(label: UILabel, text: String, tag: Int) {
         label.text = text
-        label.font = UIFont.systemFontOfSize(13)
+        label.font = UIFont.systemFont(ofSize: 13)
         label.sizeToFit()
-        label.userInteractionEnabled = true
-        label.textColor = UIColor.colorWithCustom(100, g: 100, b: 100)
+        label.isUserInteractionEnabled = true
+        label.textColor = UIColor.colorWithCustom(r: 100, g: 100, b: 100)
         label.numberOfLines = 0
         
         switch tag {
-        case 1: label.frame = CGRect(x:40, y:CGRectGetMaxY(authorLabel.frame) + 20, width:gitHubLabel.width, height:gitHubLabel.height + 10)
+        case 1: label.frame = CGRect(x:40, y:authorLabel.frame.maxY + 20, width:gitHubLabel.width, height:gitHubLabel.height + 10)
             break
-        case 2: label.frame = CGRect(x:40, y:CGRectGetMaxY(gitHubLabel.frame) + 10, width:ScreenWidth, height:sinaWeiBoLabel.height + 10)
+        case 2: label.frame = CGRect(x:40, y:gitHubLabel.frame.maxY + 10, width:ScreenWidth, height:sinaWeiBoLabel.height + 10)
             break
-        case 3: label.frame = CGRect(x:40, y:CGRectGetMaxY(sinaWeiBoLabel.frame) + 10, width:ScreenWidth - 40 - 50, height:40)
+        case 3: label.frame = CGRect(x:40, y:sinaWeiBoLabel.frame.maxY + 10, width:ScreenWidth - 40 - 50, height:40)
         default:break
         }
         
@@ -87,11 +87,11 @@ class AboltAuthorViewController: BaseViewController {
     // MARK: - Action
     func textLabelClick(tap: UITapGestureRecognizer) {
         switch tap.view!.tag {
-        case 1: UIApplication.sharedApplication().openURL(NSURL(string: GitHubURLString)!)
+        case 1: UIApplication.shared.openURL(NSURL(string: GitHubURLString)! as URL)
             break
-        case 2: UIApplication.sharedApplication().openURL(NSURL(string: SinaWeiBoURLString)!)
+        case 2: UIApplication.shared.openURL(NSURL(string: SinaWeiBoURLString)! as URL)
             break
-        default: UIApplication.sharedApplication().openURL(NSURL(string: BlogURLString)!)
+        default: UIApplication.shared.openURL(NSURL(string: BlogURLString)! as URL)
             break
         }
     }

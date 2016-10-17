@@ -42,8 +42,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     // MARK: - Public Method
     func addNotification() {
-        NotificationCenter.default.addObserver(self, selector: "showMainTabbarControllerSucess:", name: ADImageLoadSecussed, object: nil)
-        NotificationCenter.default.addObserver(self, selector: "showMainTabbarControllerFale", name: ADImageLoadFail, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.showMainTabbarControllerSucess(noti:)), name: NSNotification.Name(rawValue: ADImageLoadSecussed), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.showMainTabbarControllerFale), name: NSNotification.Name(rawValue: ADImageLoadFail), object: nil)
         
     }
     
