@@ -11,7 +11,7 @@ import UIKit
 class CoupinRuleViewController: BaseViewController {
 
     private let webView = UIWebView(frame: CGRect(x:0, y:0, width:ScreenWidth, height:ScreenHeight - NavigationH))
-    private let loadProgressAnimationView: LoadProgressAnimationView = LoadProgressAnimationView(frame: CGRect(x:0, y:0, width:ScreenWidth, height:3))
+    fileprivate let loadProgressAnimationView: LoadProgressAnimationView = LoadProgressAnimationView(frame: CGRect(x:0, y:0, width:ScreenWidth, height:3))
     var loadURLStr: String? {
         didSet {
             webView.loadRequest(NSURLRequest(url: NSURL(string: loadURLStr!)! as URL) as URLRequest)
