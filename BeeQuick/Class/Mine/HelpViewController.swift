@@ -68,8 +68,14 @@ class HelpViewController: BaseViewController {
         
         switch tap.view!.tag {
         case HelpCellType.Phone.hashValue :
-            let alertView = UIAlertView(title: "", message: "400-8484-842", delegate: self, cancelButtonTitle: "取消", otherButtonTitles: "拨打")
-            alertView.show()
+            let alert = UIAlertController(title: nil, message: "400-8484-842", preferredStyle: UIAlertControllerStyle.alert)
+            let callAction = UIAlertAction(title: "拨打", style: UIAlertActionStyle.default, handler: { (self) in
+                UIApplication.shared.open(NSURL(string: "tel:4008484842") as! URL, options: [:], completionHandler: nil)
+            })
+
+            alert.addAction(callAction)
+            alert.addAction(UIAlertAction(title: "取消", style: UIAlertActionStyle.cancel, handler: nil))
+            self.present(alert, animated: true, completion: nil)
             break
         case HelpCellType.Question.hashValue :
             let helpDetailVC = HelpDetailViewController()
@@ -78,14 +84,5 @@ class HelpViewController: BaseViewController {
         default : break
         }
         
-    }
-    
-}
-
-extension HelpViewController: UIAlertViewDelegate {
-    func alertView(_ alertView: UIAlertView, clickedButtonAt buttonIndex: Int) {
-        if buttonIndex == 1 {
-            UIApplication.shared.openURL(NSURL(string: "tel:4008484842")! as URL)
-        }
     }
 }

@@ -41,7 +41,7 @@ class IdeaViewController: BaseViewController {
     }
     
     private func buildRightItemButton() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem.barButton(title: "发送", titleColor: UIColor.colorWithCustom(r: 100, g: 100, b: 100), target: self, action: "rightItemClick")
+        navigationItem.rightBarButtonItem = UIBarButtonItem.barButton(title: "发送", titleColor: UIColor.colorWithCustom(r: 100, g: 100, b: 100), target: self, action: #selector(IdeaViewController.rightItemClick))
     }
     
     private func buildPlaceholderLabel() {

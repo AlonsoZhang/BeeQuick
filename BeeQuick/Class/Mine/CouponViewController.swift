@@ -50,8 +50,9 @@ class CouponViewController: BaseViewController {
             if couponTextFiled.text != nil && !(couponTextFiled.text!.isEmpty) {
                 ProgressHUDManager.showImage(image: UIImage(named: "v2_orderSuccess")!, status: "请输入正确的优惠劵")
             } else {
-                let alert = UIAlertView(title: nil, message: "请输入优惠码!", delegate: nil, cancelButtonTitle: "确定")
-                alert.show()
+                let alert = UIAlertController(title: nil, message: "请输入优惠码!", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "确定", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
             }
         })
         view.addSubview(bindingCouponView!)

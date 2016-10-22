@@ -66,7 +66,7 @@ class MainTabBarController: AnimationTabBarController, UITabBarControllerDelegat
         addChildViewController(navigationVC)
     }
     
-    func tabBarController(tabBarController: UITabBarController, shouldSelectViewController viewController: UIViewController) -> Bool {
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         let childArr = tabBarController.childViewControllers as NSArray
         let index = childArr.index(of: viewController)
         
