@@ -19,7 +19,7 @@ class BaseNavigationController: UINavigationController {
         //设置返回按钮属性
         let backBtn = UIButton(type: UIButtonType.custom)
         backBtn.setImage(UIImage(named: "v2_goback"), for: .normal)
-        backBtn.addTarget(self, action: "backBtnClick", for: .touchUpInside)
+        backBtn.addTarget(self, action: #selector(BaseNavigationController.backBtnClick), for: .touchUpInside)
         backBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignment.left
         backBtn.contentEdgeInsets = UIEdgeInsetsMake(0, -10, 0, 0)
         let btnW: CGFloat = ScreenWidth > 375.0 ? 50 : 44

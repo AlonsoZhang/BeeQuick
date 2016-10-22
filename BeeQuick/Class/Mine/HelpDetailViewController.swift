@@ -63,7 +63,7 @@ extension HelpDetailViewController: UITableViewDelegate, UITableViewDataSource, 
         return 0
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if lastOpenIndex == indexPath.section && isOpenCell {
             return questions![indexPath.section].cellHeight
         }
@@ -71,11 +71,11 @@ extension HelpDetailViewController: UITableViewDelegate, UITableViewDataSource, 
         return 0
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return questions?.count ?? 0
     }
     
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "headView") as? HelpHeadView
         headView!.tag = section
         headView?.delegate = self
@@ -109,7 +109,7 @@ extension HelpDetailViewController: UITableViewDelegate, UITableViewDataSource, 
         questionTableView?.insertRows(at: insertIndexPaths, with: UITableViewRowAnimation.top)
     }
     
-    func scrollViewDidScroll(scrollView: UIScrollView) {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
     }
 }

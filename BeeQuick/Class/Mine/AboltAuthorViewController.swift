@@ -80,18 +80,18 @@ class AboltAuthorViewController: BaseViewController {
         label.tag = tag
         view.addSubview(label)
         
-        let tap = UITapGestureRecognizer(target: self, action: "textLabelClick:")
+        let tap = UITapGestureRecognizer(target: self, action: #selector(AboltAuthorViewController.textLabelClick(tap:)))
         label.addGestureRecognizer(tap)
     }
     
     // MARK: - Action
     func textLabelClick(tap: UITapGestureRecognizer) {
         switch tap.view!.tag {
-        case 1: UIApplication.shared.openURL(NSURL(string: GitHubURLString)! as URL)
+        case 1: UIApplication.shared.open(NSURL(string: GitHubURLString) as! URL, options: [:], completionHandler: nil)
             break
-        case 2: UIApplication.shared.openURL(NSURL(string: SinaWeiBoURLString)! as URL)
+        case 2: UIApplication.shared.open(NSURL(string: SinaWeiBoURLString) as! URL, options: [:], completionHandler: nil)
             break
-        default: UIApplication.shared.openURL(NSURL(string: BlogURLString)! as URL)
+        default: UIApplication.shared.open(NSURL(string: BlogURLString) as! URL, options: [:], completionHandler: nil)
             break
         }
     }

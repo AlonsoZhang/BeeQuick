@@ -9,7 +9,7 @@
 import UIKit
 
 class ADViewController: UIViewController {
-
+    var isHidden:Bool = false
     private lazy var backImageView: UIImageView = {
         let backImageView = UIImageView()
         backImageView.frame = ScreenBounds
@@ -29,19 +29,19 @@ class ADViewController: UIViewController {
             default:
                 placeholderImageName = "iphone6s"
             }
-            
-            backImageView.sd_setImage(with: NSURL(string: imageName!) as URL!, placeholderImage: UIImage(named: placeholderImageName!)){ (image, error, _, _) -> Void in
+            backImageView.sd_setImage(with: NSURL(string: imageName!) as URL!, placeholderImage: UIImage(named: placeholderImageName!), options: SDWebImageOptions()) { (image, error, _, _) in
                 if error != nil {
                     //加载广告失败
                     print("加载广告失败")
-                    NSNotificationCenter.defaultCenter().postNotificationName(ADImageLoadFail, object: nil)
+                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: ADImageLoadFail), object: nil)
                 }
                 
                 if image != nil {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
-                        UIApplication.sharedApplication().setStatusBarHidden(false, withAnimation: UIStatusBarAnimation.Fade)
+                        self.isHidden = false
+                        self.setNeedsStatusBarAppearanceUpdate()
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
-                            NSNotificationCenter.defaultCenter().postNotificationName(ADImageLoadSecussed, object: image)
+                            NotificationCenter.default.post(name: NSNotification.Name(rawValue: ADImageLoadSecussed), object: image)
                         })
 
                     })
@@ -50,10 +50,15 @@ class ADViewController: UIViewController {
         }
     }
     
+    fileprivate func prefersStatusBarHidden() -> Bool {
+        return isHidden
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.addSubview(backImageView)
-        UIApplication.shared.setStatusBarHidden(true, with: UIStatusBarAnimation.none)
+        isHidden = true
+        self.setNeedsStatusBarAppearanceUpdate()
     }
 }

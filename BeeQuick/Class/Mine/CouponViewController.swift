@@ -42,7 +42,7 @@ class CouponViewController: BaseViewController {
     private func setNavigationItem() {
         navigationItem.title = "优惠劵"
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem.barButton(title: "使用规则", titleColor: UIColor.colorWithCustom(r: 100, g: 100, b: 100), target: self, action: "rightItemClick")
+        navigationItem.rightBarButtonItem = UIBarButtonItem.barButton(title: "使用规则", titleColor: UIColor.colorWithCustom(r: 100, g: 100, b: 100), target: self, action: #selector(CouponViewController.rightItemClick))
     }
     
     func buildBindingCouponView() {
@@ -119,7 +119,7 @@ extension CouponViewController: UITableViewDelegate, UITableViewDataSource {
         return 0
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         if useCoupons.count > 0 && unUseCoupons.count > 0 {
             return 2
         } else if useCoupons.count > 0 || unUseCoupons.count > 0 {
@@ -129,7 +129,7 @@ extension CouponViewController: UITableViewDelegate, UITableViewDataSource {
         return 0
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 130
     }
     
@@ -153,7 +153,7 @@ extension CouponViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         if unUseCoupons.count > 0 && useCoupons.count > 0 && 0 == section {
             return 10
         }
@@ -161,7 +161,7 @@ extension CouponViewController: UITableViewDelegate, UITableViewDataSource {
         return 0
     }
     
-    func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         if unUseCoupons.count > 0 && useCoupons.count > 0 {
             if 0 == section {
                 let footView = UIView(frame: CGRect(x:0, y:0, width:ScreenWidth, height:10))

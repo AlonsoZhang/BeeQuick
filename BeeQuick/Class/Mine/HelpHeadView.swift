@@ -43,7 +43,7 @@ class HelpHeadView: UITableViewHeaderFooterView {
         arrowImageView = UIImageView(image: UIImage(named: "cell_arrow_down_accessory"))
         contentView.addSubview(arrowImageView!)
         
-        let tap = UITapGestureRecognizer(target: self, action: "headViewDidClick:")
+        let tap = UITapGestureRecognizer(target: self, action: #selector(HelpHeadView.headViewDidClick(tap:)))
         contentView.addGestureRecognizer(tap)
         
         lineView.alpha = 0.08
@@ -67,7 +67,7 @@ class HelpHeadView: UITableViewHeaderFooterView {
     func headViewDidClick(tap: UITapGestureRecognizer) {
         isSelected = !isSelected
         
-        if delegate != nil && delegate!.responds(to: "headViewDidClck:") {
+        if delegate != nil && delegate!.responds(to: Selector(("headViewDidClck:"))) {
             
             delegate!.headViewDidClck!(headView: self)
         }

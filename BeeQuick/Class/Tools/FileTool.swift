@@ -61,9 +61,8 @@ class FileTool: NSObject {
     
     /// 清除文件 异步
     class func cleanFolderAsync(path: String, complete:() -> ()) {
-        
-        let queue = dispatch_queue_create("cleanQueue", nil)
-        dispatch_async(queue) { () -> Void in
+        let queue = DispatchQueue(label: "cleanQueue")
+        queue.async(execute: {
             let chilerFiles = self.fileManager.subpaths(atPath: path)
             for fileName in chilerFiles! {
                 let tmpPath = path as NSString
@@ -75,8 +74,6 @@ class FileTool: NSObject {
                     }
                 }
             }
-            
-            complete()
-        }
+        })
     }
 }

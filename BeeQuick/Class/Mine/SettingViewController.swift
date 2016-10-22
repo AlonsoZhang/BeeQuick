@@ -44,7 +44,7 @@ class SettingViewController: BaseViewController {
         aboutMeView.backgroundColor = UIColor.white
         view.addSubview(aboutMeView!)
         
-        let tap = UITapGestureRecognizer(target: self, action: "aboutMeViewClick")
+        let tap = UITapGestureRecognizer(target: self, action: #selector(SettingViewController.aboutMeViewClick))
         aboutMeView.addGestureRecognizer(tap)
         
         let aboutLabel = UILabel(frame: CGRect(x:10, y:0, width:200, height:subViewHeight))
@@ -69,7 +69,7 @@ class SettingViewController: BaseViewController {
         cleanCacheLabel.textColor = UIColor.colorWithCustom(r: 60, g: 60, b: 60)
         cleanCacheView.addSubview(cleanCacheLabel)
         
-        let tap = UITapGestureRecognizer(target: self, action: "cleanCacheViewClick")
+        let tap = UITapGestureRecognizer(target: self, action: #selector(SettingViewController.cleanCacheViewClick))
         cleanCacheView.addGestureRecognizer(tap)
         
         cacheNumberLabel = UILabel(frame: CGRect(x:150, y:0, width:ScreenWidth - 165, height:subViewHeight))
@@ -96,7 +96,7 @@ class SettingViewController: BaseViewController {
         logoutLabel.textAlignment = NSTextAlignment.center
         logoutView.addSubview(logoutLabel)
         
-        let tap = UITapGestureRecognizer(target: self, action: "logoutViewClick")
+        let tap = UITapGestureRecognizer(target: self, action: #selector(SettingViewController.logoutViewClick))
         logoutLabel.addGestureRecognizer(tap)
     }
     

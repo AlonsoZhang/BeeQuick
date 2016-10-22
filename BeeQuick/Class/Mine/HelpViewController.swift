@@ -59,7 +59,7 @@ class HelpViewController: BaseViewController {
         label.tag = type.hashValue
         backView.addSubview(label)
         
-        let tap = UITapGestureRecognizer(target: self, action: "cellClick:")
+        let tap = UITapGestureRecognizer(target: self, action: #selector(HelpViewController.cellClick(tap:)))
         label.addGestureRecognizer(tap)
     }
     
@@ -83,7 +83,7 @@ class HelpViewController: BaseViewController {
 }
 
 extension HelpViewController: UIAlertViewDelegate {
-    func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
+    func alertView(_ alertView: UIAlertView, clickedButtonAt buttonIndex: Int) {
         if buttonIndex == 1 {
             UIApplication.shared.openURL(NSURL(string: "tel:4008484842")! as URL)
         }

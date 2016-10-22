@@ -140,7 +140,7 @@ class AnimationTabBarController: UITabBarController {
         tabBar.addSubview(viewContainer)
         viewContainer.tag = index
         
-        let tap = UITapGestureRecognizer(target: self, action: "tabBarClick:")
+        let tap = UITapGestureRecognizer(target: self, action: #selector(AnimationTabBarController.tabBarClick(tap:)))
         viewContainer.addGestureRecognizer(tap)
         
         return viewContainer
@@ -227,7 +227,7 @@ class AnimationTabBarController: UITabBarController {
         items[Index].selectedState(icon: selectIcon, textLabel: iconsView[Index].textLabel)
     }
     
-    func setSelectIndex(from from: Int,to: Int) {
+    func setSelectIndex(from: Int,to: Int) {
         
         if to == 2 {
             let vc = childViewControllers[selectedIndex]

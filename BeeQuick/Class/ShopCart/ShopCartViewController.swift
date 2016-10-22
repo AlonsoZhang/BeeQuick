@@ -38,7 +38,7 @@ class ShopCartViewController: BaseViewController {
     private func buildNavigationItem() {
         navigationItem.title = "购物车"
         
-        navigationItem.leftBarButtonItem = UIBarButtonItem.barButton(image: UIImage(named: "v2_goback")!, target: self, action: "leftNavigitonItemClick")
+        navigationItem.leftBarButtonItem = UIBarButtonItem.barButton(image: UIImage(named: "v2_goback")!, target: self, action: #selector(ShopCartViewController.leftNavigitonItemClick))
     }
     
     private func buildEmptyUI() {
@@ -60,7 +60,7 @@ class ShopCartViewController: BaseViewController {
         emptyButton.setBackgroundImage(UIImage(named: "btn.png"), for: UIControlState.normal)
         emptyButton.setTitle("去逛逛", for: UIControlState.normal)
         emptyButton.setTitleColor(UIColor.colorWithCustom(r: 100, g: 100, b: 100), for: UIControlState.normal)
-        emptyButton.addTarget(self, action: "leftNavigitonItemClick", for: UIControlEvents.touchUpInside)
+        emptyButton.addTarget(self, action: #selector(ShopCartViewController.leftNavigitonItemClick), for: UIControlEvents.touchUpInside)
         emptyButton.isHidden = true
         view.addSubview(emptyButton)
     }

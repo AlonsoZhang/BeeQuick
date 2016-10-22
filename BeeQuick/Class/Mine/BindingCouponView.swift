@@ -34,7 +34,7 @@ class BindingCouponView: UIView {
         btn.setTitle("绑定", for: UIControlState.normal)
         btn.setTitleColor(UIColor.black, for: UIControlState.normal)
         btn.titleLabel?.font = UIFont.systemFont(ofSize: 14)
-        btn.addTarget(self, action: "bindingButtonClick", for: UIControlEvents.touchUpInside)
+        btn.addTarget(self, action: #selector(BindingCouponView.bindingButtonClick), for: UIControlEvents.touchUpInside)
         
         return btn
     }()

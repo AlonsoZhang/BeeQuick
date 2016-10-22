@@ -105,8 +105,8 @@ class CouponCell: UITableViewCell {
         
         titleLabel?.sizeToFit()
         titleLabel?.frame = CGRect(x:(rightWidth - titleLabel!.width) * 0.5 + starRightL, y:15, width:titleLabel!.width, height:titleLabel!.height)
-        
-        line1View?.frame = CGRect(x:CouponViewControllerMargin + (ScreenWidth - 2 * CouponViewControllerMargin) * 0.26 + 10, y:2, width:(ScreenWidth - 2 * CouponViewControllerMargin) * 0.74 - 20, height:0.8)
+        let ax = CouponViewControllerMargin + (ScreenWidth - 2 * CouponViewControllerMargin) * 0.26 + 10
+        line1View?.frame = CGRect(x:ax,y:2,width:(ScreenWidth - 2 * CouponViewControllerMargin) * 0.74 - 20,height:0.8)
         line1View?.center.y = (titleLabel?.center.y)!
         
         dateLabel?.sizeToFit()
