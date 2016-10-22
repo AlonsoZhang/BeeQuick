@@ -71,7 +71,7 @@ class IdeaViewController: BaseViewController {
         } else {
             ProgressHUDManager.showWithStatus(status: "发送中")
             DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
-                self.navigationController?.popViewController(animated: true)
+                _ = self.navigationController?.popViewController(animated: true)
                 self.mineVC?.iderVCSendIderSuccess = true
                 ProgressHUDManager.dismiss()
             })
