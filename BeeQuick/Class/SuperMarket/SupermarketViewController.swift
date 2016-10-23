@@ -100,7 +100,7 @@ class SupermarketViewController: BaseViewController {
                         tmpSelf!.productsVC.productsTableView!.isHidden = false
                         tmpSelf!.productsVC.view.isHidden = false
                         ProgressHUDManager.dismiss()
-                        tmpSelf!.categoryTableView.hidden = false
+                        tmpSelf!.categoryTableView.isHidden = false
                     }
                 }
             }

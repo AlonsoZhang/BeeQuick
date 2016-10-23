@@ -22,7 +22,7 @@ class MyAdressViewController: BaseViewController {
         loadAdressData()
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         navigationController?.setNavigationBarHidden(false, animated: animated)
@@ -46,7 +46,7 @@ class MyAdressViewController: BaseViewController {
         weak var tmpSelf = self
         AdressData.loadMyAdressData { (data, error) -> Void in
             if error == nil {
-                if data?.data?.count > 0 {
+                if data?.data?.count != 0 {
                     tmpSelf!.adresses = data!.data
                     tmpSelf!.adressTableView?.reloadData()
                 } else {
@@ -64,11 +64,11 @@ class MyAdressViewController: BaseViewController {
 
 extension MyAdressViewController: UITableViewDelegate, UITableViewDataSource {
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return adresses?.count ?? 0
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return UITableViewCell()
     }
     

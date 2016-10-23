@@ -46,7 +46,6 @@ class AboltAuthorViewController: BaseViewController {
     }
     
     private func bulidGitHubLabel() {
-        //frame: CGRectMake((ScreenWidth - gitHubLabel.width) * 0.5, CGRectGetMaxY(authorLabel.frame) + 10, gitHubLabel.width, gitHubLabel.height)
         gitHubLabel = UILabel()
         bulidTextLabel(label: gitHubLabel, text: "GitHub: " + "\(GitHubURLString)", tag: 1)
     }
