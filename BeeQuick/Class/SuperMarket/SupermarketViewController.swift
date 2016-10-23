@@ -56,6 +56,7 @@ class SupermarketViewController: BaseViewController {
         categoryTableView.showsHorizontalScrollIndicator = false
         categoryTableView.showsVerticalScrollIndicator = false
         categoryTableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: NavigationH, right: 0)
+        categoryTableView.isHidden = true;
         view.addSubview(categoryTableView)
     }
     
@@ -99,6 +100,7 @@ class SupermarketViewController: BaseViewController {
                         tmpSelf!.productsVC.productsTableView!.isHidden = false
                         tmpSelf!.productsVC.view.isHidden = false
                         ProgressHUDManager.dismiss()
+                        tmpSelf!.categoryTableView.hidden = false
                     }
                 }
             }
@@ -117,6 +119,7 @@ class SupermarketViewController: BaseViewController {
     
     // MARK: - Private Method
     private func showProgressHUD() {
+        view.backgroundColor = UIColor.white
         if !ProgressHUDManager.isVisible() {
             ProgressHUDManager.showWithStatus(status: "正在加载中")
         }

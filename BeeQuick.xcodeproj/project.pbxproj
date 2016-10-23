@@ -73,6 +73,21 @@
 		E2AAD2661DBCAAD90001BF0C /* PlaceholderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AAD2581DBCAAD90001BF0C /* PlaceholderTextView.swift */; };
 		E2AAD2671DBCAAD90001BF0C /* ShopCarRedDotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AAD2591DBCAAD90001BF0C /* ShopCarRedDotView.swift */; };
 		E2AAD2681DBCAAD90001BF0C /* UpImageDownTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AAD25A1DBCAAD90001BF0C /* UpImageDownTextButton.swift */; };
+		E2AAD26A1DBCAB590001BF0C /* LFBSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AAD2691DBCAB590001BF0C /* LFBSegmentedControl.swift */; };
+		E2AAD26E1DBCD8420001BF0C /* AdressData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AAD26D1DBCD8420001BF0C /* AdressData.swift */; };
+		E2AAD2701DBCDA5F0001BF0C /* MyAdressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AAD26F1DBCDA5F0001BF0C /* MyAdressViewController.swift */; };
+		E2AAD2721DBCDAF00001BF0C /* MyOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AAD2711DBCDAF00001BF0C /* MyOrderCell.swift */; };
+		E2AAD2761DBCDBAF0001BF0C /* OrderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AAD2751DBCDBAF0001BF0C /* OrderData.swift */; };
+		E2AAD2781DBCDBDC0001BF0C /* OrderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AAD2771DBCDBDC0001BF0C /* OrderDetailView.swift */; };
+		E2AAD27A1DBCDC030001BF0C /* OrderDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AAD2791DBCDC030001BF0C /* OrderDetailViewController.swift */; };
+		E2AAD27C1DBCDC220001BF0C /* OrderGoodsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AAD27B1DBCDC220001BF0C /* OrderGoodsListView.swift */; };
+		E2AAD27E1DBCDC7E0001BF0C /* OrderStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AAD27D1DBCDC7E0001BF0C /* OrderStatusCell.swift */; };
+		E2AAD2801DBCDF620001BF0C /* OrderStatuslViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AAD27F1DBCDF620001BF0C /* OrderStatuslViewController.swift */; };
+		E2AAD2821DBCDF890001BF0C /* OrderUserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AAD2811DBCDF890001BF0C /* OrderUserDetailView.swift */; };
+		E2AAD2841DBCE0C70001BF0C /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AAD2831DBCE0C70001BF0C /* OrderViewController.swift */; };
+		E2AAD2861DBCE1610001BF0C /* SystemMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AAD2851DBCE1610001BF0C /* SystemMessageCell.swift */; };
+		E2AAD28A1DBCE1A30001BF0C /* UserMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AAD2891DBCE1A30001BF0C /* UserMessage.swift */; };
+		E2AAD28C1DBCE5BB0001BF0C /* AdressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AAD28B1DBCE5BB0001BF0C /* AdressCell.swift */; };
 		E2B059F41DA4921D0026DF8D /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B059F31DA4921D0026DF8D /* Theme.swift */; };
 		E2B05A051DA4A1010026DF8D /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B05A041DA4A1010026DF8D /* MineViewController.swift */; };
 		E2B05A0B1DA4A6370026DF8D /* MineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B05A0A1DA4A6370026DF8D /* MineCell.swift */; };
@@ -176,6 +191,21 @@
 		E2AAD2581DBCAAD90001BF0C /* PlaceholderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlaceholderTextView.swift; path = Class/LFBBase/Common/PlaceholderTextView.swift; sourceTree = "<group>"; };
 		E2AAD2591DBCAAD90001BF0C /* ShopCarRedDotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShopCarRedDotView.swift; path = Class/LFBBase/Common/ShopCarRedDotView.swift; sourceTree = "<group>"; };
 		E2AAD25A1DBCAAD90001BF0C /* UpImageDownTextButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpImageDownTextButton.swift; path = Class/LFBBase/Common/UpImageDownTextButton.swift; sourceTree = "<group>"; };
+		E2AAD2691DBCAB590001BF0C /* LFBSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LFBSegmentedControl.swift; path = Class/LFBBase/Common/LFBSegmentedControl.swift; sourceTree = "<group>"; };
+		E2AAD26D1DBCD8420001BF0C /* AdressData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdressData.swift; path = Class/Mine/Model/AdressData.swift; sourceTree = "<group>"; };
+		E2AAD26F1DBCDA5F0001BF0C /* MyAdressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyAdressViewController.swift; path = Class/Mine/MyAdressViewController.swift; sourceTree = "<group>"; };
+		E2AAD2711DBCDAF00001BF0C /* MyOrderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyOrderCell.swift; path = Class/Mine/MyOrderCell.swift; sourceTree = "<group>"; };
+		E2AAD2751DBCDBAF0001BF0C /* OrderData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrderData.swift; path = Class/Mine/Model/OrderData.swift; sourceTree = "<group>"; };
+		E2AAD2771DBCDBDC0001BF0C /* OrderDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrderDetailView.swift; path = Class/Mine/OrderDetailView.swift; sourceTree = "<group>"; };
+		E2AAD2791DBCDC030001BF0C /* OrderDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrderDetailViewController.swift; path = Class/Mine/OrderDetailViewController.swift; sourceTree = "<group>"; };
+		E2AAD27B1DBCDC220001BF0C /* OrderGoodsListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrderGoodsListView.swift; path = Class/Mine/OrderGoodsListView.swift; sourceTree = "<group>"; };
+		E2AAD27D1DBCDC7E0001BF0C /* OrderStatusCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrderStatusCell.swift; path = Class/Mine/OrderStatusCell.swift; sourceTree = "<group>"; };
+		E2AAD27F1DBCDF620001BF0C /* OrderStatuslViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrderStatuslViewController.swift; path = Class/Mine/OrderStatuslViewController.swift; sourceTree = "<group>"; };
+		E2AAD2811DBCDF890001BF0C /* OrderUserDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrderUserDetailView.swift; path = Class/Mine/OrderUserDetailView.swift; sourceTree = "<group>"; };
+		E2AAD2831DBCE0C70001BF0C /* OrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrderViewController.swift; path = Class/Mine/OrderViewController.swift; sourceTree = "<group>"; };
+		E2AAD2851DBCE1610001BF0C /* SystemMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SystemMessageCell.swift; path = Class/Mine/SystemMessageCell.swift; sourceTree = "<group>"; };
+		E2AAD2891DBCE1A30001BF0C /* UserMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserMessage.swift; path = Class/Mine/Model/UserMessage.swift; sourceTree = "<group>"; };
+		E2AAD28B1DBCE5BB0001BF0C /* AdressCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdressCell.swift; path = Class/Mine/AdressCell.swift; sourceTree = "<group>"; };
 		E2B059F31DA4921D0026DF8D /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Theme.swift; path = Class/Other/Theme.swift; sourceTree = "<group>"; };
 		E2B05A041DA4A1010026DF8D /* MineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MineViewController.swift; path = Class/Mine/MineViewController.swift; sourceTree = "<group>"; };
 		E2B05A0A1DA4A6370026DF8D /* MineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MineCell.swift; path = Class/Mine/MineCell.swift; sourceTree = "<group>"; };
@@ -250,8 +280,11 @@
 			isa = PBXGroup;
 			children = (
 				E22391231DB4890A00FAE968 /* CouponData.swift */,
+				E2AAD2751DBCDBAF0001BF0C /* OrderData.swift */,
+				E2AAD2891DBCE1A30001BF0C /* UserMessage.swift */,
 				E22391391DB49AA900FAE968 /* Help.swift */,
 				E22391451DB49C9700FAE968 /* Mine.swift */,
+				E2AAD26D1DBCD8420001BF0C /* AdressData.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -369,6 +402,7 @@
 				E2AAD2581DBCAAD90001BF0C /* PlaceholderTextView.swift */,
 				E2AAD2591DBCAAD90001BF0C /* ShopCarRedDotView.swift */,
 				E2AAD25A1DBCAAD90001BF0C /* UpImageDownTextButton.swift */,
+				E2AAD2691DBCAB590001BF0C /* LFBSegmentedControl.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -460,9 +494,19 @@
 		E2B059F91DA492BE0026DF8D /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				E2B05A041DA4A1010026DF8D /* MineViewController.swift */,
+				E2AAD26F1DBCDA5F0001BF0C /* MyAdressViewController.swift */,
+				E2AAD2711DBCDAF00001BF0C /* MyOrderCell.swift */,
+				E2AAD28B1DBCE5BB0001BF0C /* AdressCell.swift */,
+				E2AAD2771DBCDBDC0001BF0C /* OrderDetailView.swift */,
+				E2AAD2791DBCDC030001BF0C /* OrderDetailViewController.swift */,
+				E2AAD27B1DBCDC220001BF0C /* OrderGoodsListView.swift */,
+				E2AAD27D1DBCDC7E0001BF0C /* OrderStatusCell.swift */,
+				E2AAD27F1DBCDF620001BF0C /* OrderStatuslViewController.swift */,
+				E2AAD2811DBCDF890001BF0C /* OrderUserDetailView.swift */,
+				E2AAD2831DBCE0C70001BF0C /* OrderViewController.swift */,
 				E2B05A0C1DA4A6540026DF8D /* MineHeadView.swift */,
 				E2B05A0D1DA4A6540026DF8D /* MineTabeHeadView.swift */,
-				E2B05A041DA4A1010026DF8D /* MineViewController.swift */,
 				E2B05A0A1DA4A6370026DF8D /* MineCell.swift */,
 				E223912F1DB4997D00FAE968 /* AnswerCell.swift */,
 				E22391311DB499C900FAE968 /* BindingCouponView.swift */,
@@ -476,6 +520,7 @@
 				E22391411DB49BFD00FAE968 /* IdeaViewController.swift */,
 				E22391431DB49C3100FAE968 /* MessageViewController.swift */,
 				E22391491DB49EF100FAE968 /* SettingViewController.swift */,
+				E2AAD2851DBCE1610001BF0C /* SystemMessageCell.swift */,
 				E22391221DB488EB00FAE968 /* Model */,
 			);
 			name = Mine;
@@ -695,13 +740,16 @@
 				E2B05A0F1DA4A6540026DF8D /* MineTabeHeadView.swift in Sources */,
 				E2AAD25F1DBCAAD90001BF0C /* BuyView.swift in Sources */,
 				E223913E1DB49B4C00FAE968 /* HelpHeadView.swift in Sources */,
+				E2AAD27E1DBCDC7E0001BF0C /* OrderStatusCell.swift in Sources */,
 				E223914A1DB49EF100FAE968 /* SettingViewController.swift in Sources */,
+				E2AAD2861DBCE1610001BF0C /* SystemMessageCell.swift in Sources */,
 				E2AAD25E1DBCAAD90001BF0C /* BaseViewController.swift in Sources */,
 				E2B05A161DA4BFE60026DF8D /* ScheduleViewController.swift in Sources */,
 				E2E084E61DA8CDE30067FE52 /* UIImage+GIF.m in Sources */,
 				E2AAD25D1DBCAAD90001BF0C /* BaseNavigationController.swift in Sources */,
 				E2AAD24C1DBCAAC40001BF0C /* UIView+Extension.swift in Sources */,
 				E2E084E21DA8CDE30067FE52 /* SDWebImageDownloaderOperation.m in Sources */,
+				E2AAD2761DBCDBAF0001BF0C /* OrderData.swift in Sources */,
 				E22391281DB494B500FAE968 /* MainAD.swift in Sources */,
 				E2AAD24B1DBCAAC40001BF0C /* UIImage + Extension.swift in Sources */,
 				E2B621E51DAE1291007F97D2 /* SupermarketHeadView.swift in Sources */,
@@ -711,6 +759,7 @@
 				E2B05A181DA4C01E0026DF8D /* SupermarketViewController.swift in Sources */,
 				E2E084EB1DA8CDE30067FE52 /* UIView+WebCacheOperation.m in Sources */,
 				E2AAD2651DBCAAD90001BF0C /* PageScrollView.swift in Sources */,
+				E2AAD2801DBCDF620001BF0C /* OrderStatuslViewController.swift in Sources */,
 				E2B05A0B1DA4A6370026DF8D /* MineCell.swift in Sources */,
 				E22391681DB4A1C000FAE968 /* ADViewController.swift in Sources */,
 				E2B05A0E1DA4A6540026DF8D /* MineHeadView.swift in Sources */,
@@ -721,9 +770,12 @@
 				E2AAD25C1DBCAAD90001BF0C /* AnimationViewController.swift in Sources */,
 				E2E084DF1DA8CDE30067FE52 /* SDWebImageCompat.m in Sources */,
 				E2E084E71DA8CDE30067FE52 /* UIImage+MultiFormat.m in Sources */,
+				E2AAD28C1DBCE5BB0001BF0C /* AdressCell.swift in Sources */,
 				E223912E1DB4993B00FAE968 /* AboltAuthorViewController.swift in Sources */,
 				E2718F371DA8944F0087CE71 /* HomeCell.swift in Sources */,
+				E2AAD2821DBCDF890001BF0C /* OrderUserDetailView.swift in Sources */,
 				E22391421DB49BFD00FAE968 /* IdeaViewController.swift in Sources */,
+				E2AAD28A1DBCE1A30001BF0C /* UserMessage.swift in Sources */,
 				E2B621E71DAE133B007F97D2 /* UserShopCarTool.swift in Sources */,
 				E2718F3A1DA894580087CE71 /* FreshHot.swift in Sources */,
 				E2E084E81DA8CDE30067FE52 /* UIImage+WebP.m in Sources */,
@@ -738,8 +790,10 @@
 				E2E084B91DA8CD030067FE52 /* ProgressHUDManager.swift in Sources */,
 				E2E084DC1DA8CDE30067FE52 /* MKAnnotationView+WebCache.m in Sources */,
 				E2B05A141DA4BFAB0026DF8D /* ShopCartViewController.swift in Sources */,
+				E2AAD2781DBCDBDC0001BF0C /* OrderDetailView.swift in Sources */,
 				E2B05A051DA4A1010026DF8D /* MineViewController.swift in Sources */,
 				E2E084E01DA8CDE30067FE52 /* SDWebImageDecoder.m in Sources */,
+				E2AAD26A1DBCAB590001BF0C /* LFBSegmentedControl.swift in Sources */,
 				E223913C1DB49AE400FAE968 /* HelpDetailViewController.swift in Sources */,
 				E2E084E91DA8CDE30067FE52 /* UIImageView+HighlightedWebCache.m in Sources */,
 				E2AAD2671DBCAAD90001BF0C /* ShopCarRedDotView.swift in Sources */,
@@ -757,7 +811,11 @@
 				E2AAD2661DBCAAD90001BF0C /* PlaceholderTextView.swift in Sources */,
 				E22391361DB49A4500FAE968 /* CouponCell.swift in Sources */,
 				E2AAD2611DBCAAD90001BF0C /* LFBCollectionView.swift in Sources */,
+				E2AAD27A1DBCDC030001BF0C /* OrderDetailViewController.swift in Sources */,
+				E2AAD26E1DBCD8420001BF0C /* AdressData.swift in Sources */,
 				E2AAD2481DBCAAC40001BF0C /* String + Extension.swift in Sources */,
+				E2AAD2701DBCDA5F0001BF0C /* MyAdressViewController.swift in Sources */,
+				E2AAD2721DBCDAF00001BF0C /* MyOrderCell.swift in Sources */,
 				E2B059F41DA4921D0026DF8D /* Theme.swift in Sources */,
 				E22391321DB499C900FAE968 /* BindingCouponView.swift in Sources */,
 				E2AAD2621DBCAAD90001BF0C /* LFBTableView.swift in Sources */,
@@ -766,7 +824,9 @@
 				E25A7D7C1DA88FD4005DC90E /* HomeTableHeadView.swift in Sources */,
 				E2AAD2631DBCAAD90001BF0C /* LoadProgressAnimationView.swift in Sources */,
 				E2AAD2471DBCAAC40001BF0C /* Color+Extension.swift in Sources */,
+				E2AAD27C1DBCDC220001BF0C /* OrderGoodsListView.swift in Sources */,
 				E2718F381DA8944F0087CE71 /* IconImageTextView.swift in Sources */,
+				E2AAD2841DBCE0C70001BF0C /* OrderViewController.swift in Sources */,
 				E25A7D7E1DA88FD4005DC90E /* HotView.swift in Sources */,
 				E223913A1DB49AA900FAE968 /* Help.swift in Sources */,
 				E24BB05B1DAB2C01005FC444 /* CategoryCell.swift in Sources */,
