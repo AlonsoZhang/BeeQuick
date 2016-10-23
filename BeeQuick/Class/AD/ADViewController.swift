@@ -9,7 +9,7 @@
 import UIKit
 
 class ADViewController: UIViewController {
-    var isHidden:Bool = false
+    
     private lazy var backImageView: UIImageView = {
         let backImageView = UIImageView()
         backImageView.frame = ScreenBounds
@@ -38,27 +38,20 @@ class ADViewController: UIViewController {
                 
                 if image != nil {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
-                        self.isHidden = false
-                        self.setNeedsStatusBarAppearanceUpdate()
+
                         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
                             NotificationCenter.default.post(name: NSNotification.Name(rawValue: ADImageLoadSecussed), object: image)
                         })
-
                     })
                 }
             }
         }
     }
-    
-    fileprivate func prefersStatusBarHidden() -> Bool {
-        return isHidden
-    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.addSubview(backImageView)
-        isHidden = true
         self.setNeedsStatusBarAppearanceUpdate()
     }
 }
