@@ -17,7 +17,7 @@ class HomeViewController: AnimationViewController {
     fileprivate var headData: HeadResources?
     fileprivate var freshHot: FreshHot?
     
-// MARK: - Life circle
+    // MARK: - Life circle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,13 +36,13 @@ class HomeViewController: AnimationViewController {
         NotificationCenter.default.removeObserver(self)
     }
     
-// MARK:- addNotifiation
+    // MARK:- addNotifiation
     func addHomeNotification() {
         NotificationCenter.default.addObserver(self, selector: #selector(homeTableHeadViewHeightDidChange(noti:)), name: NSNotification.Name(rawValue: HomeTableHeadViewHeightDidChange), object: nil)
-        NotificationCenter.default.addObserver(self, selector: Selector(("goodsInventoryProblem:")), name: NSNotification.Name(rawValue: HomeGoodsInventoryProblem), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(goodsInventoryProblem(noti:)), name: NSNotification.Name(rawValue: HomeGoodsInventoryProblem), object: nil)
     }
     
-// MARK:- Creat UI
+    // MARK:- Creat UI
     private func buildNavigationItem() {
         navigationController?.navigationBar.barTintColor = LFBNavigationYellowColor
         
@@ -106,21 +106,29 @@ class HomeViewController: AnimationViewController {
         headView?.headData = nil
         headData = nil
         freshHot = nil
-        
+        var headDataLoadFinish = false
+        var freshHotLoadFinish = false
         weak var tmpSelf = self
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) { 
             HeadResources.loadHomeHeadData { (data, error) -> Void in
                 if error == nil {
+                    headDataLoadFinish = true
                     tmpSelf?.headView?.headData = data
                     tmpSelf?.headData = data
-                    tmpSelf?.collectionView.reloadData()
+                    if headDataLoadFinish && freshHotLoadFinish {
+                        tmpSelf?.collectionView.reloadData()
+                        tmpSelf?.collectionView.mj_header.endRefreshing()
+                    }
                 }
             }
             
             FreshHot.loadFreshHotData { (data, error) -> Void in
+                freshHotLoadFinish = true
                 tmpSelf?.freshHot = data
-                tmpSelf?.collectionView.reloadData()
-                tmpSelf?.collectionView.mj_header.endRefreshing()
+                if headDataLoadFinish && freshHotLoadFinish {
+                    tmpSelf?.collectionView.reloadData()
+                    tmpSelf?.collectionView.mj_header.endRefreshing()
+                }
             }
         }
     }
@@ -164,6 +172,9 @@ extension HomeViewController: HomeTableHeadViewDelegate {
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if headData?.data?.activities?.count == 0 || freshHot?.data?.count == 0 {
+            return 0
+        }
         if section == 0 {
             return headData?.data?.activities?.count ?? 0
         } else if section == 1 {
@@ -175,7 +186,9 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath as IndexPath)as! HomeCell
-        
+        if headData?.data?.activities?.count == 0 {
+            return cell
+        }
         if indexPath.section == 0 {
             cell.activities = headData!.data!.activities![indexPath.row]
         } else if indexPath.section == 1 {
@@ -190,6 +203,9 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
+        if headData?.data?.activities?.count == 0 || freshHot?.data?.count == 0 {
+            return 0
+        }
         return 2
     }
     
