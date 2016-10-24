@@ -4,7 +4,7 @@
 //
 //  Created by Alonso on 16/10/8.
 //  Copyright © 2016年 Alonso. All rights reserved.
-//
+//  添加和减少购买商品View,没有库存是补货中
 
 import UIKit
 
@@ -141,6 +141,8 @@ class BuyView: UIView {
         }
         
         ShopCarRedDotView.sharedRedDotView.addProductToRedDotView(animation: true)
+        UserShopCarTool.sharedUserShopCar.addSupermarkProductToShopCar(goods: goods!)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: LFBShopCarBuyPriceDidChangeNotification), object: nil, userInfo: nil)
     }
     
     func reduceGoodsButtonClick() {
@@ -154,10 +156,12 @@ class BuyView: UIView {
             reduceGoodsButton.isHidden = true
             buyCountLabel.isHidden = true
             buyCountLabel.text = ""
+            UserShopCarTool.sharedUserShopCar.removeSupermarketProduct(goods: goods!)
         } else {
             buyCountLabel.text = "\(buyNumber)"
         }
         
         ShopCarRedDotView.sharedRedDotView.reduceProductToRedDotView(animation: true)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: LFBShopCarBuyPriceDidChangeNotification), object: nil, userInfo: nil)
     }
 }

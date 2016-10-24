@@ -4,7 +4,7 @@
 //
 //  Created by Alonso on 16/10/6.
 //  Copyright © 2016年 Alonso. All rights reserved.
-//
+//  字典转模型
 
 import Foundation
 

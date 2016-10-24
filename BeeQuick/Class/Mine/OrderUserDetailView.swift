@@ -31,15 +31,15 @@ class OrderUserDetailView: UIView {
         
         backgroundColor = UIColor.white
         
-        consigneeLabel.textColor = UIColor.colorWithCustom(r: 50, g: 50, b: 50)
+        consigneeLabel.textColor = LFBTextBlackColor
         consigneeLabel.font = UIFont.systemFont(ofSize: 14)
         addSubview(consigneeLabel)
         
-        consigneeAdressLabel.textColor = UIColor.colorWithCustom(r: 50, g: 50, b: 50)
+        consigneeAdressLabel.textColor = LFBTextBlackColor
         consigneeAdressLabel.font = UIFont.systemFont(ofSize: 12)
         addSubview(consigneeAdressLabel)
         
-        phoneNumberLabel.textColor = UIColor.colorWithCustom(r: 50, g: 50, b: 50)
+        phoneNumberLabel.textColor = LFBTextBlackColor
         phoneNumberLabel.textAlignment = NSTextAlignment.right
         phoneNumberLabel.font = UIFont.systemFont(ofSize: 12)
         addSubview(phoneNumberLabel)
@@ -48,12 +48,12 @@ class OrderUserDetailView: UIView {
         lineView.alpha = 0.1
         addSubview(lineView)
         
-        shopLabel.textColor = UIColor.colorWithCustom(r: 50, g: 50, b: 50)
+        shopLabel.textColor = LFBTextBlackColor
         shopLabel.font = UIFont.systemFont(ofSize: 12)
         addSubview(shopLabel)
         
         collectionButton.setTitle("+ 收藏", for: .normal)
-        collectionButton.setTitleColor(UIColor.colorWithCustom(r: 50, g: 50, b: 50), for: .normal)
+        collectionButton.setTitleColor(LFBTextBlackColor, for: .normal)
         collectionButton.setTitle("取消收藏", for: .selected)
         collectionButton.setTitleColor(UIColor.white, for: .selected)
         collectionButton.setBackgroundImage(UIImage.imageWithColor(color: LFBNavigationYellowColor, size: CGSize(width:60, height:25), alpha: 1), for: UIControlState.normal)

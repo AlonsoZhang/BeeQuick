@@ -36,9 +36,17 @@ class ProductsViewController: AnimationViewController {
         }
     }
     
+    // MARK: - Lift Cycle
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(ProductsViewController.shopCarBuyProductNumberDidChange), name: NSNotification.Name(rawValue: LFBShopCarBuyProductNumberDidChangeNotification), object: nil)
         view = UIView(frame: CGRect(x:ScreenWidth * 0.25, y:0, width:ScreenWidth * 0.75, height:ScreenHeight - NavigationH))
         buildProductsTableView()
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     // MARK: - Build UI
@@ -69,6 +77,11 @@ class ProductsViewController: AnimationViewController {
         if refreshUpPull != nil {
             refreshUpPull!()
         }
+    }
+    
+    // MARK: - Action
+    func shopCarBuyProductNumberDidChange() {
+        productsTableView?.reloadData()
     }
 }
 

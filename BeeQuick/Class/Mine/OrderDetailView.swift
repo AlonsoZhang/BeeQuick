@@ -47,7 +47,7 @@ class OrderDetailView: UIView {
     private func initLabel(label: UILabel, text: String) {
         label.text = text
         label.font = UIFont.systemFont(ofSize: 14)
-        label.textColor = UIColor.colorWithCustom(r: 50, g: 50, b: 50)
+        label.textColor = LFBTextBlackColor
         addSubview(label)
     }
     

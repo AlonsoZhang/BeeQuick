@@ -74,20 +74,6 @@
 		E2AAD2861DBCE1610001BF0C /* SystemMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AAD2851DBCE1610001BF0C /* SystemMessageCell.swift */; };
 		E2AAD28A1DBCE1A30001BF0C /* UserMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AAD2891DBCE1A30001BF0C /* UserMessage.swift */; };
 		E2AAD28C1DBCE5BB0001BF0C /* AdressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AAD28B1DBCE5BB0001BF0C /* AdressCell.swift */; };
-		E2AAD2B71DBCE8A90001BF0C /* 促销 in Resources */ = {isa = PBXBuildFile; fileRef = E2AAD2A91DBCE8A90001BF0C /* 促销 */; };
-		E2AAD2B81DBCE8A90001BF0C /* 首页焦点按钮 in Resources */ = {isa = PBXBuildFile; fileRef = E2AAD2AA1DBCE8A90001BF0C /* 首页焦点按钮 */; };
-		E2AAD2B91DBCE8A90001BF0C /* 首页新鲜热卖 in Resources */ = {isa = PBXBuildFile; fileRef = E2AAD2AB1DBCE8A90001BF0C /* 首页新鲜热卖 */; };
-		E2AAD2BA1DBCE8A90001BF0C /* 系统消息 in Resources */ = {isa = PBXBuildFile; fileRef = E2AAD2AC1DBCE8A90001BF0C /* 系统消息 */; };
-		E2AAD2BB1DBCE8A90001BF0C /* AD in Resources */ = {isa = PBXBuildFile; fileRef = E2AAD2AD1DBCE8A90001BF0C /* AD */; };
-		E2AAD2BC1DBCE8A90001BF0C /* HelpPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2AAD2AE1DBCE8A90001BF0C /* HelpPlist.plist */; };
-		E2AAD2BD1DBCE8A90001BF0C /* Mine in Resources */ = {isa = PBXBuildFile; fileRef = E2AAD2AF1DBCE8A90001BF0C /* Mine */; };
-		E2AAD2BE1DBCE8A90001BF0C /* MinePlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2AAD2B01DBCE8A90001BF0C /* MinePlist.plist */; };
-		E2AAD2BF1DBCE8A90001BF0C /* MyAdress in Resources */ = {isa = PBXBuildFile; fileRef = E2AAD2B11DBCE8A90001BF0C /* MyAdress */; };
-		E2AAD2C01DBCE8A90001BF0C /* MyCoupon in Resources */ = {isa = PBXBuildFile; fileRef = E2AAD2B21DBCE8A90001BF0C /* MyCoupon */; };
-		E2AAD2C11DBCE8A90001BF0C /* MyOrders in Resources */ = {isa = PBXBuildFile; fileRef = E2AAD2B31DBCE8A90001BF0C /* MyOrders */; };
-		E2AAD2C21DBCE8A90001BF0C /* supermarket in Resources */ = {isa = PBXBuildFile; fileRef = E2AAD2B41DBCE8A90001BF0C /* supermarket */; };
-		E2AAD2C31DBCE8A90001BF0C /* SystemMessage in Resources */ = {isa = PBXBuildFile; fileRef = E2AAD2B51DBCE8A90001BF0C /* SystemMessage */; };
-		E2AAD2C41DBCE8A90001BF0C /* UserMessage in Resources */ = {isa = PBXBuildFile; fileRef = E2AAD2B61DBCE8A90001BF0C /* UserMessage */; };
 		E2B059F41DA4921D0026DF8D /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B059F31DA4921D0026DF8D /* Theme.swift */; };
 		E2B05A051DA4A1010026DF8D /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B05A041DA4A1010026DF8D /* MineViewController.swift */; };
 		E2B05A0B1DA4A6370026DF8D /* MineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B05A0A1DA4A6370026DF8D /* MineCell.swift */; };
@@ -118,6 +104,29 @@
 		E2E084E91DA8CDE30067FE52 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E084D71DA8CDE30067FE52 /* UIImageView+HighlightedWebCache.m */; };
 		E2E084EA1DA8CDE30067FE52 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E084D91DA8CDE30067FE52 /* UIImageView+WebCache.m */; };
 		E2E084EB1DA8CDE30067FE52 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E084DB1DA8CDE30067FE52 /* UIView+WebCacheOperation.m */; };
+		E2F91A7C1DBD9CCF007FAB30 /* LeftImageRightTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F91A7B1DBD9CCF007FAB30 /* LeftImageRightTextButton.swift */; };
+		E2F91A8B1DBD9D2C007FAB30 /* 促销 in Resources */ = {isa = PBXBuildFile; fileRef = E2F91A7D1DBD9D2C007FAB30 /* 促销 */; };
+		E2F91A8C1DBD9D2C007FAB30 /* 首页焦点按钮 in Resources */ = {isa = PBXBuildFile; fileRef = E2F91A7E1DBD9D2C007FAB30 /* 首页焦点按钮 */; };
+		E2F91A8D1DBD9D2C007FAB30 /* 首页新鲜热卖 in Resources */ = {isa = PBXBuildFile; fileRef = E2F91A7F1DBD9D2C007FAB30 /* 首页新鲜热卖 */; };
+		E2F91A8E1DBD9D2C007FAB30 /* 系统消息 in Resources */ = {isa = PBXBuildFile; fileRef = E2F91A801DBD9D2C007FAB30 /* 系统消息 */; };
+		E2F91A8F1DBD9D2C007FAB30 /* AD in Resources */ = {isa = PBXBuildFile; fileRef = E2F91A811DBD9D2C007FAB30 /* AD */; };
+		E2F91A901DBD9D2C007FAB30 /* HelpPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2F91A821DBD9D2C007FAB30 /* HelpPlist.plist */; };
+		E2F91A911DBD9D2C007FAB30 /* Mine in Resources */ = {isa = PBXBuildFile; fileRef = E2F91A831DBD9D2C007FAB30 /* Mine */; };
+		E2F91A921DBD9D2C007FAB30 /* MinePlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2F91A841DBD9D2C007FAB30 /* MinePlist.plist */; };
+		E2F91A931DBD9D2C007FAB30 /* MyAdress in Resources */ = {isa = PBXBuildFile; fileRef = E2F91A851DBD9D2C007FAB30 /* MyAdress */; };
+		E2F91A941DBD9D2C007FAB30 /* MyCoupon in Resources */ = {isa = PBXBuildFile; fileRef = E2F91A861DBD9D2C007FAB30 /* MyCoupon */; };
+		E2F91A951DBD9D2C007FAB30 /* MyOrders in Resources */ = {isa = PBXBuildFile; fileRef = E2F91A871DBD9D2C007FAB30 /* MyOrders */; };
+		E2F91A961DBD9D2C007FAB30 /* supermarket in Resources */ = {isa = PBXBuildFile; fileRef = E2F91A881DBD9D2C007FAB30 /* supermarket */; };
+		E2F91A971DBD9D2C007FAB30 /* SystemMessage in Resources */ = {isa = PBXBuildFile; fileRef = E2F91A891DBD9D2C007FAB30 /* SystemMessage */; };
+		E2F91A981DBD9D2C007FAB30 /* UserMessage in Resources */ = {isa = PBXBuildFile; fileRef = E2F91A8A1DBD9D2C007FAB30 /* UserMessage */; };
+		E2F91A9A1DBD9DD3007FAB30 /* EditAdressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F91A991DBD9DD3007FAB30 /* EditAdressViewController.swift */; };
+		E2F91A9C1DBD9EC2007FAB30 /* MyShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F91A9B1DBD9EC2007FAB30 /* MyShopViewController.swift */; };
+		E2F91A9E1DBDA0AC007FAB30 /* ReceiptAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F91A9D1DBDA0AC007FAB30 /* ReceiptAddressView.swift */; };
+		E2F91AA01DBDA0CE007FAB30 /* ShopCartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F91A9F1DBDA0CE007FAB30 /* ShopCartCell.swift */; };
+		E2F91AA21DBDA0F2007FAB30 /* ShopCartCommentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F91AA11DBDA0F2007FAB30 /* ShopCartCommentsView.swift */; };
+		E2F91AA41DBDA113007FAB30 /* ShopCartMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F91AA31DBDA113007FAB30 /* ShopCartMarkerView.swift */; };
+		E2F91AA61DBDA19C007FAB30 /* ShopCartSupermarketTableFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F91AA51DBDA19C007FAB30 /* ShopCartSupermarketTableFooterView.swift */; };
+		E2F91AA81DBDA290007FAB30 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F91AA71DBDA290007FAB30 /* UserInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -192,20 +201,6 @@
 		E2AAD2851DBCE1610001BF0C /* SystemMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SystemMessageCell.swift; path = Class/Mine/SystemMessageCell.swift; sourceTree = "<group>"; };
 		E2AAD2891DBCE1A30001BF0C /* UserMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserMessage.swift; path = Class/Mine/Model/UserMessage.swift; sourceTree = "<group>"; };
 		E2AAD28B1DBCE5BB0001BF0C /* AdressCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdressCell.swift; path = Class/Mine/AdressCell.swift; sourceTree = "<group>"; };
-		E2AAD2A91DBCE8A90001BF0C /* 促销 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "促销"; sourceTree = "<group>"; };
-		E2AAD2AA1DBCE8A90001BF0C /* 首页焦点按钮 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "首页焦点按钮"; sourceTree = "<group>"; };
-		E2AAD2AB1DBCE8A90001BF0C /* 首页新鲜热卖 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "首页新鲜热卖"; sourceTree = "<group>"; };
-		E2AAD2AC1DBCE8A90001BF0C /* 系统消息 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "系统消息"; sourceTree = "<group>"; };
-		E2AAD2AD1DBCE8A90001BF0C /* AD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AD; sourceTree = "<group>"; };
-		E2AAD2AE1DBCE8A90001BF0C /* HelpPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HelpPlist.plist; sourceTree = "<group>"; };
-		E2AAD2AF1DBCE8A90001BF0C /* Mine */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Mine; sourceTree = "<group>"; };
-		E2AAD2B01DBCE8A90001BF0C /* MinePlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MinePlist.plist; sourceTree = "<group>"; };
-		E2AAD2B11DBCE8A90001BF0C /* MyAdress */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MyAdress; sourceTree = "<group>"; };
-		E2AAD2B21DBCE8A90001BF0C /* MyCoupon */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MyCoupon; sourceTree = "<group>"; };
-		E2AAD2B31DBCE8A90001BF0C /* MyOrders */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MyOrders; sourceTree = "<group>"; };
-		E2AAD2B41DBCE8A90001BF0C /* supermarket */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = supermarket; sourceTree = "<group>"; };
-		E2AAD2B51DBCE8A90001BF0C /* SystemMessage */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SystemMessage; sourceTree = "<group>"; };
-		E2AAD2B61DBCE8A90001BF0C /* UserMessage */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UserMessage; sourceTree = "<group>"; };
 		E2B059F31DA4921D0026DF8D /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Theme.swift; path = Class/Other/Theme.swift; sourceTree = "<group>"; };
 		E2B05A041DA4A1010026DF8D /* MineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MineViewController.swift; path = Class/Mine/MineViewController.swift; sourceTree = "<group>"; };
 		E2B05A0A1DA4A6370026DF8D /* MineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MineCell.swift; path = Class/Mine/MineCell.swift; sourceTree = "<group>"; };
@@ -254,6 +249,29 @@
 		E2E084D91DA8CDE30067FE52 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+WebCache.m"; path = "Class/Vender/SDWebImage/UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		E2E084DA1DA8CDE30067FE52 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+WebCacheOperation.h"; path = "Class/Vender/SDWebImage/UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		E2E084DB1DA8CDE30067FE52 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+WebCacheOperation.m"; path = "Class/Vender/SDWebImage/UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		E2F91A7B1DBD9CCF007FAB30 /* LeftImageRightTextButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LeftImageRightTextButton.swift; path = Class/LFBBase/Common/LeftImageRightTextButton.swift; sourceTree = "<group>"; };
+		E2F91A7D1DBD9D2C007FAB30 /* 促销 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "促销"; path = "Class/Resouce/促销"; sourceTree = "<group>"; };
+		E2F91A7E1DBD9D2C007FAB30 /* 首页焦点按钮 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "首页焦点按钮"; path = "Class/Resouce/首页焦点按钮"; sourceTree = "<group>"; };
+		E2F91A7F1DBD9D2C007FAB30 /* 首页新鲜热卖 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "首页新鲜热卖"; path = "Class/Resouce/首页新鲜热卖"; sourceTree = "<group>"; };
+		E2F91A801DBD9D2C007FAB30 /* 系统消息 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "系统消息"; path = "Class/Resouce/系统消息"; sourceTree = "<group>"; };
+		E2F91A811DBD9D2C007FAB30 /* AD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = AD; path = Class/Resouce/AD; sourceTree = "<group>"; };
+		E2F91A821DBD9D2C007FAB30 /* HelpPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = HelpPlist.plist; path = Class/Resouce/HelpPlist.plist; sourceTree = "<group>"; };
+		E2F91A831DBD9D2C007FAB30 /* Mine */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Mine; path = Class/Resouce/Mine; sourceTree = "<group>"; };
+		E2F91A841DBD9D2C007FAB30 /* MinePlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = MinePlist.plist; path = Class/Resouce/MinePlist.plist; sourceTree = "<group>"; };
+		E2F91A851DBD9D2C007FAB30 /* MyAdress */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = MyAdress; path = Class/Resouce/MyAdress; sourceTree = "<group>"; };
+		E2F91A861DBD9D2C007FAB30 /* MyCoupon */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = MyCoupon; path = Class/Resouce/MyCoupon; sourceTree = "<group>"; };
+		E2F91A871DBD9D2C007FAB30 /* MyOrders */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = MyOrders; path = Class/Resouce/MyOrders; sourceTree = "<group>"; };
+		E2F91A881DBD9D2C007FAB30 /* supermarket */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = supermarket; path = Class/Resouce/supermarket; sourceTree = "<group>"; };
+		E2F91A891DBD9D2C007FAB30 /* SystemMessage */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SystemMessage; path = Class/Resouce/SystemMessage; sourceTree = "<group>"; };
+		E2F91A8A1DBD9D2C007FAB30 /* UserMessage */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = UserMessage; path = Class/Resouce/UserMessage; sourceTree = "<group>"; };
+		E2F91A991DBD9DD3007FAB30 /* EditAdressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditAdressViewController.swift; path = Class/Mine/EditAdressViewController.swift; sourceTree = "<group>"; };
+		E2F91A9B1DBD9EC2007FAB30 /* MyShopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyShopViewController.swift; path = Class/Mine/MyShopViewController.swift; sourceTree = "<group>"; };
+		E2F91A9D1DBDA0AC007FAB30 /* ReceiptAddressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReceiptAddressView.swift; path = Class/ShopCart/ReceiptAddressView.swift; sourceTree = "<group>"; };
+		E2F91A9F1DBDA0CE007FAB30 /* ShopCartCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShopCartCell.swift; path = Class/ShopCart/ShopCartCell.swift; sourceTree = "<group>"; };
+		E2F91AA11DBDA0F2007FAB30 /* ShopCartCommentsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShopCartCommentsView.swift; path = Class/ShopCart/ShopCartCommentsView.swift; sourceTree = "<group>"; };
+		E2F91AA31DBDA113007FAB30 /* ShopCartMarkerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShopCartMarkerView.swift; path = Class/ShopCart/ShopCartMarkerView.swift; sourceTree = "<group>"; };
+		E2F91AA51DBDA19C007FAB30 /* ShopCartSupermarketTableFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShopCartSupermarketTableFooterView.swift; path = Class/ShopCart/ShopCartSupermarketTableFooterView.swift; sourceTree = "<group>"; };
+		E2F91AA71DBDA290007FAB30 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserInfo.swift; path = Class/Tools/UserInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,20 +327,20 @@
 		E22791031DA61C24006ABBB5 /* Resouce */ = {
 			isa = PBXGroup;
 			children = (
-				E2AAD2A91DBCE8A90001BF0C /* 促销 */,
-				E2AAD2AA1DBCE8A90001BF0C /* 首页焦点按钮 */,
-				E2AAD2AB1DBCE8A90001BF0C /* 首页新鲜热卖 */,
-				E2AAD2AC1DBCE8A90001BF0C /* 系统消息 */,
-				E2AAD2AD1DBCE8A90001BF0C /* AD */,
-				E2AAD2AE1DBCE8A90001BF0C /* HelpPlist.plist */,
-				E2AAD2AF1DBCE8A90001BF0C /* Mine */,
-				E2AAD2B01DBCE8A90001BF0C /* MinePlist.plist */,
-				E2AAD2B11DBCE8A90001BF0C /* MyAdress */,
-				E2AAD2B21DBCE8A90001BF0C /* MyCoupon */,
-				E2AAD2B31DBCE8A90001BF0C /* MyOrders */,
-				E2AAD2B41DBCE8A90001BF0C /* supermarket */,
-				E2AAD2B51DBCE8A90001BF0C /* SystemMessage */,
-				E2AAD2B61DBCE8A90001BF0C /* UserMessage */,
+				E2F91A7D1DBD9D2C007FAB30 /* 促销 */,
+				E2F91A7E1DBD9D2C007FAB30 /* 首页焦点按钮 */,
+				E2F91A7F1DBD9D2C007FAB30 /* 首页新鲜热卖 */,
+				E2F91A801DBD9D2C007FAB30 /* 系统消息 */,
+				E2F91A811DBD9D2C007FAB30 /* AD */,
+				E2F91A821DBD9D2C007FAB30 /* HelpPlist.plist */,
+				E2F91A831DBD9D2C007FAB30 /* Mine */,
+				E2F91A841DBD9D2C007FAB30 /* MinePlist.plist */,
+				E2F91A851DBD9D2C007FAB30 /* MyAdress */,
+				E2F91A861DBD9D2C007FAB30 /* MyCoupon */,
+				E2F91A871DBD9D2C007FAB30 /* MyOrders */,
+				E2F91A881DBD9D2C007FAB30 /* supermarket */,
+				E2F91A891DBD9D2C007FAB30 /* SystemMessage */,
+				E2F91A8A1DBD9D2C007FAB30 /* UserMessage */,
 			);
 			name = Resouce;
 			sourceTree = "<group>";
@@ -381,6 +399,7 @@
 				E2E084B81DA8CD030067FE52 /* ProgressHUDManager.swift */,
 				E2B621E61DAE133B007F97D2 /* UserShopCarTool.swift */,
 				E22391691DB4A1FA00FAE968 /* FileTool.swift */,
+				E2F91AA71DBDA290007FAB30 /* UserInfo.swift */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -396,6 +415,7 @@
 				E2AAD2521DBCAAD90001BF0C /* DiscountPriceView.swift */,
 				E2AAD2531DBCAAD90001BF0C /* LFBCollectionView.swift */,
 				E2AAD2541DBCAAD90001BF0C /* LFBTableView.swift */,
+				E2F91A7B1DBD9CCF007FAB30 /* LeftImageRightTextButton.swift */,
 				E2AAD2551DBCAAD90001BF0C /* LoadProgressAnimationView.swift */,
 				E2AAD2561DBCAAD90001BF0C /* MainViewController.swift */,
 				E2AAD2571DBCAAD90001BF0C /* PageScrollView.swift */,
@@ -496,8 +516,10 @@
 			children = (
 				E2B05A041DA4A1010026DF8D /* MineViewController.swift */,
 				E2AAD26F1DBCDA5F0001BF0C /* MyAdressViewController.swift */,
+				E2F91A9B1DBD9EC2007FAB30 /* MyShopViewController.swift */,
 				E2AAD2711DBCDAF00001BF0C /* MyOrderCell.swift */,
 				E2AAD28B1DBCE5BB0001BF0C /* AdressCell.swift */,
+				E2F91A991DBD9DD3007FAB30 /* EditAdressViewController.swift */,
 				E2AAD2771DBCDBDC0001BF0C /* OrderDetailView.swift */,
 				E2AAD2791DBCDC030001BF0C /* OrderDetailViewController.swift */,
 				E2AAD27B1DBCDC220001BF0C /* OrderGoodsListView.swift */,
@@ -530,6 +552,11 @@
 			isa = PBXGroup;
 			children = (
 				E2B05A131DA4BFAB0026DF8D /* ShopCartViewController.swift */,
+				E2F91A9D1DBDA0AC007FAB30 /* ReceiptAddressView.swift */,
+				E2F91A9F1DBDA0CE007FAB30 /* ShopCartCell.swift */,
+				E2F91AA31DBDA113007FAB30 /* ShopCartMarkerView.swift */,
+				E2F91AA51DBDA19C007FAB30 /* ShopCartSupermarketTableFooterView.swift */,
+				E2F91AA11DBDA0F2007FAB30 /* ShopCartCommentsView.swift */,
 			);
 			name = ShopCart;
 			sourceTree = "<group>";
@@ -663,21 +690,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2AAD2BE1DBCE8A90001BF0C /* MinePlist.plist in Resources */,
-				E2AAD2C31DBCE8A90001BF0C /* SystemMessage in Resources */,
-				E2AAD2C41DBCE8A90001BF0C /* UserMessage in Resources */,
-				E2AAD2B91DBCE8A90001BF0C /* 首页新鲜热卖 in Resources */,
-				E2AAD2C21DBCE8A90001BF0C /* supermarket in Resources */,
-				E2AAD2BB1DBCE8A90001BF0C /* AD in Resources */,
-				E2AAD2BC1DBCE8A90001BF0C /* HelpPlist.plist in Resources */,
-				E2AAD2B81DBCE8A90001BF0C /* 首页焦点按钮 in Resources */,
+				E2F91A931DBD9D2C007FAB30 /* MyAdress in Resources */,
+				E2F91A941DBD9D2C007FAB30 /* MyCoupon in Resources */,
+				E2F91A911DBD9D2C007FAB30 /* Mine in Resources */,
+				E2F91A8E1DBD9D2C007FAB30 /* 系统消息 in Resources */,
+				E2F91A981DBD9D2C007FAB30 /* UserMessage in Resources */,
 				E22B16051DA39B2C0077B4A8 /* Assets.xcassets in Resources */,
-				E2AAD2BF1DBCE8A90001BF0C /* MyAdress in Resources */,
-				E2AAD2C01DBCE8A90001BF0C /* MyCoupon in Resources */,
-				E2AAD2BD1DBCE8A90001BF0C /* Mine in Resources */,
-				E2AAD2C11DBCE8A90001BF0C /* MyOrders in Resources */,
-				E2AAD2B71DBCE8A90001BF0C /* 促销 in Resources */,
-				E2AAD2BA1DBCE8A90001BF0C /* 系统消息 in Resources */,
+				E2F91A8C1DBD9D2C007FAB30 /* 首页焦点按钮 in Resources */,
+				E2F91A921DBD9D2C007FAB30 /* MinePlist.plist in Resources */,
+				E2F91A971DBD9D2C007FAB30 /* SystemMessage in Resources */,
+				E2F91A8D1DBD9D2C007FAB30 /* 首页新鲜热卖 in Resources */,
+				E2F91A8B1DBD9D2C007FAB30 /* 促销 in Resources */,
+				E2F91A8F1DBD9D2C007FAB30 /* AD in Resources */,
+				E2F91A901DBD9D2C007FAB30 /* HelpPlist.plist in Resources */,
+				E2F91A961DBD9D2C007FAB30 /* supermarket in Resources */,
+				E2F91A951DBD9D2C007FAB30 /* MyOrders in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -738,7 +765,9 @@
 			files = (
 				E22391441DB49C3100FAE968 /* MessageViewController.swift in Sources */,
 				E2B05A0F1DA4A6540026DF8D /* MineTabeHeadView.swift in Sources */,
+				E2F91A9C1DBD9EC2007FAB30 /* MyShopViewController.swift in Sources */,
 				E2AAD25F1DBCAAD90001BF0C /* BuyView.swift in Sources */,
+				E2F91AA41DBDA113007FAB30 /* ShopCartMarkerView.swift in Sources */,
 				E223913E1DB49B4C00FAE968 /* HelpHeadView.swift in Sources */,
 				E2AAD27E1DBCDC7E0001BF0C /* OrderStatusCell.swift in Sources */,
 				E223914A1DB49EF100FAE968 /* SettingViewController.swift in Sources */,
@@ -749,6 +778,7 @@
 				E2AAD25D1DBCAAD90001BF0C /* BaseNavigationController.swift in Sources */,
 				E2AAD24C1DBCAAC40001BF0C /* UIView+Extension.swift in Sources */,
 				E2E084E21DA8CDE30067FE52 /* SDWebImageDownloaderOperation.m in Sources */,
+				E2F91AA61DBDA19C007FAB30 /* ShopCartSupermarketTableFooterView.swift in Sources */,
 				E2AAD2761DBCDBAF0001BF0C /* OrderData.swift in Sources */,
 				E22391281DB494B500FAE968 /* MainAD.swift in Sources */,
 				E2AAD24B1DBCAAC40001BF0C /* UIImage + Extension.swift in Sources */,
@@ -767,6 +797,7 @@
 				E2AAD2681DBCAAD90001BF0C /* UpImageDownTextButton.swift in Sources */,
 				E223916A1DB4A1FA00FAE968 /* FileTool.swift in Sources */,
 				E22B15FE1DA39B2C0077B4A8 /* AppDelegate.swift in Sources */,
+				E2F91A9E1DBDA0AC007FAB30 /* ReceiptAddressView.swift in Sources */,
 				E2AAD25C1DBCAAD90001BF0C /* AnimationViewController.swift in Sources */,
 				E2E084DF1DA8CDE30067FE52 /* SDWebImageCompat.m in Sources */,
 				E2E084E71DA8CDE30067FE52 /* UIImage+MultiFormat.m in Sources */,
@@ -774,6 +805,7 @@
 				E223912E1DB4993B00FAE968 /* AboltAuthorViewController.swift in Sources */,
 				E2718F371DA8944F0087CE71 /* HomeCell.swift in Sources */,
 				E2AAD2821DBCDF890001BF0C /* OrderUserDetailView.swift in Sources */,
+				E2F91A7C1DBD9CCF007FAB30 /* LeftImageRightTextButton.swift in Sources */,
 				E22391421DB49BFD00FAE968 /* IdeaViewController.swift in Sources */,
 				E2AAD28A1DBCE1A30001BF0C /* UserMessage.swift in Sources */,
 				E2B621E71DAE133B007F97D2 /* UserShopCarTool.swift in Sources */,
@@ -791,12 +823,15 @@
 				E2E084DC1DA8CDE30067FE52 /* MKAnnotationView+WebCache.m in Sources */,
 				E2B05A141DA4BFAB0026DF8D /* ShopCartViewController.swift in Sources */,
 				E2AAD2781DBCDBDC0001BF0C /* OrderDetailView.swift in Sources */,
+				E2F91AA81DBDA290007FAB30 /* UserInfo.swift in Sources */,
 				E2B05A051DA4A1010026DF8D /* MineViewController.swift in Sources */,
 				E2E084E01DA8CDE30067FE52 /* SDWebImageDecoder.m in Sources */,
 				E2AAD26A1DBCAB590001BF0C /* LFBSegmentedControl.swift in Sources */,
+				E2F91AA01DBDA0CE007FAB30 /* ShopCartCell.swift in Sources */,
 				E223913C1DB49AE400FAE968 /* HelpDetailViewController.swift in Sources */,
 				E2E084E91DA8CDE30067FE52 /* UIImageView+HighlightedWebCache.m in Sources */,
 				E2AAD2671DBCAAD90001BF0C /* ShopCarRedDotView.swift in Sources */,
+				E2F91AA21DBDA0F2007FAB30 /* ShopCartCommentsView.swift in Sources */,
 				E209BD141DB0764E0022EB83 /* LFBRefreshHeader.swift in Sources */,
 				E2E084E51DA8CDE30067FE52 /* UIButton+WebCache.m in Sources */,
 				E22391301DB4997D00FAE968 /* AnswerCell.swift in Sources */,
@@ -806,6 +841,7 @@
 				E22391461DB49C9700FAE968 /* Mine.swift in Sources */,
 				E22391381DB49A7C00FAE968 /* CouponViewController.swift in Sources */,
 				E2AAD25B1DBCAAD90001BF0C /* AnimationTabBarController.swift in Sources */,
+				E2F91A9A1DBD9DD3007FAB30 /* EditAdressViewController.swift in Sources */,
 				E2B621E11DAE11CD007F97D2 /* ProductCell.swift in Sources */,
 				E2AAD2641DBCAAD90001BF0C /* MainViewController.swift in Sources */,
 				E2AAD2661DBCAAD90001BF0C /* PlaceholderTextView.swift in Sources */,
