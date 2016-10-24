@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AnimationViewController: BaseViewController {
+class AnimationViewController: BaseViewController,CAAnimationDelegate {
 
     var animationLayers: [CALayer]?
     
@@ -33,8 +33,8 @@ class AnimationViewController: BaseViewController {
         
         let positionAnimation = CAKeyframeAnimation(keyPath: "position")
         let path = CGMutablePath();
-        path.move(to: CGPoint(x:p1.x, y:p1.y))
-        path.addCurve(to: CGPoint(x:p1.x, y:p1.y - 30), control1: CGPoint(x:p3.x, y:p1.y - 30), control2: CGPoint(x:p3.x, y:p3.y))
+        path.move(to: p1)
+        path.addCurve(to: CGPoint.init(x: p3.x, y: p3.y), control1: CGPoint.init(x: p1.x, y: p1.y - 30), control2: CGPoint.init(x: p3.x, y: p1.y - 30))
         positionAnimation.path = path
         let opacityAnimation = CABasicAnimation(keyPath: "opacity")
         opacityAnimation.fromValue = 1
@@ -71,8 +71,8 @@ class AnimationViewController: BaseViewController {
         
         let positionAnimation = CAKeyframeAnimation(keyPath: "position")
         let path = CGMutablePath();
-        path.move(to: CGPoint(x:p1.x, y:p1.y))
-        path.addCurve(to: CGPoint(x:p1.x, y:p1.y - 30), control1: CGPoint(x:p3.x, y:p1.y - 30), control2: CGPoint(x:p3.x, y:p3.y))
+        path.move(to: p1)
+        path.addCurve(to: p3, control1: CGPoint(x:p1.x, y:p1.y - 30), control2: CGPoint(x: p3.x, y:p1.y - 30))
         positionAnimation.path = path;
         
         let opacityAnimation = CABasicAnimation(keyPath: "opacity")
