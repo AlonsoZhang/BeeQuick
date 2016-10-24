@@ -157,13 +157,12 @@ class OrderImageViews: UIView {
                     subImageView.sd_setImage(with: NSURL(string: order_goods![i][0].img!) as! URL, placeholderImage: UIImage(named: "author"))
                 }
             }
-            
-            for i in order_goods!.count ..< 4 {
-                let subImageView = imageViewsSubViews![i]
-                subImageView.isHidden = true
-            }
-            
-            if (order_goods?.count)! >= 5 {
+            if (order_goods?.count)! < 5 {
+                for i in order_goods!.count ..< 4 {
+                    let subImageView = imageViewsSubViews![i]
+                    subImageView.isHidden = true
+                }
+            }else if (order_goods?.count)! >= 5 {
                 let subImageView = imageViewsSubViews![4]
                 subImageView.isHidden = false
             } else {
@@ -209,9 +208,12 @@ class OrderButtons: UIView {
     
     var buttons: [OrderButton]? {
         didSet {
-            for i in ((0 + 1)...subviews.count).reversed() {
-                let subBtnView = self.subviews[i-1]
-                subBtnView.removeFromSuperview()
+            print(subviews.count)
+            if subviews.count > 0 {
+                for i in (1...subviews.count).reversed() {
+                    let subBtnView = self.subviews[i-1]
+                    subBtnView.removeFromSuperview()
+                }
             }
             
             let btnW: CGFloat = 60
