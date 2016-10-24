@@ -115,17 +115,17 @@ class AnimationTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "searchViewControllerDeinit", name: "LFBSearchViewControllerDeinit", object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(AnimationTabBarController.searchViewControllerDeinit), name: NSNotification.Name(rawValue: "LFBSearchViewControllerDeinit"), object: nil)
     }
     
     deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
     }
     
     func searchViewControllerDeinit() {
         if shopCarIcon != nil {
             let redDotView = ShopCarRedDotView.sharedRedDotView
-            redDotView.frame = CGRectMake(21 + 1, -3, 15, 15)
+            redDotView.frame = CGRect(x:21 + 1, y:-3, width:15, height:15)
             shopCarIcon?.addSubview(redDotView)
         }
     }
@@ -159,7 +159,7 @@ class AnimationTabBarController: UITabBarController {
         tabBar.addSubview(viewContainer)
         viewContainer.tag = index
         
-        let tap = UITapGestureRecognizer(target: self, action: #selector(AnimationTabBarController.tabBarClick(tap:)))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(AnimationTabBarController.tabBar(_:didSelect:)))
         viewContainer.addGestureRecognizer(tap)
         
         return viewContainer

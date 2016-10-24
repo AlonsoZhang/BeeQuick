@@ -64,14 +64,14 @@ class AboltAuthorViewController: BaseViewController {
     private func buildURLButton() {
         for i in 0...2 {
             let btn = UIButton()
-            btn.setTitle(buttonTitles[i], forState: .Normal)
-            btn.backgroundColor = UIColor.whiteColor()
+            btn.setTitle(buttonTitles[i], for: .normal)
+            btn.backgroundColor = UIColor.white
             btn.layer.cornerRadius = 5
             btn.tag = i
-            btn.titleLabel?.font = UIFont.systemFontOfSize(10)
-            btn.frame = CGRectMake(30 + CGFloat(i) * ((ScreenWidth - btnW * 3 - 60) / 2 + btnW), CGRectGetMaxY(blogLabel.frame) + 10, btnW, 30)
-            btn.addTarget(self, action: "btnClick:", forControlEvents: UIControlEvents.TouchUpInside)
-            btn.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
+            btn.titleLabel?.font = UIFont.systemFont(ofSize: 10)
+            btn.frame = CGRect(x:30 + CGFloat(i) * ((ScreenWidth - btnW * 3 - 60) / 2 + btnW), y:blogLabel.frame.maxY + 10, width:btnW, height:30)
+            btn.addTarget(self, action: #selector(AboltAuthorViewController.btnClick(sender:)), for: UIControlEvents.touchUpInside)
+            btn.setTitleColor(UIColor.black, for: UIControlState.normal)
             view.addSubview(btn)
         }
     }
@@ -114,11 +114,11 @@ class AboltAuthorViewController: BaseViewController {
     
     func btnClick(sender: UIButton) {
         switch sender.tag {
-        case 0: UIApplication.sharedApplication().openURL(NSURL(string: GitHubURLString)!)
+        case 0: UIApplication.shared.open(NSURL(string: GitHubURLString) as! URL, options: [:], completionHandler: nil)
             break
-        case 1: UIApplication.sharedApplication().openURL(NSURL(string: BlogURLString)!)
+        case 1: UIApplication.shared.open(NSURL(string: BlogURLString) as! URL, options: [:], completionHandler: nil)
             break
-        case 2: UIApplication.sharedApplication().openURL(NSURL(string: SinaWeiBoURLString)!)
+        case 2: UIApplication.shared.open(NSURL(string: SinaWeiBoURLString) as! URL, options: [:], completionHandler: nil)
             break
         default:
             break

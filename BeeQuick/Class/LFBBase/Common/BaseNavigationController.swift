@@ -43,6 +43,6 @@ class BaseNavigationController: UINavigationController {
     }
     
     func backBtnClick() {
-        popViewControllerAnimated(isAnimation)
+        popViewController(animated: isAnimation)
     }
 }
