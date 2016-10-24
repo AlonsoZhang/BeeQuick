@@ -39,6 +39,29 @@
 		E2718F381DA8944F0087CE71 /* IconImageTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2718F361DA8944F0087CE71 /* IconImageTextView.swift */; };
 		E2718F3A1DA894580087CE71 /* FreshHot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2718F391DA894580087CE71 /* FreshHot.swift */; };
 		E27E61351DA78266003FE234 /* SwiftDictModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27E61341DA78266003FE234 /* SwiftDictModel.swift */; };
+		E280335C1DBDDD8900F6F68E /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E280335B1DBDDD8900F6F68E /* ProductDetailViewController.swift */; };
+		E28033611DBDE0AD00F6F68E /* NotSearchProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28033601DBDE0AD00F6F68E /* NotSearchProductsView.swift */; };
+		E28033631DBDE3C200F6F68E /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28033621DBDE3C200F6F68E /* QRCodeViewController.swift */; };
+		E28033651DBDE3EE00F6F68E /* SearchProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28033641DBDE3EE00F6F68E /* SearchProductViewController.swift */; };
+		E28033671DBDE42200F6F68E /* SearchProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28033661DBDE42200F6F68E /* SearchProducts.swift */; };
+		E28033691DBDE44500F6F68E /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28033681DBDE44500F6F68E /* SearchView.swift */; };
+		E280336D1DBDE49B00F6F68E /* YellowShopCarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E280336C1DBDE49B00F6F68E /* YellowShopCarView.swift */; };
+		E280337E1DBDE61E00F6F68E /* 促销 in Resources */ = {isa = PBXBuildFile; fileRef = E280336E1DBDE61E00F6F68E /* 促销 */; };
+		E280337F1DBDE61E00F6F68E /* 首页焦点按钮 in Resources */ = {isa = PBXBuildFile; fileRef = E280336F1DBDE61E00F6F68E /* 首页焦点按钮 */; };
+		E28033801DBDE61E00F6F68E /* 首页新鲜热卖 in Resources */ = {isa = PBXBuildFile; fileRef = E28033701DBDE61E00F6F68E /* 首页新鲜热卖 */; };
+		E28033811DBDE61E00F6F68E /* 系统消息 in Resources */ = {isa = PBXBuildFile; fileRef = E28033711DBDE61E00F6F68E /* 系统消息 */; };
+		E28033821DBDE61E00F6F68E /* AD in Resources */ = {isa = PBXBuildFile; fileRef = E28033721DBDE61E00F6F68E /* AD */; };
+		E28033831DBDE61E00F6F68E /* HelpPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = E28033731DBDE61E00F6F68E /* HelpPlist.plist */; };
+		E28033841DBDE61E00F6F68E /* Mine in Resources */ = {isa = PBXBuildFile; fileRef = E28033741DBDE61E00F6F68E /* Mine */; };
+		E28033851DBDE61E00F6F68E /* MinePlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = E28033751DBDE61E00F6F68E /* MinePlist.plist */; };
+		E28033861DBDE61E00F6F68E /* MyAdress in Resources */ = {isa = PBXBuildFile; fileRef = E28033761DBDE61E00F6F68E /* MyAdress */; };
+		E28033871DBDE61E00F6F68E /* MyCoupon in Resources */ = {isa = PBXBuildFile; fileRef = E28033771DBDE61E00F6F68E /* MyCoupon */; };
+		E28033881DBDE61E00F6F68E /* MyOrders in Resources */ = {isa = PBXBuildFile; fileRef = E28033781DBDE61E00F6F68E /* MyOrders */; };
+		E28033891DBDE61E00F6F68E /* Search in Resources */ = {isa = PBXBuildFile; fileRef = E28033791DBDE61E00F6F68E /* Search */; };
+		E280338A1DBDE61E00F6F68E /* SearchProduct in Resources */ = {isa = PBXBuildFile; fileRef = E280337A1DBDE61E00F6F68E /* SearchProduct */; };
+		E280338B1DBDE61E00F6F68E /* supermarket in Resources */ = {isa = PBXBuildFile; fileRef = E280337B1DBDE61E00F6F68E /* supermarket */; };
+		E280338C1DBDE61E00F6F68E /* SystemMessage in Resources */ = {isa = PBXBuildFile; fileRef = E280337C1DBDE61E00F6F68E /* SystemMessage */; };
+		E280338D1DBDE61E00F6F68E /* UserMessage in Resources */ = {isa = PBXBuildFile; fileRef = E280337D1DBDE61E00F6F68E /* UserMessage */; };
 		E2AAD2471DBCAAC40001BF0C /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AAD2411DBCAAC40001BF0C /* Color+Extension.swift */; };
 		E2AAD2481DBCAAC40001BF0C /* String + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AAD2421DBCAAC40001BF0C /* String + Extension.swift */; };
 		E2AAD2491DBCAAC40001BF0C /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AAD2431DBCAAC40001BF0C /* UIBarButtonItem+Extension.swift */; };
@@ -105,20 +128,6 @@
 		E2E084EA1DA8CDE30067FE52 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E084D91DA8CDE30067FE52 /* UIImageView+WebCache.m */; };
 		E2E084EB1DA8CDE30067FE52 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E084DB1DA8CDE30067FE52 /* UIView+WebCacheOperation.m */; };
 		E2F91A7C1DBD9CCF007FAB30 /* LeftImageRightTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F91A7B1DBD9CCF007FAB30 /* LeftImageRightTextButton.swift */; };
-		E2F91A8B1DBD9D2C007FAB30 /* 促销 in Resources */ = {isa = PBXBuildFile; fileRef = E2F91A7D1DBD9D2C007FAB30 /* 促销 */; };
-		E2F91A8C1DBD9D2C007FAB30 /* 首页焦点按钮 in Resources */ = {isa = PBXBuildFile; fileRef = E2F91A7E1DBD9D2C007FAB30 /* 首页焦点按钮 */; };
-		E2F91A8D1DBD9D2C007FAB30 /* 首页新鲜热卖 in Resources */ = {isa = PBXBuildFile; fileRef = E2F91A7F1DBD9D2C007FAB30 /* 首页新鲜热卖 */; };
-		E2F91A8E1DBD9D2C007FAB30 /* 系统消息 in Resources */ = {isa = PBXBuildFile; fileRef = E2F91A801DBD9D2C007FAB30 /* 系统消息 */; };
-		E2F91A8F1DBD9D2C007FAB30 /* AD in Resources */ = {isa = PBXBuildFile; fileRef = E2F91A811DBD9D2C007FAB30 /* AD */; };
-		E2F91A901DBD9D2C007FAB30 /* HelpPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2F91A821DBD9D2C007FAB30 /* HelpPlist.plist */; };
-		E2F91A911DBD9D2C007FAB30 /* Mine in Resources */ = {isa = PBXBuildFile; fileRef = E2F91A831DBD9D2C007FAB30 /* Mine */; };
-		E2F91A921DBD9D2C007FAB30 /* MinePlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = E2F91A841DBD9D2C007FAB30 /* MinePlist.plist */; };
-		E2F91A931DBD9D2C007FAB30 /* MyAdress in Resources */ = {isa = PBXBuildFile; fileRef = E2F91A851DBD9D2C007FAB30 /* MyAdress */; };
-		E2F91A941DBD9D2C007FAB30 /* MyCoupon in Resources */ = {isa = PBXBuildFile; fileRef = E2F91A861DBD9D2C007FAB30 /* MyCoupon */; };
-		E2F91A951DBD9D2C007FAB30 /* MyOrders in Resources */ = {isa = PBXBuildFile; fileRef = E2F91A871DBD9D2C007FAB30 /* MyOrders */; };
-		E2F91A961DBD9D2C007FAB30 /* supermarket in Resources */ = {isa = PBXBuildFile; fileRef = E2F91A881DBD9D2C007FAB30 /* supermarket */; };
-		E2F91A971DBD9D2C007FAB30 /* SystemMessage in Resources */ = {isa = PBXBuildFile; fileRef = E2F91A891DBD9D2C007FAB30 /* SystemMessage */; };
-		E2F91A981DBD9D2C007FAB30 /* UserMessage in Resources */ = {isa = PBXBuildFile; fileRef = E2F91A8A1DBD9D2C007FAB30 /* UserMessage */; };
 		E2F91A9A1DBD9DD3007FAB30 /* EditAdressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F91A991DBD9DD3007FAB30 /* EditAdressViewController.swift */; };
 		E2F91A9C1DBD9EC2007FAB30 /* MyShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F91A9B1DBD9EC2007FAB30 /* MyShopViewController.swift */; };
 		E2F91A9E1DBDA0AC007FAB30 /* ReceiptAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F91A9D1DBDA0AC007FAB30 /* ReceiptAddressView.swift */; };
@@ -166,6 +175,29 @@
 		E2718F361DA8944F0087CE71 /* IconImageTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IconImageTextView.swift; path = Class/Home/IconImageTextView.swift; sourceTree = "<group>"; };
 		E2718F391DA894580087CE71 /* FreshHot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FreshHot.swift; path = Class/Home/Model/FreshHot.swift; sourceTree = "<group>"; };
 		E27E61341DA78266003FE234 /* SwiftDictModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftDictModel.swift; path = Class/Tools/SwiftDictModel.swift; sourceTree = "<group>"; };
+		E280335B1DBDDD8900F6F68E /* ProductDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductDetailViewController.swift; path = Class/Home/ProductDetailViewController.swift; sourceTree = "<group>"; };
+		E28033601DBDE0AD00F6F68E /* NotSearchProductsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotSearchProductsView.swift; path = Class/LFBBase/Common/SearchViewController/NotSearchProductsView.swift; sourceTree = "<group>"; };
+		E28033621DBDE3C200F6F68E /* QRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QRCodeViewController.swift; path = Class/LFBBase/Common/QRCodeViewController.swift; sourceTree = "<group>"; };
+		E28033641DBDE3EE00F6F68E /* SearchProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchProductViewController.swift; path = Class/LFBBase/Common/SearchViewController/SearchProductViewController.swift; sourceTree = "<group>"; };
+		E28033661DBDE42200F6F68E /* SearchProducts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchProducts.swift; path = Class/LFBBase/Common/SearchViewController/SearchProducts.swift; sourceTree = "<group>"; };
+		E28033681DBDE44500F6F68E /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchView.swift; path = Class/LFBBase/Common/SearchViewController/SearchView.swift; sourceTree = "<group>"; };
+		E280336C1DBDE49B00F6F68E /* YellowShopCarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YellowShopCarView.swift; path = Class/LFBBase/Common/SearchViewController/YellowShopCarView.swift; sourceTree = "<group>"; };
+		E280336E1DBDE61E00F6F68E /* 促销 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "促销"; path = "Class/Resouce/促销"; sourceTree = "<group>"; };
+		E280336F1DBDE61E00F6F68E /* 首页焦点按钮 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "首页焦点按钮"; path = "Class/Resouce/首页焦点按钮"; sourceTree = "<group>"; };
+		E28033701DBDE61E00F6F68E /* 首页新鲜热卖 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "首页新鲜热卖"; path = "Class/Resouce/首页新鲜热卖"; sourceTree = "<group>"; };
+		E28033711DBDE61E00F6F68E /* 系统消息 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "系统消息"; path = "Class/Resouce/系统消息"; sourceTree = "<group>"; };
+		E28033721DBDE61E00F6F68E /* AD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = AD; path = Class/Resouce/AD; sourceTree = "<group>"; };
+		E28033731DBDE61E00F6F68E /* HelpPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = HelpPlist.plist; path = Class/Resouce/HelpPlist.plist; sourceTree = "<group>"; };
+		E28033741DBDE61E00F6F68E /* Mine */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Mine; path = Class/Resouce/Mine; sourceTree = "<group>"; };
+		E28033751DBDE61E00F6F68E /* MinePlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = MinePlist.plist; path = Class/Resouce/MinePlist.plist; sourceTree = "<group>"; };
+		E28033761DBDE61E00F6F68E /* MyAdress */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = MyAdress; path = Class/Resouce/MyAdress; sourceTree = "<group>"; };
+		E28033771DBDE61E00F6F68E /* MyCoupon */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = MyCoupon; path = Class/Resouce/MyCoupon; sourceTree = "<group>"; };
+		E28033781DBDE61E00F6F68E /* MyOrders */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = MyOrders; path = Class/Resouce/MyOrders; sourceTree = "<group>"; };
+		E28033791DBDE61E00F6F68E /* Search */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Search; path = Class/Resouce/Search; sourceTree = "<group>"; };
+		E280337A1DBDE61E00F6F68E /* SearchProduct */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SearchProduct; path = Class/Resouce/SearchProduct; sourceTree = "<group>"; };
+		E280337B1DBDE61E00F6F68E /* supermarket */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = supermarket; path = Class/Resouce/supermarket; sourceTree = "<group>"; };
+		E280337C1DBDE61E00F6F68E /* SystemMessage */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SystemMessage; path = Class/Resouce/SystemMessage; sourceTree = "<group>"; };
+		E280337D1DBDE61E00F6F68E /* UserMessage */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = UserMessage; path = Class/Resouce/UserMessage; sourceTree = "<group>"; };
 		E2AAD2411DBCAAC40001BF0C /* Color+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Color+Extension.swift"; path = "Class/LFBBase/Extension/Color+Extension.swift"; sourceTree = "<group>"; };
 		E2AAD2421DBCAAC40001BF0C /* String + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String + Extension.swift"; path = "Class/LFBBase/Extension/String + Extension.swift"; sourceTree = "<group>"; };
 		E2AAD2431DBCAAC40001BF0C /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIBarButtonItem+Extension.swift"; path = "Class/LFBBase/Extension/UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
@@ -250,20 +282,6 @@
 		E2E084DA1DA8CDE30067FE52 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+WebCacheOperation.h"; path = "Class/Vender/SDWebImage/UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		E2E084DB1DA8CDE30067FE52 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+WebCacheOperation.m"; path = "Class/Vender/SDWebImage/UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
 		E2F91A7B1DBD9CCF007FAB30 /* LeftImageRightTextButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LeftImageRightTextButton.swift; path = Class/LFBBase/Common/LeftImageRightTextButton.swift; sourceTree = "<group>"; };
-		E2F91A7D1DBD9D2C007FAB30 /* 促销 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "促销"; path = "Class/Resouce/促销"; sourceTree = "<group>"; };
-		E2F91A7E1DBD9D2C007FAB30 /* 首页焦点按钮 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "首页焦点按钮"; path = "Class/Resouce/首页焦点按钮"; sourceTree = "<group>"; };
-		E2F91A7F1DBD9D2C007FAB30 /* 首页新鲜热卖 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "首页新鲜热卖"; path = "Class/Resouce/首页新鲜热卖"; sourceTree = "<group>"; };
-		E2F91A801DBD9D2C007FAB30 /* 系统消息 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "系统消息"; path = "Class/Resouce/系统消息"; sourceTree = "<group>"; };
-		E2F91A811DBD9D2C007FAB30 /* AD */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = AD; path = Class/Resouce/AD; sourceTree = "<group>"; };
-		E2F91A821DBD9D2C007FAB30 /* HelpPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = HelpPlist.plist; path = Class/Resouce/HelpPlist.plist; sourceTree = "<group>"; };
-		E2F91A831DBD9D2C007FAB30 /* Mine */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Mine; path = Class/Resouce/Mine; sourceTree = "<group>"; };
-		E2F91A841DBD9D2C007FAB30 /* MinePlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = MinePlist.plist; path = Class/Resouce/MinePlist.plist; sourceTree = "<group>"; };
-		E2F91A851DBD9D2C007FAB30 /* MyAdress */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = MyAdress; path = Class/Resouce/MyAdress; sourceTree = "<group>"; };
-		E2F91A861DBD9D2C007FAB30 /* MyCoupon */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = MyCoupon; path = Class/Resouce/MyCoupon; sourceTree = "<group>"; };
-		E2F91A871DBD9D2C007FAB30 /* MyOrders */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = MyOrders; path = Class/Resouce/MyOrders; sourceTree = "<group>"; };
-		E2F91A881DBD9D2C007FAB30 /* supermarket */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = supermarket; path = Class/Resouce/supermarket; sourceTree = "<group>"; };
-		E2F91A891DBD9D2C007FAB30 /* SystemMessage */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SystemMessage; path = Class/Resouce/SystemMessage; sourceTree = "<group>"; };
-		E2F91A8A1DBD9D2C007FAB30 /* UserMessage */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = UserMessage; path = Class/Resouce/UserMessage; sourceTree = "<group>"; };
 		E2F91A991DBD9DD3007FAB30 /* EditAdressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditAdressViewController.swift; path = Class/Mine/EditAdressViewController.swift; sourceTree = "<group>"; };
 		E2F91A9B1DBD9EC2007FAB30 /* MyShopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyShopViewController.swift; path = Class/Mine/MyShopViewController.swift; sourceTree = "<group>"; };
 		E2F91A9D1DBDA0AC007FAB30 /* ReceiptAddressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReceiptAddressView.swift; path = Class/ShopCart/ReceiptAddressView.swift; sourceTree = "<group>"; };
@@ -327,20 +345,22 @@
 		E22791031DA61C24006ABBB5 /* Resouce */ = {
 			isa = PBXGroup;
 			children = (
-				E2F91A7D1DBD9D2C007FAB30 /* 促销 */,
-				E2F91A7E1DBD9D2C007FAB30 /* 首页焦点按钮 */,
-				E2F91A7F1DBD9D2C007FAB30 /* 首页新鲜热卖 */,
-				E2F91A801DBD9D2C007FAB30 /* 系统消息 */,
-				E2F91A811DBD9D2C007FAB30 /* AD */,
-				E2F91A821DBD9D2C007FAB30 /* HelpPlist.plist */,
-				E2F91A831DBD9D2C007FAB30 /* Mine */,
-				E2F91A841DBD9D2C007FAB30 /* MinePlist.plist */,
-				E2F91A851DBD9D2C007FAB30 /* MyAdress */,
-				E2F91A861DBD9D2C007FAB30 /* MyCoupon */,
-				E2F91A871DBD9D2C007FAB30 /* MyOrders */,
-				E2F91A881DBD9D2C007FAB30 /* supermarket */,
-				E2F91A891DBD9D2C007FAB30 /* SystemMessage */,
-				E2F91A8A1DBD9D2C007FAB30 /* UserMessage */,
+				E280336E1DBDE61E00F6F68E /* 促销 */,
+				E280336F1DBDE61E00F6F68E /* 首页焦点按钮 */,
+				E28033701DBDE61E00F6F68E /* 首页新鲜热卖 */,
+				E28033711DBDE61E00F6F68E /* 系统消息 */,
+				E28033721DBDE61E00F6F68E /* AD */,
+				E28033731DBDE61E00F6F68E /* HelpPlist.plist */,
+				E28033741DBDE61E00F6F68E /* Mine */,
+				E28033751DBDE61E00F6F68E /* MinePlist.plist */,
+				E28033761DBDE61E00F6F68E /* MyAdress */,
+				E28033771DBDE61E00F6F68E /* MyCoupon */,
+				E28033781DBDE61E00F6F68E /* MyOrders */,
+				E28033791DBDE61E00F6F68E /* Search */,
+				E280337A1DBDE61E00F6F68E /* SearchProduct */,
+				E280337B1DBDE61E00F6F68E /* supermarket */,
+				E280337C1DBDE61E00F6F68E /* SystemMessage */,
+				E280337D1DBDE61E00F6F68E /* UserMessage */,
 			);
 			name = Resouce;
 			sourceTree = "<group>";
@@ -404,15 +424,29 @@
 			name = Tools;
 			sourceTree = "<group>";
 		};
+		E280335F1DBDE08C00F6F68E /* SearchViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E28033601DBDE0AD00F6F68E /* NotSearchProductsView.swift */,
+				E28033641DBDE3EE00F6F68E /* SearchProductViewController.swift */,
+				E28033661DBDE42200F6F68E /* SearchProducts.swift */,
+				E28033681DBDE44500F6F68E /* SearchView.swift */,
+				E280336C1DBDE49B00F6F68E /* YellowShopCarView.swift */,
+			);
+			name = SearchViewController;
+			sourceTree = "<group>";
+		};
 		E2AAD2401DBCAA5A0001BF0C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				E280335F1DBDE08C00F6F68E /* SearchViewController */,
 				E2AAD24D1DBCAAD90001BF0C /* AnimationTabBarController.swift */,
 				E2AAD24E1DBCAAD90001BF0C /* AnimationViewController.swift */,
 				E2AAD24F1DBCAAD90001BF0C /* BaseNavigationController.swift */,
 				E2AAD2501DBCAAD90001BF0C /* BaseViewController.swift */,
 				E2AAD2511DBCAAD90001BF0C /* BuyView.swift */,
 				E2AAD2521DBCAAD90001BF0C /* DiscountPriceView.swift */,
+				E28033621DBDE3C200F6F68E /* QRCodeViewController.swift */,
 				E2AAD2531DBCAAD90001BF0C /* LFBCollectionView.swift */,
 				E2AAD2541DBCAAD90001BF0C /* LFBTableView.swift */,
 				E2F91A7B1DBD9CCF007FAB30 /* LeftImageRightTextButton.swift */,
@@ -482,6 +516,7 @@
 				E25A7D791DA88FD4005DC90E /* HomeTableHeadView.swift */,
 				E2E084B01DA8C9EF0067FE52 /* HomeCollectionFooterView.swift */,
 				E25A7D7A1DA88FD4005DC90E /* HomeViewController.swift */,
+				E280335B1DBDDD8900F6F68E /* ProductDetailViewController.swift */,
 				E25A7D7B1DA88FD4005DC90E /* HotView.swift */,
 				E27E61201DA780C7003FE234 /* Model */,
 			);
@@ -690,21 +725,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2F91A931DBD9D2C007FAB30 /* MyAdress in Resources */,
-				E2F91A941DBD9D2C007FAB30 /* MyCoupon in Resources */,
-				E2F91A911DBD9D2C007FAB30 /* Mine in Resources */,
-				E2F91A8E1DBD9D2C007FAB30 /* 系统消息 in Resources */,
-				E2F91A981DBD9D2C007FAB30 /* UserMessage in Resources */,
+				E28033891DBDE61E00F6F68E /* Search in Resources */,
+				E280338D1DBDE61E00F6F68E /* UserMessage in Resources */,
+				E28033851DBDE61E00F6F68E /* MinePlist.plist in Resources */,
+				E28033801DBDE61E00F6F68E /* 首页新鲜热卖 in Resources */,
+				E28033821DBDE61E00F6F68E /* AD in Resources */,
+				E28033831DBDE61E00F6F68E /* HelpPlist.plist in Resources */,
+				E280337F1DBDE61E00F6F68E /* 首页焦点按钮 in Resources */,
 				E22B16051DA39B2C0077B4A8 /* Assets.xcassets in Resources */,
-				E2F91A8C1DBD9D2C007FAB30 /* 首页焦点按钮 in Resources */,
-				E2F91A921DBD9D2C007FAB30 /* MinePlist.plist in Resources */,
-				E2F91A971DBD9D2C007FAB30 /* SystemMessage in Resources */,
-				E2F91A8D1DBD9D2C007FAB30 /* 首页新鲜热卖 in Resources */,
-				E2F91A8B1DBD9D2C007FAB30 /* 促销 in Resources */,
-				E2F91A8F1DBD9D2C007FAB30 /* AD in Resources */,
-				E2F91A901DBD9D2C007FAB30 /* HelpPlist.plist in Resources */,
-				E2F91A961DBD9D2C007FAB30 /* supermarket in Resources */,
-				E2F91A951DBD9D2C007FAB30 /* MyOrders in Resources */,
+				E280338C1DBDE61E00F6F68E /* SystemMessage in Resources */,
+				E28033861DBDE61E00F6F68E /* MyAdress in Resources */,
+				E280338A1DBDE61E00F6F68E /* SearchProduct in Resources */,
+				E28033871DBDE61E00F6F68E /* MyCoupon in Resources */,
+				E280338B1DBDE61E00F6F68E /* supermarket in Resources */,
+				E28033841DBDE61E00F6F68E /* Mine in Resources */,
+				E28033881DBDE61E00F6F68E /* MyOrders in Resources */,
+				E280337E1DBDE61E00F6F68E /* 促销 in Resources */,
+				E28033811DBDE61E00F6F68E /* 系统消息 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -765,12 +802,15 @@
 			files = (
 				E22391441DB49C3100FAE968 /* MessageViewController.swift in Sources */,
 				E2B05A0F1DA4A6540026DF8D /* MineTabeHeadView.swift in Sources */,
+				E280335C1DBDDD8900F6F68E /* ProductDetailViewController.swift in Sources */,
 				E2F91A9C1DBD9EC2007FAB30 /* MyShopViewController.swift in Sources */,
 				E2AAD25F1DBCAAD90001BF0C /* BuyView.swift in Sources */,
 				E2F91AA41DBDA113007FAB30 /* ShopCartMarkerView.swift in Sources */,
+				E28033651DBDE3EE00F6F68E /* SearchProductViewController.swift in Sources */,
 				E223913E1DB49B4C00FAE968 /* HelpHeadView.swift in Sources */,
 				E2AAD27E1DBCDC7E0001BF0C /* OrderStatusCell.swift in Sources */,
 				E223914A1DB49EF100FAE968 /* SettingViewController.swift in Sources */,
+				E28033691DBDE44500F6F68E /* SearchView.swift in Sources */,
 				E2AAD2861DBCE1610001BF0C /* SystemMessageCell.swift in Sources */,
 				E2AAD25E1DBCAAD90001BF0C /* BaseViewController.swift in Sources */,
 				E2B05A161DA4BFE60026DF8D /* ScheduleViewController.swift in Sources */,
@@ -795,12 +835,15 @@
 				E2B05A0E1DA4A6540026DF8D /* MineHeadView.swift in Sources */,
 				E27E61351DA78266003FE234 /* SwiftDictModel.swift in Sources */,
 				E2AAD2681DBCAAD90001BF0C /* UpImageDownTextButton.swift in Sources */,
+				E280336D1DBDE49B00F6F68E /* YellowShopCarView.swift in Sources */,
 				E223916A1DB4A1FA00FAE968 /* FileTool.swift in Sources */,
 				E22B15FE1DA39B2C0077B4A8 /* AppDelegate.swift in Sources */,
 				E2F91A9E1DBDA0AC007FAB30 /* ReceiptAddressView.swift in Sources */,
+				E28033671DBDE42200F6F68E /* SearchProducts.swift in Sources */,
 				E2AAD25C1DBCAAD90001BF0C /* AnimationViewController.swift in Sources */,
 				E2E084DF1DA8CDE30067FE52 /* SDWebImageCompat.m in Sources */,
 				E2E084E71DA8CDE30067FE52 /* UIImage+MultiFormat.m in Sources */,
+				E28033631DBDE3C200F6F68E /* QRCodeViewController.swift in Sources */,
 				E2AAD28C1DBCE5BB0001BF0C /* AdressCell.swift in Sources */,
 				E223912E1DB4993B00FAE968 /* AboltAuthorViewController.swift in Sources */,
 				E2718F371DA8944F0087CE71 /* HomeCell.swift in Sources */,
@@ -858,6 +901,7 @@
 				E2AAD2601DBCAAD90001BF0C /* DiscountPriceView.swift in Sources */,
 				E25A7D801DA88FE5005DC90E /* HeadResources.swift in Sources */,
 				E25A7D7C1DA88FD4005DC90E /* HomeTableHeadView.swift in Sources */,
+				E28033611DBDE0AD00F6F68E /* NotSearchProductsView.swift in Sources */,
 				E2AAD2631DBCAAD90001BF0C /* LoadProgressAnimationView.swift in Sources */,
 				E2AAD2471DBCAAC40001BF0C /* Color+Extension.swift in Sources */,
 				E2AAD27C1DBCDC220001BF0C /* OrderGoodsListView.swift in Sources */,

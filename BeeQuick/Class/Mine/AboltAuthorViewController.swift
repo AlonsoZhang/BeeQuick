@@ -59,6 +59,23 @@ class AboltAuthorViewController: BaseViewController {
         bulidTextLabel(label: blogLabel, text: "技术博客: " + "\(BlogURLString)", tag: 3)
     }
     
+    let buttonTitles = ["小熊的Github", "小熊的微博", "小熊的技术博客"]
+    let btnW: CGFloat = 80
+    private func buildURLButton() {
+        for i in 0...2 {
+            let btn = UIButton()
+            btn.setTitle(buttonTitles[i], forState: .Normal)
+            btn.backgroundColor = UIColor.whiteColor()
+            btn.layer.cornerRadius = 5
+            btn.tag = i
+            btn.titleLabel?.font = UIFont.systemFontOfSize(10)
+            btn.frame = CGRectMake(30 + CGFloat(i) * ((ScreenWidth - btnW * 3 - 60) / 2 + btnW), CGRectGetMaxY(blogLabel.frame) + 10, btnW, 30)
+            btn.addTarget(self, action: "btnClick:", forControlEvents: UIControlEvents.TouchUpInside)
+            btn.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
+            view.addSubview(btn)
+        }
+    }
+    
     private func bulidTextLabel(label: UILabel, text: String, tag: Int) {
         label.text = text
         label.font = UIFont.systemFont(ofSize: 13)
@@ -91,6 +108,19 @@ class AboltAuthorViewController: BaseViewController {
         case 2: UIApplication.shared.open(NSURL(string: SinaWeiBoURLString) as! URL, options: [:], completionHandler: nil)
             break
         default: UIApplication.shared.open(NSURL(string: BlogURLString) as! URL, options: [:], completionHandler: nil)
+            break
+        }
+    }
+    
+    func btnClick(sender: UIButton) {
+        switch sender.tag {
+        case 0: UIApplication.sharedApplication().openURL(NSURL(string: GitHubURLString)!)
+            break
+        case 1: UIApplication.sharedApplication().openURL(NSURL(string: BlogURLString)!)
+            break
+        case 2: UIApplication.sharedApplication().openURL(NSURL(string: SinaWeiBoURLString)!)
+            break
+        default:
             break
         }
     }

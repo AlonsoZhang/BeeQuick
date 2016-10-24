@@ -11,6 +11,7 @@ import UIKit
 class BuyView: UIView {
     
     var clickAddShopCar: (() -> ())?
+    var zearIsShow = false
     
     /// 添加按钮
     private lazy var addGoodsButton: UIButton = {
@@ -25,14 +26,15 @@ class BuyView: UIView {
         let reduceGoodsButton = UIButton(type: .custom)
         reduceGoodsButton.setImage(UIImage(named: "v2_reduce")!, for: .normal)
         reduceGoodsButton.addTarget(self, action: #selector(BuyView.reduceGoodsButtonClick), for: .touchUpInside)
-        reduceGoodsButton.isHidden = true
+        reduceGoodsButton.isHidden = false
         return reduceGoodsButton
     }()
     
     /// 购买数量
     private lazy var buyCountLabel: UILabel = {
         let buyCountLabel = UILabel()
-        buyCountLabel.isHidden = true
+        buyCountLabel.isHidden = false
+        buyCountLabel.text = "0"
         buyCountLabel.textColor = UIColor.black
         buyCountLabel.textAlignment = NSTextAlignment.center
         buyCountLabel.font = HomeCollectionTextFont
@@ -97,8 +99,8 @@ class BuyView: UIView {
                 hideSupplementLabel()
             }
             if 0 == buyNumber {
-                reduceGoodsButton.isHidden = true
-                buyCountLabel.isHidden = true
+                reduceGoodsButton.isHidden = true && !zearIsShow
+                buyCountLabel.isHidden = true && !zearIsShow
             } else {
                 reduceGoodsButton.isHidden = false
                 buyCountLabel.isHidden = false
@@ -153,9 +155,9 @@ class BuyView: UIView {
         buyNumber -= 1
         goods?.userBuyNumber = buyNumber
         if buyNumber == 0 {
-            reduceGoodsButton.isHidden = true
-            buyCountLabel.isHidden = true
-            buyCountLabel.text = ""
+            reduceGoodsButton.isHidden = true  && !zearIsShow
+            buyCountLabel.isHidden = true  && !zearIsShow
+            buyCountLabel.text = zearIsShow ? "0" : ""
             UserShopCarTool.sharedUserShopCar.removeSupermarketProduct(goods: goods!)
         } else {
             buyCountLabel.text = "\(buyNumber)"

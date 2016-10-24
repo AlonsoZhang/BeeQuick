@@ -32,6 +32,16 @@ class HomeViewController: AnimationViewController {
         buildProessHud()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.navigationBar.barTintColor = LFBNavigationYellowColor
+        
+        if collectionView != nil {
+            collectionView.reloadData()
+        }
+    }
+    
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
@@ -45,8 +55,6 @@ class HomeViewController: AnimationViewController {
     
     // MARK:- Creat UI
     private func buildNavigationItem() {
-        navigationController?.navigationBar.barTintColor = LFBNavigationYellowColor
-        
         navigationItem.leftBarButtonItem = UIBarButtonItem.barButton(title: "扫一扫", titleColor: UIColor.black,
                                                                      image: UIImage(named: "icon_black_scancode")!, hightLightImage: nil,
                                                                      target: self, action: #selector(HomeViewController.leftItemClick), type: ItemButtonType.Left)
@@ -137,11 +145,13 @@ class HomeViewController: AnimationViewController {
     // MARK:- Action
     // MARK: 扫一扫和搜索Action
     func leftItemClick() {
-        print("左")
+        let qrCode = QRCodeViewController()
+        navigationController?.pushViewController(qrCode, animated: true)
     }
     
     func rightItemClick() {
-        print("右")
+        let searchVC = SearchProductViewController()
+        navigationController!.pushViewController(searchVC, animated: false)
     }
     
     // MARK: Notifiation Action
@@ -313,6 +323,11 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        if indexPath.section == 0 {
+            print("点击了长条的第 \(indexPath.row) 的cell")
+        } else {
+            let productVC = ProductDetailViewController(goods: freshHot!.data![indexPath.row])
+            navigationController?.pushViewController(productVC, animated: true)
+        }
     }
 }

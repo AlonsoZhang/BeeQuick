@@ -22,6 +22,8 @@ class SupermarketViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        addNotification()
+        
         showProgressHUD()
         
         buildNavigationItem()
@@ -33,6 +35,28 @@ class SupermarketViewController: BaseViewController {
         loadSupermarketData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.navigationBar.barTintColor = LFBNavigationYellowColor
+        if productsVC.productsTableView != nil {
+            productsVC.productsTableView?.reloadData()
+        }
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    private func addNotification() {
+        NotificationCenter.default.addObserver(self, selector: "shopCarBuyProductNumberDidChange", name: LFBShopCarBuyProductNumberDidChangeNotification, object: nil)
+    }
+    
+    func shopCarBuyProductNumberDidChange() {
+        if productsVC.productsTableView != nil {
+            productsVC.productsTableView!.reloadData()
+        }
+    }
     
     // MARK:- Creat UI
     private func buildNavigationItem() {
@@ -114,11 +138,13 @@ class SupermarketViewController: BaseViewController {
     }
     
     func rightItemClick() {
-        print("右")
+        let searchVC = SearchProductViewController()
+        navigationController?.pushViewController(searchVC, animated: true)
     }
     
     // MARK: - Private Method
     private func showProgressHUD() {
+        ProgressHUDManager.setBackgroundColor(color: UIColor.colorWithCustom(r: 230, g: 230, b: 230))
         view.backgroundColor = UIColor.white
         if !ProgressHUDManager.isVisible() {
             ProgressHUDManager.showWithStatus(status: "正在加载中")

@@ -17,12 +17,6 @@ class BaseViewController: UIViewController {
         navigationItem.hidesBackButton = true
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
     deinit {
         print(NSStringFromClass(self.classForCoder) + "--------delloc---------")
     }
