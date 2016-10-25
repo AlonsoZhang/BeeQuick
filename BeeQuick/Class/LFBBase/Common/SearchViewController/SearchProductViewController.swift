@@ -269,7 +269,15 @@ extension SearchProductViewController: UISearchBarDelegate, UIScrollViewDelegate
 }
 
 
-extension SearchProductViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension SearchProductViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        if goodses == nil {
+            return 0
+        } else {
+            return 1
+        }
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
@@ -287,14 +295,14 @@ extension SearchProductViewController: UICollectionViewDelegate, UICollectionVie
         return cell
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let itemSize = CGSize(width:(ScreenWidth - HomeCollectionViewCellMargin * 2) * 0.5 - 4, height:250)
         
         return itemSize
     }
-    
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
         
         if goodses?.count == 0 || goodses == nil {
             return CGSize.zero
@@ -303,7 +311,7 @@ extension SearchProductViewController: UICollectionViewDelegate, UICollectionVie
         return CGSize(width:ScreenWidth, height:30)
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         
         return CGSize.zero
     }

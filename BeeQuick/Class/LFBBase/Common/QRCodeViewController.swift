@@ -70,7 +70,7 @@ class QRCodeViewController: BaseViewController, AVCaptureMetadataOutputObjectsDe
         captureSession = AVCaptureSession()
         captureSession?.addInput(input!)
         captureSession?.addOutput(captureMetadataOutput)
-        let dispatchQueue = dispatch_queue_create("myQueue", nil)
+        let dispatchQueue = DispatchQueue(label: "myQueue")
         captureMetadataOutput.setMetadataObjectsDelegate(self, queue: dispatchQueue)
         captureMetadataOutput.metadataObjectTypes = [AVMetadataObjectTypeQRCode, AVMetadataObjectTypeAztecCode]
         

@@ -93,9 +93,8 @@ class AnimationViewController: BaseViewController,CAAnimationDelegate {
         transitionLayer.add(groupAnimation, forKey: "BigShopCarAnimation")
         
     }
-
-    override func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
-        
+    
+    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         if self.animationLayers?.count != 0 {
             let transitionLayer = animationLayers![0]
             transitionLayer.isHidden = true
@@ -112,4 +111,5 @@ class AnimationViewController: BaseViewController,CAAnimationDelegate {
             view.layer.removeAnimation(forKey: "BigShopCarAnimation")
         }
     }
+    
 }
