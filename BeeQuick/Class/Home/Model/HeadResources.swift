@@ -51,4 +51,5 @@ class Activities: NSObject {
     var jptype: String?
     var trackid: String?
     var mimg: String?
+    var customURL: String?
 }
