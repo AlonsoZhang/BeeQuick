@@ -63,9 +63,8 @@ class ShopCartSupermarketTableFooterView: UIView {
     }
     
     func determineButtonClick() {
-        if delegate != nil {
-            delegate?.supermarketTableFooterDetermineButtonClick()
-        }
+        print("确定")
+        delegate?.supermarketTableFooterDetermineButtonClick()
     }
 }
 

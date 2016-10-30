@@ -17,7 +17,7 @@ class BaseViewController: UIViewController {
         navigationItem.hidesBackButton = true
     }
     
-    deinit {
-        print(NSStringFromClass(self.classForCoder) + "--------delloc---------")
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
     }
 }

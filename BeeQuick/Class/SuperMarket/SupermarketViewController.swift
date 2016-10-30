@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SupermarketViewController: BaseViewController {
+class SupermarketViewController: SelectedAdressViewController {
 
     fileprivate var supermarketData: Supermarket?
     fileprivate var categoryTableView: LFBTableView!
@@ -26,8 +26,6 @@ class SupermarketViewController: BaseViewController {
         
         showProgressHUD()
         
-        buildNavigationItem()
-        
         bulidCategoryTableView()
         
         bulidProductsViewController()
@@ -38,10 +36,11 @@ class SupermarketViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        navigationController?.navigationBar.barTintColor = LFBNavigationYellowColor
         if productsVC.productsTableView != nil {
             productsVC.productsTableView?.reloadData()
         }
+        NSNotificationCenter.defaultCenter().postNotificationName("LFBSearchViewControllerDeinit", object: nil)
+        navigationController?.navigationBar.barTintColor = LFBNavigationYellowColor
     }
     
     deinit {
@@ -59,19 +58,6 @@ class SupermarketViewController: BaseViewController {
     }
     
     // MARK:- Creat UI
-    private func buildNavigationItem() {
-        navigationController?.navigationBar.barTintColor = LFBNavigationYellowColor
-        
-        navigationItem.leftBarButtonItem = UIBarButtonItem.barButton(title: "扫一扫", titleColor: UIColor.black,
-                                                                     image: UIImage(named: "icon_black_scancode")!, hightLightImage: nil,
-                                                                     target: self, action: #selector(SupermarketViewController.leftItemClick), type: ItemButtonType.Left)
-        navigationItem.rightBarButtonItem = UIBarButtonItem.barButton(title: "搜 索", titleColor: UIColor.black,
-                                                                      image: UIImage(named: "icon_search")!,hightLightImage: nil,
-                                                                      target: self, action: #selector(SupermarketViewController.rightItemClick), type: ItemButtonType.Right)
-        
-        
-    }
-    
     private func bulidCategoryTableView() {
         categoryTableView = LFBTableView(frame: CGRect(x:0, y:0, width:ScreenWidth * 0.25, height:ScreenHeight), style: .plain)
         categoryTableView.backgroundColor = LFBGlobalBackgroundColor
@@ -129,17 +115,6 @@ class SupermarketViewController: BaseViewController {
                 }
             }
         })
-    }
-    
-    // MARK:- Action
-    // MARK: 扫一扫和搜索Action
-    func leftItemClick() {
-        print("左")
-    }
-    
-    func rightItemClick() {
-        let searchVC = SearchProductViewController()
-        navigationController?.pushViewController(searchVC, animated: true)
     }
     
     // MARK: - Private Method
