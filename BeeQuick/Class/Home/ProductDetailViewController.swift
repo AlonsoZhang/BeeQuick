@@ -218,8 +218,8 @@ class ProductDetailViewController: BaseViewController {
     
     // MARK: - Action
     func rightItemClick() {
-        shareActionSheet.showActionSheetViewShowInView(view) { (shareType) -> () in
-            ShareManager.shareToShareType(shareType, vc: self)
+        shareActionSheet.showActionSheetViewShowInView(inView: view) { (shareType) -> () in
+            ShareManager.shareToShareType(shareType: shareType, vc: self)
         }
     }
 }

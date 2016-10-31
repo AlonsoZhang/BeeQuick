@@ -12,7 +12,7 @@ class MyAdressViewController: BaseViewController {
     
     private var addAdressButton: UIButton?
     private var nullImageView = UIView()
-    var selectedAdressCallback:((adress: Adress) -> ())?
+    var selectedAdressCallback:((_ adress: Adress) -> ())?
     var isSelectVC = false
     var adressTableView: LFBTableView?
     var adresses: [Adress]? {
@@ -27,7 +27,7 @@ class MyAdressViewController: BaseViewController {
         }
     }
     
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -35,7 +35,7 @@ class MyAdressViewController: BaseViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    convenience init(selectedAdress: ((adress:Adress) -> ())) {
+    convenience init(selectedAdress: @escaping ((_ adress:Adress) -> ())) {
         self.init(nibName: nil, bundle: nil)
         selectedAdressCallback = selectedAdress
     }
@@ -104,7 +104,7 @@ class MyAdressViewController: BaseViewController {
                     tmpSelf!.adressTableView?.isHidden = false
                     tmpSelf!.adressTableView?.reloadData()
                     tmpSelf!.nullImageView.isHidden = true
-                    UserInfo.sharedUserInfo.setAllAdress(data!.data!)
+                    UserInfo.sharedUserInfo.setAllAdress(adresses: data!.data!)
                 } else {
                     tmpSelf!.adressTableView?.isHidden = true
                     tmpSelf!.nullImageView.isHidden = false
@@ -161,11 +161,11 @@ extension MyAdressViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if isSelectVC {
             if selectedAdressCallback != nil {
-                selectedAdressCallback!(adress: adresses![indexPath.row])
-                navigationController?.popViewControllerAnimated(true)
+                selectedAdressCallback!(adresses![indexPath.row])
+                _ = navigationController?.popViewController(animated: true)
             }
         }
     }

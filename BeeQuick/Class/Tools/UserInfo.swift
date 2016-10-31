@@ -39,14 +39,14 @@ class UserInfo: NSObject {
             weak var tmpSelf = self
             
             AdressData.loadMyAdressData { (data, error) -> Void in
-                if data?.data?.count > 0 {
+                if data?.data?.count != 0 {
                     tmpSelf!.allAdress = data!.data!
                 } else {
                     tmpSelf?.allAdress?.removeAll()
                 }
             }
-            
-            return allAdress?.count > 1 ? allAdress![0] : nil
+            //maybe issue
+            return (allAdress?.count)! > 1 ? allAdress![0] : nil
         } else {
             return allAdress![0]
         }
@@ -54,7 +54,7 @@ class UserInfo: NSObject {
     
     func setDefaultAdress(adress: Adress) {
         if allAdress != nil {
-            allAdress?.insert(adress, atIndex: 0)
+            allAdress?.insert(adress, at: 0)
         } else {
             allAdress = [Adress]()
             allAdress?.append(adress)
