@@ -38,7 +38,7 @@ class HomeViewController: SelectedAdressViewController {
         if collectionView != nil {
             collectionView.reloadData()
         }
-        NSNotificationCenter.defaultCenter().postNotificationName("LFBSearchViewControllerDeinit", object: nil)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "LFBSearchViewControllerDeinit"), object: nil)
     }
     
     deinit {
@@ -153,8 +153,8 @@ class HomeViewController: SelectedAdressViewController {
 // MARK:- HomeHeadViewDelegate TableHeadViewAction
 extension HomeViewController: HomeTableHeadViewDelegate {
     func tableHeadView(headView: HomeTableHeadView, focusImageViewClick index: Int) {
-        if headData?.data?.focus?.count > 0 {
-            let path = NSBundle.mainBundle().pathForResource("FocusURL", ofType: "plist")
+        if headData?.data?.focus?.count != nil {
+            let path = Bundle.main.path(forResource: "FocusURL", ofType: "plist")
             let array = NSArray(contentsOfFile: path!)
             let webVC = WebViewController(navigationTitle: headData!.data!.focus![index].name!, urlStr: array![index] as! String)
             navigationController?.pushViewController(webVC, animated: true)
@@ -162,7 +162,7 @@ extension HomeViewController: HomeTableHeadViewDelegate {
     }
     
     func tableHeadView(headView: HomeTableHeadView, iconClick index: Int) {
-        if headData?.data?.icons?.count > 0 {
+        if headData?.data?.icons?.count != nil {
             let webVC = WebViewController(navigationTitle: headData!.data!.icons![index].name!, urlStr: headData!.data!.icons![index].customURL!)
             navigationController?.pushViewController(webVC, animated: true)
         }

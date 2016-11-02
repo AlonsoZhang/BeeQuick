@@ -39,7 +39,7 @@ class SupermarketViewController: SelectedAdressViewController {
         if productsVC.productsTableView != nil {
             productsVC.productsTableView?.reloadData()
         }
-        NSNotificationCenter.defaultCenter().postNotificationName("LFBSearchViewControllerDeinit", object: nil)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "LFBSearchViewControllerDeinit"), object: nil)
         navigationController?.navigationBar.barTintColor = LFBNavigationYellowColor
     }
     
